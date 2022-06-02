@@ -1,0 +1,33 @@
+.footer {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-color);
+
+  @extend %fs-t2;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copyright {
+
+  }
+
+  &__confidence {
+    margin-right: auto;
+    margin-left: 12.75%;
+  }
+
+  &__developer {
+    display: flex;
+    gap: 1rem;
+    grid-column: span 4;
+
+    img {
+      width: 7.7rem;
+      height: 1.9rem;
+      margin-top: 0.2rem;
+    }
+  }
+}

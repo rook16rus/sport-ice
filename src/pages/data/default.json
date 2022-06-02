@@ -1,0 +1,83 @@
+{
+  "menu": [
+    {
+      "link": "#",
+      "name": "О нас",
+      "active": false
+    },
+    {
+      "link": "#",
+      "name": "Услуги",
+      "active": false
+    },
+    {
+      "link": "#",
+      "name": "Портфолио",
+      "active": false
+    },
+    {
+      "link": "#",
+      "name": "Видео",
+      "active": false
+    },
+    {
+      "link": "#",
+      "name": "Контакты",
+      "active": false
+    }
+  ],
+  "socials": [
+    {
+      "link": "#",
+      "svg": "inst-icon"
+    },
+    {
+      "link": "#",
+      "svg": "phone-icon"
+    },
+    {
+      "link": "#",
+      "svg": "mail-icon"
+    }
+  ],
+  "aboutNav": [
+    {
+      "name": "Мастерская",
+      "active": true
+    },
+    {
+      "name": "Награды",
+      "active": false
+    },
+    {
+      "name": "Публикации",
+      "active": false
+    }
+  ],
+  "portfolioNav": [
+    {
+      "name": "Все проекты",
+      "active": true
+    },
+    {
+      "name": "Общественные",
+      "active": false
+    },
+    {
+      "name": "Градо",
+      "active": false
+    },
+    {
+      "name": "Жилые",
+      "active": false
+    },
+    {
+      "name": "Офисы и деловые центры",
+      "active": false
+    },
+    {
+      "name": "Интерьеры",
+      "active": false
+    }
+  ]
+}

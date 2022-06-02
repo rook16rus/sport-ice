@@ -1,0 +1,25 @@
+:root {
+  /* Цвета */
+  --primary: #383838;
+  --border-color: #DDDDDD;
+  --pale-white: #F2F2F2;
+
+  /* Сетка контейнеров */
+  --max-container-width: 135.5rem;
+  --content-padding: 4rem;
+}
+
+@include breakpoint(mobile) {
+  :root {
+    --content-padding: 2rem;
+  }
+}
+
+$minWidth: 375;
+$maxWidth: 1680; // Ширина макета
+$base-transition-time: 0.3s;
+$base-transition-easing: ease;
+
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+$modal-bg-color: white;

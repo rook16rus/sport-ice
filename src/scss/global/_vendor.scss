@@ -1,0 +1,74 @@
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/choices.js/public/assets/styles/choices';
+@import '../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone';
+// @import '../../node_modules/plyr/dist/plyr';
+// todo: решить баг с plyr.css "Error: -7px and -2 are incompatible."
+
+.swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--pale-white);
+    
+    &:hover {
+        color: #fff;
+    }
+    
+    &::after {
+        content: '';
+    }
+
+    svg {
+        width: 2rem;
+        height: 5.7rem;
+    }
+}
+
+.swiper-button-prev {
+    left: 4rem;
+    transform: rotate(180deg);
+}
+
+.swiper-button-next {
+    right: 4rem;
+}
+
+.swiper-pagination {
+    right: 4rem;
+    left: auto !important;
+    bottom: 4rem !important;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: auto !important;
+}
+
+.slider-bullet {
+    width: 2rem;
+    height: 1px;
+
+    background-color: #fff;
+    opacity: 0.5;
+
+    transition: 0.3s;
+
+    &--active {
+        width: 4rem;
+        height: 2px;
+        opacity: 1;
+    }
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
