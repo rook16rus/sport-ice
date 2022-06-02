@@ -1,12 +1,45 @@
 :root {
-  /* Цвета */
-  --primary: #383838;
-  --border-color: #DDDDDD;
-  --pale-white: #F2F2F2;
+  /* Colors */
+  --primary: #A6120A;
+  --text-body: #1D293C;
+  --text-title: #0F1926;
+  --bg-grey: #F1F1F1;
 
-  /* Сетка контейнеров */
+  /* Layout containers */
   --max-container-width: 135.5rem;
   --content-padding: 4rem;
+
+  /* Font Family */
+  --main-ff: 'BebasNeue';
+  --secondary-ff: 'TT Commons';
+  --tertiary-ff: 'Montserrat';
+
+  /* Font Weight */
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+
+  /* Body */
+  --text-L: var(--medium) 2.4rem/130% var(--secondary-ff);
+  --text-M: var(--regular) 1.8rem/100% var(--secondary-ff);
+  --text-S: var(--semi-bold) 1.6rem/120% var(--secondary-ff);
+
+  /* Body Title */
+  --body-XL: var(--bold) 5.5rem/100% var(--main-ff);
+  --body-L: var(--bold) 4rem/100% var(--main-ff);
+  --body-M: var(--bold) 3.4rem/115% var(--main-ff);
+  --body-S: var(--bold) 3rem/110% var(--main-ff);
+  --body-XS: var(--bold) 2.5rem/100% var(--main-ff);
+
+  /* Titles */
+  --title-h0: var(--bold) 15.3rem/100% var(--main-ff);
+  --title-h1: var(--bold) 10rem/120% var(--main-ff);
+  --title-h2: var(--bold) 8.5rem/120% var(--main-ff);
+  --title-S: var(--bold) 3rem/100% var(--main-ff);
+
+  /* Other Typography */
+  --other: var(--semi-bold) 2rem/120% var(--secondary-ff);
 }
 
 @include breakpoint(mobile) {

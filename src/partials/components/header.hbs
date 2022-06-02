@@ -1,3 +1,25 @@
 <header class="header">
-
+    <div class="container">
+        <div class="header__wrapper">
+            <a class="header__logo" href="#">
+                <img src="img/logo.svg" alt="Логотип">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    {{#each menu }}
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="{{this.href}}">{{this.text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </nav>
+            <a class="header__phone" href="tel:+78001019228">8 800 101 92 28</a>
+            <a class="header__whatsapp" href="#">
+                <svg>
+                    <use xlink:href="#whatsapp-icon"></use>
+                </svg>
+            </a>
+            <a class="header__button button button--white-border" href="#">Консультация</a>
+        </div>
+    </div>
 </header>
