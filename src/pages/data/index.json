@@ -1,3 +1,19 @@
 {
-
+  "intro": [
+    {
+      "img": "img/intro-1.png",
+      "text": "KODIAK",
+      "background": "linear-gradient(180deg, #1D1D1D 0%, #2C2C2C 100%)"
+    },
+    {
+      "img": "img/intro-2.png",
+      "text": "Bumblebee",
+      "background": "linear-gradient(180deg, #DCC442 0%, #FFD700 100%, #FFD700 100%)"
+    },
+    {
+      "img": "img/intro-3.png",
+      "text": "BRONCO",
+      "background": "linear-gradient(180deg, #034155 0%, #135E76 100%)"
+    }
+  ]
 }

@@ -11,6 +11,7 @@ import initSliders from "./custom/initSliders";
 import verticalScrollSlider from "./build-in/verticalScrollSlider";
 import fixedBlock from "./build-in/fixedBlock";
 import header from "./build-in/header";
+import introSlider from "./build-in/introSlider";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     verticalScrollSlider();
     fixedBlock();
     header();
+    introSlider();
 
     // custom
     initSliders();
