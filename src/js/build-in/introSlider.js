@@ -41,9 +41,10 @@ export default function introSlider() {
         }
     })
 
+    const introInner = intro.querySelector('.intro__inner');
     let activeSlide = intro.querySelector('.intro__img-slider .swiper-slide-active');
-    console.log(activeSlide);
     intro.style.setProperty('--machine-color', activeSlide.dataset.background);
+    introInner.style.setProperty('--slide-index', (imgSwiper.activeIndex + 1).toString());
 
     let tl = gsap.timeline();
 
@@ -51,8 +52,8 @@ export default function introSlider() {
         initLineAnimation(tl, imgSwiper);
 
         activeSlide = intro.querySelector('.intro__img-slider .swiper-slide-active');
-        console.log(activeSlide.dataset.background);
         intro.style.setProperty('--machine-color', activeSlide.dataset.background)
+        introInner.style.setProperty('--slide-index', (imgSwiper.activeIndex + 1).toString());
     })
 
     initLineAnimation(tl, imgSwiper);
@@ -64,7 +65,7 @@ function initLineAnimation(tl, slider) {
     const progress = document.querySelector('.intro__pagination-line-progress');
     tl.to(progress, {
         width: '100%',
-        duration: 5,
+        duration: 10,
         onComplete: () => {
             if (slider.activeIndex === slider.slides.length - 1) {
                 slider.slideTo(0)

@@ -43,6 +43,22 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+
+    counter-reset: slideIndex var(--slide-index);
+
+    &::before {
+      content: '0' counter(slideIndex);
+
+      position: absolute;
+      top: 0.36rem;
+      left: -34rem;
+
+      opacity: 0.1;
+
+      font: var(--title-h0);
+      font-size: 90rem;
+      line-height: 80%;
+    }
   }
 
   &__header {

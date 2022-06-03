@@ -62,6 +62,32 @@
             </div>
         </div>
     </section>
+    <section class="features">
+        <div class="container">
+            <h2 class="features__title section-title">
+                <span>Американское качество</span> &nbsp;по доступной цене с доставкой по все россии
+            </h2>
+            <ul class="features__list">
+                {{#each features }}
+                    <li class="features__item">
+                        <div class="features__img{{#if this.mod }} {{this.mod}}{{/if}}">
+                            <img src="{{this.img}}" alt="Приемущество">
+                        </div>
+                        <div class="features__content">
+                            <h3 class="features__item-title">{{this.title}}</h3>
+                            <div class="features__text-block">
+                                <p class="features__text">{{this.text}}</p>
+                                <div class="features__property">
+                                    <span class="features__value">{{this.property}}</span>
+                                    <span class="features__desc">{{this.desc}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
 
 {{/content}}
 {{/extend}}
