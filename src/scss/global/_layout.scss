@@ -9,6 +9,17 @@
     }
 }
 
+.wide-container {
+    width: 100%;
+    max-width: calc(var(--max-wide-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+}
+
 .button {
     display: flex;
     justify-content: center;
@@ -51,6 +62,7 @@
 
 .section-title {
     font: var(--title-h2);
+    color: var(--text-title);
 }
 
 .visually-hidden {

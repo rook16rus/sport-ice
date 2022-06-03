@@ -34,10 +34,133 @@
     {
       "img": "img/feature-3.jpg",
       "title": "гарантия поставки",
-      "text": "Все модели машин Sport Ice уже готовы к отгрузке. После заключения договора мы доставим ледозаливочную технику в течение 30 дней.",
+      "text": "Все модели машин Sport Ice уже готовы к отгрузке. После заключения договора мы доставим ледозаливочную технику в течение 30 дней.",
       "property": "30 дней",
       "desc": "отгрузка",
       "mod": "features__img--fill"
+    }
+  ],
+  "models": [
+    {
+      "title": "kodiak",
+      "text": "Для достижения высоких целей",
+      "img": "img/model-1.png",
+      "tag": "Хит продаж",
+      "background": "radial-gradient(33.21% 81.53% at 67.79% 63.5%, rgba(108, 108, 108, 0.9) 0%, rgba(81, 81, 81, 0.9) 6.25%, rgba(32, 31, 31, 0.9) 100%)",
+      "properties": [
+        {
+          "value": "3,11 м³",
+          "desc": "ёмкость для&nbsp;снега",
+          "left": "34.8%",
+          "top": "0",
+          "mod": "models__property-item--view-1",
+          "view1": "true"
+        },
+        {
+          "value": "850 л",
+          "desc": "ёмкость для&nbsp;воды",
+          "left": "87.3%",
+          "top": "0",
+          "mod": "models__property-item--view-2",
+          "view2": "true"
+        },
+        {
+          "value": "1800 м²",
+          "desc": "площадь заливки",
+          "left": "0",
+          "top": "26.8%",
+          "mod": "models__property-item--view-3",
+          "view3": "true"
+        },
+        {
+          "value": "48 V, 7.2 кВт",
+          "desc": "аккумулятор",
+          "left": "72.2%",
+          "top": "80.6%",
+          "mod": "models__property-item--view-4",
+          "view4": "true"
+        }
+      ]
+    },
+    {
+      "title": "Bumblebee",
+      "text": "Маленький, но очень эффективный",
+      "img": "img/model-2.png",
+      "background": "linear-gradient(180deg, #FFD700 0%, #DCC442 100%)",
+      "properties": [
+        {
+          "value": "3,11 м³",
+          "desc": "ёмкость для&nbsp;снега",
+          "left": "34.8%",
+          "top": "0",
+          "mod": "models__property-item--view-1",
+          "view1": "true"
+        },
+        {
+          "value": "850 л",
+          "desc": "ёмкость для&nbsp;воды",
+          "left": "87.3%",
+          "top": "0",
+          "mod": "models__property-item--view-2",
+          "view2": "true"
+        },
+        {
+          "value": "1800 м²",
+          "desc": "площадь заливки",
+          "left": "0",
+          "top": "26.8%",
+          "mod": "models__property-item--view-3",
+          "view3": "true"
+        },
+        {
+          "value": "48 V, 7.2 кВт",
+          "desc": "аккумулятор",
+          "left": "72.2%",
+          "top": "80.6%",
+          "mod": "models__property-item--view-4",
+          "view4": "true"
+        }
+      ]
+    },
+    {
+      "title": "bronco",
+      "text": "Надежный помощник на аренах средних размеров",
+      "img": "img/model-3.png",
+      "background": "linear-gradient(180deg, #034155 0%, #135E76 100%)",
+      "properties": [
+        {
+          "value": "3,11 м³",
+          "desc": "ёмкость для&nbsp;снега",
+          "left": "34.8%",
+          "top": "0",
+          "mod": "models__property-item--view-1",
+          "view1": "true"
+        },
+        {
+          "value": "850 л",
+          "desc": "ёмкость для&nbsp;воды",
+          "left": "87.3%",
+          "top": "0",
+          "mod": "models__property-item--view-2",
+          "view2": "true"
+        },
+        {
+          "value": "1800 м²",
+          "desc": "площадь заливки",
+          "left": "0",
+          "top": "26.8%",
+          "mod": "models__property-item--view-3",
+          "view3": "true"
+        },
+        {
+          "value": "48 V, 7.2 кВт",
+          "desc": "аккумулятор",
+          "left": "72.2%",
+          "top": "80.6%",
+          "mod": "models__property-item--view-4",
+          "view4": "true"
+        }
+      ]
     }
   ]
 }

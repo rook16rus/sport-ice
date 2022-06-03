@@ -1,0 +1,274 @@
+.models {
+  padding-bottom: 12rem;
+
+  &__inner {
+    padding: 6.8rem 10rem 8.8rem;
+
+    background-color: var(--bg-grey);
+    border-radius: 2.5rem;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    opacity: 0.5;
+
+    font: var(--body-S);
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.5rem;
+  }
+
+  &__list-slider {
+    grid-column: 1 / 5;
+    width: 100%;
+    max-width: 40.2rem;
+    margin-bottom: -4rem;
+
+    overflow: visible;
+  }
+
+  &__list-slide {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1.6rem 2rem 2rem;
+    min-height: 20rem;
+
+    border-radius: 1rem 1rem 12rem 1rem;
+    background-color: #fff;
+    cursor: pointer;
+
+    &.swiper-slide-thumb-active {
+      background: var(--machine-color);
+    }
+  }
+
+  &__list-title {
+    font: var(--body-M);
+    color: var(--text-title);
+  }
+
+  &__list-text {
+    max-width: 16rem;
+
+    font: var(--text-M);
+    color: var(--text-title);
+    opacity: 0.6;
+  }
+
+  &__list-img {
+    position: absolute;
+    right: -1.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 24rem;
+    aspect-ratio: 240 / 150;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__list-tag {
+    position: absolute;
+    top: 1.3rem;
+    left: 2rem;
+
+    max-width: 7rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+
+    border-radius: 0.5rem;
+    background-color: #B32E20;
+
+    font: var(--text-XS);
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__property-slider {
+    position: relative;
+
+    width: 100%;
+    grid-column: 6 / -1;
+  }
+
+  &__property-slide {
+    cursor: pointer;
+  }
+
+  &__property-check-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem 1rem 2rem 1.8rem;
+    
+    border-radius: 1rem;
+    background-color: #fff;
+  }
+
+  &__property-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+
+    border-radius: 50%;
+    background-color: var(--bg-grey);
+
+    svg {
+      width: 1.4rem;
+      height: 1.1rem;
+    }
+  }
+
+  &__property-check-desc {
+    max-width: 14rem;
+    font: var(--body-XS);
+  }
+
+  &__property-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__property-item {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: var(--text-title);
+    text-align: center;
+
+    svg {
+      position: absolute;
+      z-index: 1;
+    }
+
+    &--view-1 {
+      svg {
+        right: -5.5rem;
+        top: 5.5rem;
+      }
+    }
+
+    &--view-2 {
+      svg {
+        left: -17.4rem;
+        top: 5.5rem;
+      }
+    }
+
+    &--view-3 {
+      svg {
+        left: 50%;
+        bottom: -12.4rem;
+      }
+    }
+
+    &--view-4 {
+      svg {
+        left: -6.9rem;
+        top: -16rem;
+      }
+    }
+
+    circle {
+      r: 0;
+    }
+  }
+
+  &__property-value {
+    font: var(--body-XL);
+  }
+
+  &__property-desc {
+    max-width: 12rem;
+
+    font: var(--text-M);
+    opacity: 0.45;
+  }
+
+  &__property-img {
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 57.2rem;
+    aspect-ratio: 572 / 358;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  &__button {
+    flex-grow: 1;
+    max-width: 25rem;
+  }
+
+  &__link {
+    font: var(--body-XS);
+    color: var(--text-title);
+    text-transform: uppercase;
+  }
+}
+
+#mask1 {
+  stroke-dasharray: 148;
+  stroke-dashoffset: 148;
+}
+
+#mask2 {
+  stroke-dasharray: 301;
+  stroke-dashoffset: 301;
+}
+
+#mask3 {
+  stroke-dasharray: 228;
+  stroke-dashoffset: 228;
+}
+
+#mask4 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}

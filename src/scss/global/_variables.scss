@@ -7,7 +7,8 @@
 
   /* Layout containers */
   --max-container-width: 135.5rem;
-  --content-padding: 4rem;
+  --max-wide-container-width: 155.5rem;
+  --content-padding: 6rem;
 
   /* Font Family */
   --main-ff: 'Bebas Neue';
@@ -24,6 +25,7 @@
   --text-L: var(--medium) 2.4rem/130% var(--secondary-ff);
   --text-M: var(--regular) 1.8rem/100% var(--secondary-ff);
   --text-S: var(--semi-bold) 1.6rem/120% var(--secondary-ff);
+  --text-XS: var(--bold) 0.9rem/100% var(--secondary-ff);
 
   /* Body Title */
   --body-XL: var(--bold) 5.5rem/100% var(--main-ff);

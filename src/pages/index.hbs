@@ -88,6 +88,120 @@
             </ul>
         </div>
     </section>
+    <section class="models">
+        <div class="wide-container">
+            <div class="models__inner">
+                <h2 class="models__title">Модельный ряд</h2>
+                <div class="models__wrapper">
+                    <div class="models__list-slider swiper">
+                        <div class="swiper-wrapper">
+                            {{#each models }}
+                                <div class="models__list-slide swiper-slide" data-background="{{this.background}}">
+                                    <h3 class="models__list-title">{{this.title}}</h3>
+                                    <p class="models__list-text">{{this.text}}</p>
+                                    <div class="models__list-img">
+                                        <img src="{{this.img}}" alt="Фото модели">
+                                    </div>
+                                    {{#if tag }}
+                                        <span class="models__list-tag">{{this.tag}}</span>
+                                    {{/if}}
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="models__property-slider swiper">
+                        <div class="swiper-wrapper">
+                            {{#each models }}
+                                <div class="models__property-slide swiper-slide">
+                                    <div class="models__property-check-block">
+                                        <div class="models__property-check">
+                                            <svg>
+                                                <use xlink:href="#check-icon"></use>
+                                            </svg>
+                                        </div>
+                                        <span class="models__property-check-desc">большая ширина ножа</span>
+                                    </div>
+                                    <ul class="models__property-list">
+                                        {{#each properties }}
+                                            <li class="models__property-item {{this.mod}}" style="left: {{this.left}}; top: {{this.top}}">
+                                                <span class="models__property-value">{{this.value}}</span>
+                                                <span class="models__property-desc">{{{this.desc}}}</span>
+                                                {{#if view1 }}
+                                                    <svg width="48" height="142" viewBox="0 0 48 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line1">
+                                                            <path fill="none" d="M0 1H32V117"/>
+                                                        </symbol>
+                                                        <mask id="mask1">
+                                                            <use class="mask" xlink:href="#line1" stroke="#fff"/>
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line1" mask="url(#mask1)" stroke="#000" stroke-dasharray="6, 7" opacity="1"/>
+                                                        <g class="circle">
+                                                            <circle cx="34.5" cy="128.5" r="13.5" fill="#FCFDFF"/>
+                                                            <circle cx="34.5" cy="128.5" r="4.5" fill="#AE261E"/>
+                                                        </g>
+                                                    </svg>
+                                                {{else if view2 }}
+                                                    <svg width="167" height="172" viewBox="0 0 167 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line2">
+                                                            <path fill="none" d="M167 1H13V148"/>
+                                                        </symbol>
+                                                        <mask id="mask2">
+                                                            <use class="mask" xlink:href="#line2" stroke="#fff"/>
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line2" mask="url(#mask2)" stroke="#000" stroke-dasharray="6, 7" opacity="1"/>
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="158.5" r="13.5" fill="#FCFDFF"/>
+                                                            <circle cx="13.5" cy="158.5" r="4.5" fill="#AE261E"/>
+                                                        </g>
+                                                    </svg>
+                                                {{else if view3 }}
+                                                    <svg width="152" height="118" viewBox="0 0 152 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line3">
+                                                            <path fill="none" d="M125 104H0.999995V0"/>
+                                                        </symbol>
+                                                        <mask id="mask3">
+                                                            <use class="mask" xlink:href="#line3" stroke="#fff"/>
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line3" mask="url(#mask3)" stroke="#000" stroke-dasharray="6, 7" opacity="1"/>
+                                                        <g class="circle">
+                                                            <circle cx="138.5" cy="104.5" r="13.5" fill="#FCFDFF"/>
+                                                            <circle cx="138.5" cy="104.5" r="4.5" fill="#AE261E"/>
+                                                        </g>
+                                                    </svg>
+                                                {{else if view4 }}
+                                                    <svg width="57" height="182" viewBox="0 0 57 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <symbol id="line4">
+                                                                <path fill="none" d="M57 181H11V27"/>
+                                                            </symbol>
+                                                            <mask id="mask4">
+                                                                <use class="mask" xlink:href="#line4" stroke="#fff"/>
+                                                            </mask>
+                                                            <use class="dashed" xlink:href="#line4" mask="url(#mask4)" stroke="#000" stroke-dasharray="6, 7" opacity="1"/>
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#FCFDFF"/>
+                                                            <circle cx="13.5" cy="13.5" r="4.5" fill="#AE261E"/>
+                                                        </g>
+                                                    </svg>
+                                                {{/if}}
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                    <div class="models__property-img">
+                                        <img src="{{this.img}}" alt="Фото модели">
+                                    </div>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class="models__buttons">
+                            <button class="models__button button button--red">Заказать</button>
+                            <a class="models__link" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 {{/content}}
 {{/extend}}

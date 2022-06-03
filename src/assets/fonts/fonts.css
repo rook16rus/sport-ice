@@ -26,6 +26,16 @@
 }
 
 @font-face {
+	font-family: 'TT Commons';
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('./TTCommons-Bold.woff2'),
+	url('./TTCommons-Bold.woff');
+}
+
+
+@font-face {
 	font-family: 'Bebas Neue';
 	font-weight: 700;
 	font-style: normal;
