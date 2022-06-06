@@ -201,7 +201,28 @@
             </div>
         </div>
     </section>
-
+    <section class="reviews" id="reviews">
+        <div class="wide-container">
+            <div class="reviews__inner js-init-slider-container">
+                <h2 class="reviews__title section-title">Отзывы клиентов</h2>
+                <div class="reviews__slider swiper js-init-slider" data-space="25" data-loop="true" data-slides="3.5">
+                    <div class="reviews__inner_items swiper-wrapper">
+                        {{#each reviews }}
+                            <blockquote class="reviews__item swiper-slide">
+                                <a class="reviews__item-graphic{{#if video }} reviews__item-graphic--video{{/if}}">
+                                    <img src="{{this.img}}" alt="Фото отзыва">
+                                </a>
+                                <h3 class="reviews__item-title">{{this.title}}</h3>
+                                <p class="reviews__item-text">{{this.text}}</p>
+                                <cite class="reviews__item-author">{{this.author}}</cite>
+                                <span class="reviews__item-position">{{this.position}}</span>
+                            </blockquote>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {{/content}}
 {{/extend}}
