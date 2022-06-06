@@ -223,6 +223,33 @@
             </div>
         </div>
     </section>
+    <section class="order">
+        <div class="wide-container">
+            <div class="order__wrapper">
+                <div class="order__img-wrapper">
+                    <img class="order__img lazyload" data-src="img/person.png" alt="Персона">
+                </div>
+                <div class="order__content">
+                    <h2 class="order__title">получите консультацию нашего эксперта</h2>
+                    <form class="order__form" action="#" data-need-validation novalidate>
+                        <div class="order__input-wrapper">
+                            <input class="discount-form__input input input--light" type="text" name="name" required placeholder="Ваше имя">
+                        </div>
+                        <div class="order__input-wrapper">
+                            <input class="discount-form__input input input--light js-phone-input" type="tel" name="name" data-parsley-phone required placeholder="Ваш телефон">
+                        </div>
+                        <button class="order__button button button--white" type="submit">
+                            <span>Отправить</span>
+                            <svg>
+                                <use xlink:href="#letter-icon"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <p class="order__confidence">Нажимая кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {{/content}}
 {{/extend}}

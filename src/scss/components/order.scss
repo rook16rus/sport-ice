@@ -1,0 +1,106 @@
+.order {
+  padding-bottom: 12rem;
+
+  &__wrapper {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 40rem 1fr;
+    gap: 8rem;
+    padding: 8.2rem 8rem 6.5rem;
+
+    border-radius: 2.5rem;
+    background: url("../img/order-bg.jpg") no-repeat center;
+    background-size: cover;
+
+    color: #fff;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+
+      border-radius: 1.6rem;
+    }
+  }
+
+  &__img-wrapper {
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 8rem;
+
+    width: 40rem;
+  }
+
+  &__content {
+    max-width: 74rem;
+  }
+
+  &__title {
+    max-width: 55rem;
+    margin-bottom: 2.5rem;
+
+    font: var(--body-XL);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      padding: 1.6rem;
+      grid-template-columns: 1fr;
+      margin-bottom: 2rem;
+
+      border-radius: 1.6rem;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+    @include breakpoint(mobile) {
+      height: 5rem;
+
+      font-size: 1.6rem;
+      border-radius: 1.2rem;
+    }
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__confidence {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 36rem;
+
+    font: var(--text-M);
+    opacity: 0.6;
+
+    &::before {
+      content: '*';
+    }
+  }
+}
