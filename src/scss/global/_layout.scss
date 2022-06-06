@@ -87,6 +87,17 @@
     }
 }
 
+.video-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+
+    border-radius: 50%;
+    background: var(--primary) url("../img/icons/play-arrow-icon.svg") no-repeat center;
+}
+
 .section-title {
     font: var(--title-h2);
     color: var(--text-title);

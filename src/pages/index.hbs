@@ -250,6 +250,22 @@
             </div>
         </div>
     </section>
+    <section class="gallery">
+        <div class="container">
+            <h2 class="gallery__title section-title">Медиагалерея</h2>
+        </div>
+        <div class="wide-container">
+            <ul class="gallery__list">
+                {{#each gallery }}
+                    <li class="gallery__item">
+                        <a class="gallery__link{{#if video }} gallery__link--video{{/if}}" href="#">
+                            <img src="{{this.img}}" alt="Фото">
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
 
 {{/content}}
 {{/extend}}

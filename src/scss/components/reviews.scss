@@ -39,14 +39,7 @@
         top: 50%;
         transform: translateY(-50%);
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 10rem;
-        height: 10rem;
-
-        border-radius: 50%;
-        background: var(--primary) url("../img/icons/play-arrow-icon.svg") no-repeat center;
+        @extend .video-button;
       }
     }
 

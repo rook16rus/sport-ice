@@ -186,5 +186,29 @@
       "author": "Давид Нургалиев",
       "position": "Директор «Ледовый дворец», г. Набережные Челны"
     }
+  ],
+  "gallery": [
+    {
+      "img": "img/gallery-1.jpg",
+      "video": true
+    },
+    {
+      "img": "img/gallery-2.jpg"
+    },
+    {
+      "img": "img/gallery-3.jpg"
+    },
+    {
+      "img": "img/gallery-4.jpg"
+    },
+    {
+      "img": "img/gallery-5.jpg"
+    },
+    {
+      "img": "img/gallery-6.jpg"
+    },
+    {
+      "img": "img/gallery-7.jpg"
+    }
   ]
 }
