@@ -13,6 +13,7 @@ import fixedBlock from "./build-in/fixedBlock";
 import header from "./build-in/header";
 import introSlider from "./build-in/introSlider";
 import modelsSlider from "./build-in/modelsSlider";
+import mapSlider from "./build-in/mapSlider";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     header();
     introSlider();
     modelsSlider();
+    mapSlider();
 
     // custom
     initSliders();

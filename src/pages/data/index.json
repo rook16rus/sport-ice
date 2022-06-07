@@ -210,5 +210,102 @@
     {
       "img": "img/gallery-7.jpg"
     }
+  ],
+  "mapCircles": [
+    {
+      "name": "Санкт-Петербург",
+      "left": "10.8rem",
+      "top": "24rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Москва",
+      "left": "10.3rem",
+      "top": "32.1rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Краснодар",
+      "left": "3.5rem",
+      "top": "47.8rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Казань",
+      "left": "19.7rem",
+      "top": "34.6rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Екатеринбург",
+      "left": "32.4rem",
+      "top": "35.9rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Уфа",
+      "left": "26.3rem",
+      "top": "40.8rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Салехард",
+      "left": "43.9rem",
+      "top": "30rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Норильск",
+      "left": "58.8rem",
+      "top": "27.5rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Нижневартовск",
+      "left": "54.6rem",
+      "top": "42.2rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Мирный",
+      "left": "73rem",
+      "top": "38.8rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Омск",
+      "left": "41.8rem",
+      "top": "48.4rem",
+      "img": "img/map-1.jpg"
+    },
+    {
+      "name": "Новосибирск",
+      "left": "52.8rem",
+      "top": "52.7rem",
+      "img": "img/map-2.jpg"
+    },
+    {
+      "name": "Иркутск",
+      "left": "70rem",
+      "top": "57rem",
+      "img": "img/map-1.jpg"
+    }
+  ],
+  "mapFeatures": [
+    {
+      "img": "map-feature-1",
+      "title": "Выезд на место",
+      "text": "наш специалист выезжает и проводит обслуживание"
+    },
+    {
+      "img": "map-feature-2",
+      "title": "до 2 часов",
+      "text": "время обнаружения проблемы"
+    },
+    {
+      "img": "map-feature-3",
+      "title": "2 года",
+      "text": "гарантии на сервисное обслуживание"
+    }
   ]
 }
