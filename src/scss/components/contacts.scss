@@ -1,0 +1,174 @@
+.contacts {
+  padding-bottom: 9rem;
+
+  &__title {
+    margin-bottom: 7.5rem;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  &__consultant {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    border-radius: 1rem;
+    background-color: var(--bg-grey);
+  }
+
+  &__consultant-img {
+    width: 16.9rem;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__consultant-content {
+    margin-top: 2rem;
+  }
+
+  &__consultant-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+
+  &__consultant-title {
+    margin-bottom: 1rem;
+    font: var(--body-S);
+  }
+
+  &__consultant-desc {
+    max-width: 21.5rem;
+
+    font: var(--text-M);
+    opacity: 0.45;
+  }
+
+  &__consultant-live {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 4.3rem;
+    padding: 0 1.2rem;
+
+    border-radius: 1rem;
+    background-color: #fff;
+
+    font: var(--body-XS);
+
+    &::before {
+      content: '';
+
+      width: 0.7rem;
+      height: 0.7rem;
+
+      border-radius: 50%;
+      background-color: var(--primary);
+    }
+  }
+
+  &__consultant-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 38rem;
+
+    font: var(--body-XS);
+    color: var(--primary);
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 6.5rem;
+  }
+
+  &__info-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 42rem;
+    padding: 2.7rem 3.5rem 1.1rem 2.4rem;
+
+    background: url("../img/contact-link-back.svg") no-repeat center;
+
+    font: var(--text-L);
+    color: rgba(29, 41, 60, 0.6);
+
+    span {
+      max-width: 25rem;
+    }
+
+    svg {
+      width: 5.5rem;
+      height: 5.5rem;
+    }
+  }
+
+  &__info-address {
+    margin-top: 1rem;
+    max-width: 18.5rem;
+
+    font: var(--text-L);
+    opacity: 0.6;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    font: var(--body-S);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 49rem;
+    margin-bottom: 3rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__confidence {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 36rem;
+
+    font: var(--text-M);
+    opacity: 0.45;
+
+    &::before {
+      content: '*';
+    }
+  }
+
+  &__map {
+    background: grey;
+    overflow: hidden;
+    border-radius: 2.5rem;
+  }
+}

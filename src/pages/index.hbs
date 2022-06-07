@@ -244,11 +244,10 @@
                         <h2 class="order__title">получите консультацию нашего эксперта</h2>
                         <form class="order__form" action="#" data-need-validation novalidate>
                             <div class="order__input-wrapper">
-                                <input class="discount-form__input input input--light" type="text" name="name" required
-                                       placeholder="Ваше имя">
+                                <input class="order__input input input--light" type="text" name="name" required placeholder="Ваше имя">
                             </div>
                             <div class="order__input-wrapper">
-                                <input class="discount-form__input input input--light js-phone-input" type="tel"
+                                <input class="order__input input input--light js-phone-input" type="tel"
                                        name="name" data-parsley-phone required placeholder="Ваш телефон">
                             </div>
                             <button class="order__button button button--white" type="submit">
@@ -366,6 +365,60 @@
                             </li>
                         {{/each}}
                     </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <h2 class="contacts__title section-title">Свяжитесь с нами</h2>
+                <div class="contacts__wrapper">
+                    <div class="contacts__content">
+                        <div class="contacts__consultant">
+                            <div class="contacts__consultant-img">
+                                <img class="lazyload" data-src="img/consultant.jpg" alt="Консультант">
+                            </div>
+                            <div class="contacts__consultant-content">
+                                <div class="contacts__consultant-content-wrapper">
+                                    <div class="contacts__consultant-content-text">
+                                        <h3 class="contacts__consultant-title">Алёна Аношина</h3>
+                                        <p class="contacts__consultant-desc">Позвоните для консультации эксперту компании</p>
+                                    </div>
+                                    <span class="contacts__consultant-live">Работаем сейчас</span>
+                                </div>
+                                <div class="contacts__consultant-links">
+                                    <a class="contacts__consultant-link" href="tel:+78000008888">8 800 000-88-88</a>
+                                    <a class="contacts__consultant-link" href="mailto:nms@sportlp.ru">nms@sportlp.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__info">
+                            <a class="contacts__info-link" href="#">
+                                <span>Пишите прямо сейчас, мы онлайн</span>
+                                <svg>
+                                    <use xlink:href="#whatsapp-green-icon"></use>
+                                </svg>
+                            </a>
+                            <address class="contacts__info-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
+                        </div>
+                        <h3 class="contacts__subtitle">Закажите звонок</h3>
+                        <form class="contacts__form" action="#">
+                            <div class="contacts__input-wrapper">
+                                <input class="contacts__input input input--dark js-phone-input" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
+                            </div>
+                            <button class="contacts__button button button--red" type="submit">
+                                <span>Отправить</span>
+                                <svg>
+                                    <use xlink:href="#letter-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <p class="contacts__confidence">
+                            Нажимая кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+                        </p>
+                    </div>
+                    <div class="contacts__map" id="contact-map">
+
+                    </div>
                 </div>
             </div>
         </section>
