@@ -1,33 +1,81 @@
 .footer {
-  padding: 5rem 0;
-  border-top: 1px solid var(--border-color);
-
-  @extend %fs-t2;
+  padding-bottom: 2rem;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__name {
+    max-width: 30rem;
+
+    font: var(--text-M);
+    opacity: 0.45;
+  }
+
+  &__nav {
+    margin-right: auto;
+    margin-left: 16.3rem;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 7.3rem;
+
+    font: var(--body-S);
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.6;
+    }
+  }
+
+  &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__copyright {
+  &__download {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 
-  }
+    font: var(--text-M);
 
-  &__confidence {
-    margin-right: auto;
-    margin-left: 12.75%;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &__developer {
     display: flex;
-    gap: 1rem;
-    grid-column: span 4;
+    align-items: center;
+    gap: 1.7rem;
+
+    font: var(--text-M);
+
+    span {
+      opacity: 0.45;
+    }
 
     img {
-      width: 7.7rem;
-      height: 1.9rem;
-      margin-top: 0.2rem;
+      width: 9.3rem;
+      height: 2.4rem;
     }
   }
 }

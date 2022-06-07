@@ -1,0 +1,44 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__top">
+                <p class="footer__name">
+                    ООО «Спорт Лайн Поволжье»
+                    ИНН: 5260422236   ОГРН: 1165260051835
+                </p>
+                <nav class="footer__nav">
+                    <ul class="footer__menu">
+                        {{#each footerMenu }}
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="#">{{this.text}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </nav>
+                <ul class="footer__socials">
+                    {{#each socials }}
+                        <li class="footer__social">
+                            <a class="footer__social-link" href="#">
+                                <svg>
+                                    <use xlink:href="#{{this.img}}"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="footer__bottom">
+                <a class="footer__download" href="#">
+                    <span>Скачать реквизиты</span>
+                    <svg>
+                        <use xlink:href="#download-icon"></use>
+                    </svg>
+                </a>
+                <span class="footer__developer">
+                    <span>Разработано в </span>
+                    <img class="lazyload" data-src="img/mark-webber.svg" alt="Логотип Mark Webber">
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
