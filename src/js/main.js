@@ -14,6 +14,7 @@ import header from "./build-in/header";
 import introSlider from "./build-in/introSlider";
 import modelsSlider from "./build-in/modelsSlider";
 import mapSlider from "./build-in/mapSlider";
+import manufacturerSlider from "./build-in/manufacturerSlider";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     introSlider();
     modelsSlider();
     mapSlider();
+    manufacturerSlider();
 
     // custom
     initSliders();

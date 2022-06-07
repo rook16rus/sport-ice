@@ -1,0 +1,54 @@
+.slider-navigation {
+  display: flex;
+  gap: 1.5rem;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+
+    border-radius: 50%;
+
+    transition: 0.3s;
+
+    &:first-child {
+      transform: rotate(180deg);
+    }
+
+    &--dark {
+      background-color: var(--text-title);
+      color: #fff;
+
+      &.swiper-button-disabled {
+        background-color: var(--bg-grey);
+        color: var(--text-title);
+      }
+    }
+
+    &--bordered {
+      border: 2px solid #fff;
+      color: #fff;
+
+      &.swiper-button-disabled {
+        opacity: 0.5;
+      }
+    }
+
+    svg {
+      width: 1.8rem;
+      height: 2.7rem;
+    }
+
+    &--small {
+      width: 5.5rem;
+      height: 5.5rem;
+
+      svg {
+        width: 1rem;
+        height: 1.9rem;
+      }
+    }
+  }
+}
