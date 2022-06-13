@@ -31,6 +31,8 @@
     margin-bottom: -4rem;
 
     overflow: visible;
+
+    counter-reset: modelsSlides;
   }
 
   &__list-slide {
@@ -44,24 +46,61 @@
     min-height: 20rem;
 
     border-radius: 1rem 1rem 12rem 1rem;
+    background-image: var(--machine-color);
     background-color: #fff;
+    background-size: 200% 3000%;
+    background-position-y: 300%;
     cursor: pointer;
 
+    color: var(--text-title);
+
+    transition: $base-transition-time;
+
     &.swiper-slide-thumb-active {
-      background: var(--machine-color);
+      background-position-y: 240%;
+      color: #fff;
+
+      &::before {
+        top: 1.3rem;
+
+        opacity: 0.1;
+
+        font-size: 20rem;
+        color: #F1F1F1;
+      }
+    }
+
+    &::before {
+      counter-increment: modelsSlides;
+      content: '0' counter(modelsSlides);
+
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5.7rem;
+      line-height: 100%;
+      color: #F1F1F1;
+
+      transition: $base-transition-time;
     }
   }
 
   &__list-title {
+    position: relative;
+    z-index: 1;
+
     font: var(--body-M);
-    color: var(--text-title);
   }
 
   &__list-text {
-    max-width: 16rem;
+    position: relative;
+    z-index: 1;
+
+    max-width: 20rem;
 
     font: var(--text-M);
-    color: var(--text-title);
     opacity: 0.6;
   }
 
@@ -157,13 +196,6 @@
   &__property-item {
     position: absolute;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    color: var(--text-title);
-    text-align: center;
-
     svg {
       position: absolute;
       z-index: 1;
@@ -200,6 +232,19 @@
     circle {
       r: 0;
     }
+  }
+
+  &__property-content {
+    transform: translateX(-2rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+
+    color: var(--text-title);
+    text-align: center;
   }
 
   &__property-value {
@@ -253,22 +298,22 @@
   }
 }
 
-#mask1 {
+#mask1, #mask5, #mask9 {
   stroke-dasharray: 148;
   stroke-dashoffset: 148;
 }
 
-#mask2 {
+#mask2, #mask6, #mask10  {
   stroke-dasharray: 301;
   stroke-dashoffset: 301;
 }
 
-#mask3 {
+#mask3, #mask7, #mask11  {
   stroke-dasharray: 228;
   stroke-dashoffset: 228;
 }
 
-#mask4 {
+#mask4, #mask8, #mask12  {
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
 }
