@@ -7,6 +7,8 @@ export default function introSlider() {
     const intro = document.querySelector('.intro');
     if (!intro) return;
 
+    /* Инициализация слайдеров */
+
     const textSwiper = new Swiper('.intro__text-slider', {
         direction: "vertical",
         slidesPerView: "auto",
@@ -14,11 +16,11 @@ export default function introSlider() {
             touchEnd: function(s,e) {
                 let range = 5;
                 let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
-                    - s.touches.startY
+                    - s.touches.startY;
                 if (diff < range || diff > -range) s.allowClick = true;
             }
         }
-    })
+    });
 
     const imgSwiper = new Swiper('.intro__img-slider', {
         thumbs: {
@@ -39,12 +41,16 @@ export default function introSlider() {
             formatFractionCurrent: (number) => '0' + number,
             formatFractionTotal: (number) => '0' + number,
         }
-    })
+    });
+
+    /* Изменения цвета фона при переключения слайдера */
 
     const introInner = intro.querySelector('.intro__inner');
     let activeSlide = intro.querySelector('.intro__img-slider .swiper-slide-active');
     intro.style.setProperty('--machine-color', activeSlide.dataset.background);
     introInner.style.setProperty('--slide-index', (imgSwiper.activeIndex + 1).toString());
+
+    /* Реализация прогресс-бара */
 
     let tl = gsap.timeline();
 
@@ -52,9 +58,9 @@ export default function introSlider() {
         initLineAnimation(tl, imgSwiper);
 
         activeSlide = intro.querySelector('.intro__img-slider .swiper-slide-active');
-        intro.style.setProperty('--machine-color', activeSlide.dataset.background)
+        intro.style.setProperty('--machine-color', activeSlide.dataset.background);
         introInner.style.setProperty('--slide-index', (imgSwiper.activeIndex + 1).toString());
-    })
+    });
 
     initLineAnimation(tl, imgSwiper);
 }

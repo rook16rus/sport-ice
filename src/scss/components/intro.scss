@@ -31,7 +31,11 @@
 
     height: 100%;
     width: 100%;
-    background: var(--machine-color);
+    background: linear-gradient(180deg, #1D1D1D, #2C2C2C, #DCC442, #FFD700, #034155, #135E76);
+    background-size: 600% 600%;
+    background-position-y: var(--machine-color);
+
+    transition: 0.5s;
 
     border-radius: 0 0 40rem 0;
   }
