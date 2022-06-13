@@ -8,6 +8,20 @@
   padding: 5rem 0;
   color: #fff;
 
+  transition: 0.2s;
+
+  &--white {
+    padding: 2rem 0;
+
+    background-color: #fff;
+    color: var(--text-body);
+
+    .header__button {
+      border-color: var(--text-title);
+      color: var(--text-title);
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -53,5 +67,6 @@
     min-height: 5rem;
 
     font: var(--text-S);
+    line-height: 1;
   }
 }
