@@ -22,6 +22,11 @@
     display: flex;
     align-items: flex-start;
     gap: 8rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    @include revealed;
   }
 
   &__img {
@@ -58,6 +63,12 @@
     
     font: var(--title-h1);
     color: #B0B1B3;
+
+    transition: $base-transition-time;
+
+    &--red {
+      color: var(--primary);
+    }
   }
 
   &__text-block {

@@ -1,6 +1,11 @@
 .map {
   padding-bottom: 12rem;
 
+  opacity: 0;
+  visibility: hidden;
+
+  @include revealed;
+
   &__title {
     max-width: 71rem;
     margin-bottom: 2.4rem;

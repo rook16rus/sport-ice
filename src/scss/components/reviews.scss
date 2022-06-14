@@ -1,6 +1,11 @@
 .reviews {
   padding-bottom: 12rem;
+
   overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+
+  @include revealed;
 
   &__inner {
     position: relative;

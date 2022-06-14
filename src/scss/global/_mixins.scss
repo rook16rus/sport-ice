@@ -25,6 +25,14 @@
     }
 }
 
+@mixin revealed {
+    &.revealed {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity .2s, visibility .2s;
+    }
+}
+
 @mixin fullpageBG {
     position: relative;
     background: none;

@@ -1,6 +1,11 @@
 .gallery {
   padding-bottom: 12rem;
 
+  opacity: 0;
+  visibility: hidden;
+
+  @include revealed;
+
   &__title {
     margin-bottom: 4.4rem;
   }
