@@ -10,6 +10,10 @@
 
   transition: 0.2s;
 
+  @include breakpoint(mobile) {
+    padding: 2rem 0;
+  }
+
   &--white {
     padding: 2rem 0;
 
@@ -27,18 +31,42 @@
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+
+    @include breakpoint(mobile) {
+      gap: 1.2rem;
+    }
   }
 
   &__logo {
+    position: relative;
+    z-index: 1;
+
     svg {
       width: 14.5rem;
       height: 7rem;
+
+      @include breakpoint(mobile) {
+        width: 8.4rem;
+        height: 4rem;
+      }
     }
   }
 
   &__nav {
     margin-left: auto;
     margin-right: 9.6rem;
+
+    @include breakpoint(mobile) {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap;
+    }
   }
 
   &__menu {
@@ -51,13 +79,25 @@
   }
 
   &__phone {
+    position: relative;
+    z-index: 1;
+
     font: var(--other);
+
+    @include breakpoint(mobile) {
+      margin-top: 0.4rem;
+      margin-left: auto;
+    }
   }
 
   &__whatsapp {
     svg {
       width: 2.4rem;
       height: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      display: none;
     }
   }
 
@@ -68,5 +108,120 @@
 
     font: var(--text-S);
     line-height: 1;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    z-index: 1;
+
+    display: none;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 2rem;
+      height: 0.8rem;
+
+      &::before, &::after {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        transform-origin: center;
+
+        width: 100%;
+        height: 0.2rem;
+
+        background-color: #fff;
+        cursor: pointer;
+
+        transition: $base-transition-time;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        top: calc(100% - 0.2rem);
+      }
+
+      &.active {
+        &::before, &::after {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__mobile {
+    position: fixed;
+    left: 100%;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 10rem 1.5rem 2rem;
+
+    background-color: #212121;
+    color: #fff;
+
+    transition: $base-transition-time;
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: auto;
+  }
+
+  &__mobile-menu-link {
+    font: var(--body-L);
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  &__mobile-button {
+    font: var(--text-S);
+  }
+
+  &__mobile-whatsapp {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    gap: 1rem;
+
+    font: var(--text-M);
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 }

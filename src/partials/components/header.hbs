@@ -22,6 +22,23 @@
                 </svg>
             </a>
             <a class="header__button button button--white-border" href="#">Консультация</a>
+            <div class="header__burger"></div>
         </div>
+    </div>
+    <div class="header__mobile">
+        <ul class="header__mobile-menu">
+            {{#each mobileMenu }}
+                <li class="header__mobile-menu-item">
+                    <a class="header__mobile-menu-link" href="#">{{this.text}}</a>
+                </li>
+            {{/each}}
+        </ul>
+        <a class="header__mobile-button button button--white-border" href="#">Консультация</a>
+        <a class="header__mobile-whatsapp" href="#">
+            <svg>
+                <use xlink:href="#whatsapp-icon"></use>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
     </div>
 </header>

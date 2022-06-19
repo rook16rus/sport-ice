@@ -32,6 +32,10 @@
 
     font: var(--body-XS);
 
+    @include breakpoint(mobile) {
+        min-height: 6rem;
+    }
+
     &--red {
         background-color: var(--primary);
         color: #fff;

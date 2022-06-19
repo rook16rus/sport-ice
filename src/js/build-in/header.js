@@ -14,4 +14,12 @@ export default function header() {
     if (!intro) return;
 
     intro.style.setProperty('--header-height', header.clientHeight + 'px');
+
+    const burger = document.querySelector('.header__burger');
+    const mobileNavigation = document.querySelector('.header__mobile')
+
+    burger.addEventListener('click', function (e) {
+        e.currentTarget.classList.toggle('active');
+        mobileNavigation.classList.toggle('active');
+    })
 }

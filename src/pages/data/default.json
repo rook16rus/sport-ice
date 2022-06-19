@@ -10,7 +10,21 @@
     },
     {
       "link": "#",
-      "text": "Kodiaktext"
+      "text": "Kodiak"
+    }
+  ],
+  "mobileMenu": [
+    {
+      "link": "#",
+      "text": "Kodiak"
+    },
+    {
+      "link": "#",
+      "text": "Bumblebee"
+    },
+    {
+      "link": "#",
+      "text": "Bronco"
     }
   ]
 }

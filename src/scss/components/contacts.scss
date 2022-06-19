@@ -112,6 +112,7 @@
     padding: 2.7rem 3.5rem 1.1rem 2.4rem;
 
     background: url("../img/contact-link-back.svg") no-repeat center;
+    background-size: 99%;
 
     font: var(--text-L);
     color: rgba(29, 41, 60, 0.6);
@@ -172,8 +173,14 @@
   }
 
   &__map {
+    height: 100%;
+
     background: grey;
     overflow: hidden;
     border-radius: 2.5rem;
+
+    & > ymaps, & > ymaps > ymaps {
+      height: 100% !important;
+    }
   }
 }
