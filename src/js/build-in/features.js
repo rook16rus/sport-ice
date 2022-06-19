@@ -1,15 +1,19 @@
 export default function features() {
-    const observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.intersectionRatio > (entry.target.hasAttribute('data-intersection-ratio') ? Number(entry.target.getAttribute('data-intersection-ratio')) : 0.5)) {
-                entry.target.classList.add('features__item-title--red');
-            } else if(entry.target.classList.contains('features__item-title--red')) {
-                entry.target.classList.remove('features__item-title--red')
+    const titles = document.querySelectorAll('.features__item-title');
+
+    window.addEventListener('scroll', (e) => {
+        titles.forEach(title => {
+            const positionTop = title.getBoundingClientRect().top;
+            const containerHeight = title.closest('.features__item').clientHeight;
+            const windowHeight = document.documentElement.clientHeight;
+            const startTrigger = windowHeight / 100 * 75;
+            const endTrigger = startTrigger - containerHeight;
+
+            if (positionTop < startTrigger && positionTop > endTrigger) {
+                title.classList.add('features__item-title--red');
+            } else {
+                title.classList.remove('features__item-title--red')
             }
-        });
-    },{threshold: [0, 0.25, 0.5, 0.75, 1]});
-
-    const titles = Array.from(document.querySelectorAll('.features__item-title'));
-
-    titles.forEach(title => observer.observe(title));
+        })
+    });
 }
