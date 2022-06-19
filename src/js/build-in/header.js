@@ -21,5 +21,6 @@ export default function header() {
     burger.addEventListener('click', function (e) {
         e.currentTarget.classList.toggle('active');
         mobileNavigation.classList.toggle('active');
+        header.classList.toggle('active');
     })
 }

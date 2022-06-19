@@ -8,6 +8,11 @@
 
   color: #fff;
 
+  @include breakpoint(mobile) {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 3rem;
+  }
+
   &::after {
     content: '';
 
@@ -20,6 +25,13 @@
     background-color: var(--primary);
 
     border-radius: 0 0 40rem 0;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      height: 32rem;
+
+      border-radius: 0 0 15rem 0;
+    }
   }
 
   &::before {
@@ -38,6 +50,10 @@
     transition: 0.5s;
 
     border-radius: 0 0 40rem 0;
+
+    @include breakpoint(mobile) {
+      border-radius: 0;
+    }
   }
 
   &__inner {
@@ -62,6 +78,13 @@
       font: var(--title-h0);
       font-size: 90rem;
       line-height: 80%;
+
+      @include breakpoint(mobile) {
+        top: 3.4rem;
+        left: -1rem;
+
+        font-size: 23rem;
+      }
     }
   }
 
@@ -69,6 +92,10 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 5.5rem;
+    }
   }
 
   &__title {
@@ -76,6 +103,10 @@
 
     font: var(--body-L);
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      max-width: 16.5rem;
+    }
   }
 
   &__pagination {
@@ -87,6 +118,12 @@
     max-width: 19.6rem;
     margin-left: auto;
     margin-right: 24rem;
+
+    @include breakpoint(mobile) {
+      gap: 0.5rem;
+      max-width: 10.2rem;
+      margin-right: 0;
+    }
 
     span {
       font-family: 'Bebas Neue', sans-serif;
@@ -111,6 +148,10 @@
   &__navigation {
     display: flex;
     gap: 1.4rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
 
     button {
       display: flex;
@@ -145,6 +186,11 @@
   &__body {
     position: relative;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+      flex-grow: 0;
+      margin-bottom: auto;
+    }
   }
 
   &__body-wrapper {
@@ -155,10 +201,16 @@
     display: grid;
     grid-template-columns: 1fr auto;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     gap: 3rem;
     width: 100%;
     height: 100%;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      justify-content: stretch;
+      align-items: stretch;
+    }
   }
 
   &__img-slider-container {
@@ -167,14 +219,43 @@
 
   &__img-slider {
     .swiper-slide {
+      position: relative;
+
       aspect-ratio: 780 / 600;
       cursor: pointer;
+
+      @include breakpoint(mobile) {
+        aspect-ratio: 320 / 210;
+        height: 25rem;
+      }
     }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+
+      @include breakpoint(mobile) {
+        height: auto;
+        max-width: 32rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__img-desc {
+    display: none;
+
+    @include breakpoint(mobile) {
+      position: absolute;
+      top: calc(100% - 6.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: block;
+
+      font: 700 8rem/100% 'Bebas Neue';
+      color: #fff;
     }
   }
 
@@ -184,6 +265,10 @@
     justify-content: center;
 
     font: var(--title-h0);
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
 
     .swiper-wrapper {
       height: auto;
@@ -209,17 +294,32 @@
     align-items: flex-start;
     gap: 2rem;
     max-width: 82.6rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 2.8rem;
+    }
   }
 
   &__button {
     flex-grow: 1;
     max-width: 39rem;
+
+    @include breakpoint(mobile) {
+      order: 1;
+    }
   }
 
   &__brand {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+
+    @include breakpoint(mobile) {
+      align-items: center;
+      gap: 0.8rem;
+    }
   }
 
   &__brand-check {
@@ -228,13 +328,24 @@
     align-items: center;
     width: 4rem;
     height: 4rem;
+    flex-shrink: 0;
     
     border-radius: 50%;
     background-color: #fff;
 
+    @include breakpoint(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
     svg {
       width: 1.4rem;
       height: 1.1rem;
+
+      @include breakpoint(mobile) {
+        width: 1rem;
+        height: 0.8rem;
+      }
     }
   }
 
@@ -243,5 +354,9 @@
 
     font: var(--body-XS);
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      max-width: none ;
+    }
   }
 }

@@ -24,6 +24,22 @@
       border-color: var(--text-title);
       color: var(--text-title);
     }
+
+    .header__burger {
+      &::before, &::after {
+        background-color: var(--text-body);
+      }
+    }
+  }
+  
+  &.active {
+    color: #fff;
+
+    .header__burger {
+      &::before, &::after {
+        background-color: var(--text-body);
+      }
+    }
   }
 
   &__wrapper {
