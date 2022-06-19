@@ -37,7 +37,7 @@
 
     .header__burger {
       &::before, &::after {
-        background-color: var(--text-body);
+        background-color: #fff;
       }
     }
   }
