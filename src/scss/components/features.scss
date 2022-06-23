@@ -1,11 +1,20 @@
 .features {
   padding: 12rem 0;
 
+  @include breakpoint(mobile) {
+    padding: 6rem 0;
+  }
+
   &__title {
     max-width: 114rem;
     margin-bottom: 11.5rem;
 
     color: #B0B1B3;
+
+    @include breakpoint(mobile) {
+      max-width: 34rem;
+      margin-bottom: 3rem;
+    }
 
     span {
       color: #1E1E1E;
@@ -16,6 +25,10 @@
     display: flex;
     flex-direction: column;
     gap: 7rem;
+
+    @include breakpoint(mobile) {
+      gap: 3rem;
+    }
   }
 
   &__item {
@@ -27,6 +40,11 @@
     visibility: hidden;
 
     @include revealed;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__img {
@@ -39,6 +57,13 @@
     background-color: rgba(176, 177, 179, 0.2);
     border-radius: 11rem 1rem 12rem 1rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      aspect-ratio: 330 / 228;
+
+      border-radius: 4rem 1rem 4rem 1rem;
+    }
 
     img {
       width: 100%;
@@ -66,6 +91,10 @@
 
     transition: $base-transition-time;
 
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+    }
+
     &--red {
       color: var(--primary);
     }
@@ -75,6 +104,11 @@
     display: flex;
     align-items: flex-start;
     gap: 4rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__text {
@@ -102,10 +136,19 @@
     background-color: #EEEEF0;
 
     font: var(--body-XL);
+
+    @include breakpoint(mobile) {
+      min-height: 5.4rem;
+      padding: 0 2.8rem;
+    }
   }
 
   &__desc {
     max-width: 9rem;
     font: var(--body-XS);
+
+    @include breakpoint(mobile) {
+      max-width: none;
+    }
   }
 }
