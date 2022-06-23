@@ -7,16 +7,28 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
   &__inner {
     position: relative;
   }
 
   &__slider {
     width: 96.3vw;
+
+    @include breakpoint(mobile) {
+      width: 97.8vw;
+    }
   }
 
   &__title {
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__item {
@@ -35,6 +47,12 @@
     border-radius: 999px;
     overflow: hidden;
 
+    @include breakpoint(mobile) {
+      width: 100%;
+      aspect-ratio: 245 / 120;
+      margin-bottom: 3rem;
+    }
+
     &--video {
       &::before {
         content: '';
@@ -45,6 +63,10 @@
         transform: translateY(-50%);
 
         @extend .video-button;
+
+        @include breakpoint(mobile) {
+          left: 3.2rem;
+        }
       }
     }
 
@@ -63,6 +85,11 @@
 
     font: var(--body-L);
 
+    @include breakpoint(mobile) {
+      max-width: 21rem;
+      margin-bottom: 1rem;
+    }
+
     &::before {
       content: '';
 
@@ -75,6 +102,13 @@
       height: 7rem;
       background: url("../img/quotes-icon.svg") no-repeat center;
       background-size: contain;
+
+      @include breakpoint(mobile) {
+        top: -1.6rem;
+
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 
@@ -84,6 +118,11 @@
 
     opacity: 0.6;
     font: var(--text-L);
+
+    @include breakpoint(mobile) {
+      max-width: 24.4rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__item-author {
@@ -98,11 +137,19 @@
 
     opacity: 0.45;
     font: var(--text-M);
+
+    @include breakpoint(mobile) {
+      max-width: 24.4rem;
+    }
   }
 
   .slider-navigation {
     position: absolute;
     top: 0;
     right: 0;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 }
