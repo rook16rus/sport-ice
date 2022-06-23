@@ -6,11 +6,19 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
   &__inner {
     padding: 6.8rem 10rem 8.8rem;
 
     background-color: var(--bg-grey);
     border-radius: 2.5rem;
+
+    @include breakpoint(mobile) {
+      padding: 3rem 1.5rem;
+    }
   }
 
   &__title {
@@ -19,6 +27,10 @@
     opacity: 0.5;
 
     font: var(--body-S);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__wrapper {
@@ -27,6 +39,11 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 
   &__list-slider {
@@ -38,6 +55,12 @@
     overflow: visible;
 
     counter-reset: modelsSlides;
+
+    @include breakpoint(mobile) {
+      grid-column: 1 / -1;
+      max-width: none;
+      margin-bottom: 0;
+    }
   }
 
   &__list-slide {
@@ -61,6 +84,16 @@
 
     transition: $base-transition-time;
 
+    @include breakpoint(mobile) {
+      justify-content: center;
+      gap: 0;
+      padding: 1.5rem 1rem;
+      width: auto;
+      min-height: 6.8rem;
+
+      border-radius: 0.5rem 0.5rem 2rem 0.5rem;
+    }
+
     &.swiper-slide-thumb-active {
       background-position-y: 240%;
       color: #fff;
@@ -72,6 +105,12 @@
 
         font-size: 20rem;
         color: #F1F1F1;
+
+        @include breakpoint(mobile) {
+          top: 50%;
+
+          font-size: 6.8rem;
+        }
       }
     }
 
@@ -89,6 +128,14 @@
       color: #F1F1F1;
 
       transition: $base-transition-time;
+
+      @include breakpoint(mobile) {
+        left: -0.8rem;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-size: 6.8rem;
+      }
     }
   }
 
@@ -107,6 +154,11 @@
 
     font: var(--text-M);
     opacity: 0.6;
+
+    @include breakpoint(mobile) {
+      max-width: 12rem;
+      font-size: 1rem;
+    }
   }
 
   &__list-img {
@@ -117,6 +169,10 @@
 
     width: 24rem;
     aspect-ratio: 240 / 150;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -141,6 +197,10 @@
     text-transform: uppercase;
     color: #fff;
     text-align: center;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__property-slider {
@@ -148,6 +208,12 @@
 
     width: 100%;
     grid-column: 6 / -1;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      grid-column: 1 / -1;
+    }
   }
 
   &__property-slide {
@@ -166,6 +232,12 @@
     
     border-radius: 1rem;
     background-color: #fff;
+
+    @include breakpoint(mobile) {
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem;
+    }
   }
 
   &__property-check {
@@ -178,15 +250,30 @@
     border-radius: 50%;
     background-color: var(--bg-grey);
 
+    @include breakpoint(mobile) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
     svg {
       width: 1.4rem;
       height: 1.1rem;
+
+      @include breakpoint(mobile) {
+        width: 1rem;
+        height: 0.8rem;
+      }
     }
   }
 
   &__property-check-desc {
     max-width: 14rem;
     font: var(--body-XS);
+
+    @include breakpoint(mobile) {
+      max-width: 7.6rem;
+      font-size: 1.2rem;
+    }
   }
 
   &__property-list {
@@ -196,14 +283,35 @@
 
     width: 100%;
     height: 100%;
+
+    @include breakpoint(mobile) {
+      position: static;
+      order: 1;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem 1.2rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__property-item {
     position: absolute;
 
+    @include breakpoint(mobile) {
+      position: static;
+
+      display: flex;
+      flex-direction: column;
+    }
+
     svg {
       position: absolute;
       z-index: 1;
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
     }
 
     &--view-1 {
@@ -250,6 +358,11 @@
 
     color: var(--text-title);
     text-align: center;
+
+    @include breakpoint(mobile) {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__property-value {
@@ -272,6 +385,15 @@
     width: 57.2rem;
     aspect-ratio: 572 / 358;
 
+    @include breakpoint(mobile) {
+      position: static;
+      transform: none;
+
+      width: 23.5rem;
+      aspect-ratio: 235 / 147;
+      margin: 1.8rem auto 2.6rem;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -290,11 +412,26 @@
     align-items: center;
     gap: 4rem;
     width: 100%;
+
+    @include breakpoint(mobile) {
+      position: static;
+
+      order: 2;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 2rem;
+
+      text-align: center;
+    }
   }
 
   &__button {
     flex-grow: 1;
     max-width: 25rem;
+
+    @include breakpoint(mobile) {
+      max-width: none;
+    }
   }
 
   &__link {

@@ -11,16 +11,21 @@ export default function modelsSlider() {
     /* Инициализация слайдеров */
 
     const listSwiper = new Swiper('.models__list-slider', {
-        direction: "vertical",
-        spaceBetween: 40,
+        spaceBetween: 10,
         slidesPerView: "auto",
-        allowTouchMove: false,
         on: {
             touchEnd: function(s,e) {
                 let range = 5;
                 let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
                     - s.touches.startY
                 if (diff < range || diff > -range) s.allowClick = true;
+            }
+        },
+        breakpoints: {
+            640: {
+                direction: "vertical",
+                spaceBetween: 40,
+                allowTouchMove: false,
             }
         }
     });

@@ -18,6 +18,12 @@
         padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
+
+    &--without-padding {
+        @include breakpoint(mobile) {
+            padding: 0;
+        }
+    }
 }
 
 .button {
