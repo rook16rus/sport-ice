@@ -6,14 +6,30 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
   &__title {
     margin-bottom: 4.4rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.8rem;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(105, 0.5rem);
     gap: 1rem;
+
+    @include breakpoint(mobile) {
+      display: block;
+      aspect-ratio: 315 / 195;
+      box-sizing: border-box;
+
+      transform: none !important;
+    }
   }
 
   &__item {
@@ -26,11 +42,53 @@
     &:nth-child(7n + 1) {
       grid-column: span 70;
       aspect-ratio: 1008 / 600;
+
+      @include breakpoint(mobile) {
+        aspect-ratio: 315 / 195;
+      }
     }
 
     &:nth-child(7n + 2) {
       grid-column: span 35;
       aspect-ratio: auto;
+
+      @include breakpoint(mobile) {
+        aspect-ratio: 315 / 195;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+
+      width: calc(100% - 1.5rem) !important;
+      aspect-ratio: 315 / 195;
+
+      opacity: 0;
+
+      transition: $base-transition-time;
+    }
+
+    &.swiper-slide-active {
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      opacity: 1;
+    }
+
+    &.swiper-slide-next {
+      top: 1.5rem;
+      left: 1.5rem;
+
+      opacity: 1;
+    }
+
+    &.swiper-slide-prev {
+      left: -6rem;
+      top: -6rem;
+      z-index: 2;
     }
   }
 
@@ -58,6 +116,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @include breakpoint(mobile) {
+      position: static;
+
+      display: flex;
+      margin-top: 3.5rem;
     }
   }
 }

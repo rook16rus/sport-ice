@@ -18,6 +18,7 @@ import manufacturerSlider from "./build-in/manufacturerSlider";
 import yandexMap from "./build-in/yandexMap";
 import blocksReveal from "./build-in/blockReveal";
 import features from "./build-in/features";
+import gallerySlider from "./build-in/gallerySlider";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
     yandexMap();
     blocksReveal();
     features();
+    gallerySlider();
 
     // custom
     initSliders();
