@@ -287,6 +287,15 @@
         <section class="map js-block-to-reveal">
             <div class="container">
                 <h2 class="map__title section-title">Сервисные центры во&nbsp;всех уголках страны</h2>
+                <div class="map__cities swiper js-init-slider" data-slides="auto" data-space="44" data-free-mode="true">
+                    <div class="swiper-wrapper">
+                        {{#each mapCircles }}
+                            <div class="map__cities-slide swiper-slide">
+                                {{this.name}}
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
                 <div class="map__wrapper">
                     <div class="map__img">
                         <img class="lazyload" datasrc="img/map.svg" alt="Карта России">
@@ -308,6 +317,7 @@
                                     </div>
                                 {{/each}}
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
