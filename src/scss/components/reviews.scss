@@ -49,6 +49,7 @@
 
     @include breakpoint(mobile) {
       width: 100%;
+      max-width: 24.4rem;
       aspect-ratio: 245 / 120;
       margin-bottom: 3rem;
     }
