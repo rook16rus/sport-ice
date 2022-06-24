@@ -6,11 +6,19 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
   &__title {
     margin-bottom: 3.2rem;
 
     font: var(--body-S);
     opacity: 0.5;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__header {
@@ -19,14 +27,28 @@
     align-items: center;
     max-width: 101rem;
     margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
   }
 
   &__logo {
     color: var(--text-title);
 
+    @include breakpoint(mobile) {
+      order: 1;
+    }
+
     svg {
       width: 19.8rem;
       height: 9.6rem;
+
+      @include breakpoint(mobile) {
+        width: 7.4rem;
+        height: 3.6rem;
+      }
     }
   }
 
@@ -34,6 +56,11 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 8.5rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 
   &__lead {
@@ -43,6 +70,10 @@
 
     font: var(--text-L);
     opacity: 0.8;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
 
     p {
       max-width: 55rem;
@@ -58,6 +89,27 @@
     left: -10.3vw;
 
     width: 120.7rem;
+
+    @include breakpoint(mobile) {
+      left: auto;
+      width: auto;
+    }
+
+    .swiper-wrapper {
+      transform: none !important;
+      aspect-ratio: 1 / 1;
+    }
+
+    .swiper-pagination {
+      display: none;
+
+      @include breakpoint(mobile) {
+        position: static;
+
+        display: flex;
+        margin-top: 2rem;
+      }
+    }
   }
 
   &__slide {
@@ -65,6 +117,41 @@
 
     border-radius: 1rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      position: absolute;
+      left: 3rem;
+      top: 3rem;
+
+      width: calc(100% - 1.5rem) !important;
+      aspect-ratio: 1 / 1;
+
+      opacity: 0;
+
+      transition: $base-transition-time;
+    }
+
+    &.swiper-slide-active {
+      top: 0;
+      left: 0;
+      z-index: 2;
+
+      opacity: 1;
+    }
+
+    &.swiper-slide-next {
+      top: 1.5rem;
+      left: 1.5rem;
+
+      opacity: 1;
+    }
+
+    &.swiper-slide-prev {
+      top: -6rem;
+      left: -6rem;
+
+      opacity: 0;
+    }
 
     img {
       width: 100%;
@@ -78,6 +165,10 @@
     bottom: 3rem;
     right: 74rem;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__stats {
@@ -85,6 +176,13 @@
     flex-direction: column;
     gap: 4rem;
     max-width: 26rem;
+
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 1.2rem;
+      max-width: none;
+    }
   }
 
   &__stat-title {
@@ -92,6 +190,10 @@
     margin-bottom: 1rem;
 
     font: var(--body-XL);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0;
+    }
   }
 
   &__stat-text {

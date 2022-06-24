@@ -9,12 +9,23 @@ export default function manufacturerSlider() {
     const slidesLength = document.querySelectorAll('.manufacturer__slider .swiper-slide').length;
 
     const swiper = new Swiper('.manufacturer__slider', {
-        slidesPerView: 1.3,
-        initialSlide: slidesLength - 1,
-        spaceBetween: 35,
-        navigation: {
-            prevEl: manufacturer.querySelector('.js-prev-slide'),
-            nextEl: manufacturer.querySelector('.js-next-slide')
+        pagination: {
+            el: document.querySelector('.manufacturer__slider .swiper-pagination'),
+            clickable: true,
+            bulletElement: 'button',
+            bulletClass: 'slider-bullet',
+            bulletActiveClass: 'slider-bullet--active',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1.3,
+                initialSlide: slidesLength - 1,
+                spaceBetween: 35,
+                navigation: {
+                    prevEl: manufacturer.querySelector('.js-prev-slide'),
+                    nextEl: manufacturer.querySelector('.js-next-slide')
+                },
+            }
         }
     })
 
