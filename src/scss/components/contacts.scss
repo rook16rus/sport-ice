@@ -6,25 +6,54 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 4rem;
+  }
+
   &__title {
     margin-bottom: 7.5rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 
   &__consultant {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
     padding: 2rem;
     margin-bottom: 2rem;
 
     border-radius: 1rem;
     background-color: var(--bg-grey);
+
+    @include breakpoint(mobile) {
+      padding: 2rem;
+      margin-bottom: 1rem;
+
+      border-radius: 2rem;
+    }
+  }
+
+  &__consultant-wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
   }
 
   &__consultant-img {
@@ -33,6 +62,11 @@
 
     border-radius: 50%;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      width: 8.5rem;
+      flex-shrink: 0;
+    }
 
     img {
       width: 100%;
@@ -43,6 +77,49 @@
 
   &__consultant-content {
     margin-top: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-top: 0;
+    }
+  }
+
+  &__consultant-live-mobile {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+
+      border-radius: 0.6rem;
+      background-color: #FCFDFF;
+
+      font: 700 1.6rem/100% 'Bebas Neue';
+
+      &::before {
+        content: '';
+
+        width: 0.5rem;
+        height: 0.5rem;
+
+        border-radius: 50%;
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  &__consultant-phone {
+    display: none;
+    margin-bottom: 3rem;
+
+    font: 700 4rem/100% 'Bebas Neue';
+    color: var(--primary);
+
+    @include breakpoint(mobile) {
+      display: block;
+    }
   }
 
   &__consultant-content-wrapper {
@@ -50,6 +127,10 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0;
+    }
   }
 
   &__consultant-title {
@@ -76,6 +157,10 @@
 
     font: var(--body-XS);
 
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
     &::before {
       content: '';
 
@@ -94,6 +179,49 @@
 
     font: var(--body-XS);
     color: var(--primary);
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__consultant-call {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
+
+    img {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__consultant-email-block {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-top: 3rem;
+
+    border-top: 1px solid rgba(0, 0, 0, .1);
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
+  }
+
+  &__consultant-email-link {
+    font: 700 1.8rem/100% 'Bebas Neue';
+    color: var(--primary);
+  }
+
+  &__consultant-email-address {
+    font: 400 1.4rem/100% 'TT Commons';
+    opacity: 0.45;
   }
 
   &__info {
@@ -101,6 +229,15 @@
     align-items: center;
     gap: 3rem;
     margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 0;
+
+      border: 1px solid var(--text-title);
+      border-radius: 1rem;
+    }
   }
 
   &__info-link {
@@ -117,13 +254,29 @@
     font: var(--text-L);
     color: rgba(29, 41, 60, 0.6);
 
+    @include breakpoint(mobile) {
+      max-width: none;
+      padding: 1.2rem 2rem;
+
+      background: none;
+    }
+
     span {
       max-width: 25rem;
+
+      @include breakpoint(mobile) {
+        max-width: 16.5rem;
+      }
     }
 
     svg {
       width: 5.5rem;
       height: 5.5rem;
+
+      @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+      }
     }
   }
 
@@ -133,11 +286,19 @@
 
     font: var(--text-L);
     opacity: 0.6;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__subtitle {
     margin-bottom: 1.5rem;
     font: var(--body-S);
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__form {
@@ -146,6 +307,10 @@
     gap: 1rem;
     max-width: 49rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__button {
@@ -167,6 +332,10 @@
     font: var(--text-M);
     opacity: 0.45;
 
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
     &::before {
       content: '*';
     }
@@ -178,6 +347,11 @@
     background: grey;
     overflow: hidden;
     border-radius: 2.5rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      aspect-ratio: 330 / 200;
+    }
 
     & > ymaps, & > ymaps > ymaps {
       height: 100% !important;
