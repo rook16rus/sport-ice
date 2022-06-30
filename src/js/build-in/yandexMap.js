@@ -2,7 +2,11 @@ export default function yandexMap() {
     ymaps.ready(init);
 
     function init() {
-        const map = new ymaps.Map('contact-map', {
+        let map = document.querySelector('#contact-map');
+
+        if (!map) return;
+
+        map = new ymaps.Map('contact-map', {
             center: [55.7553728204915,49.225575677909866],
             zoom: 17
         })

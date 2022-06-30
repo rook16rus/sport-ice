@@ -26,5 +26,30 @@
       "link": "#",
       "text": "Bronco"
     }
+  ],
+  "footerMenu": [
+    {
+      "text": "kodiak"
+    },
+    {
+      "text": "Bumblebee"
+    },
+    {
+      "text": "bronco"
+    }
+  ],
+  "socials": [
+    {
+      "img": "wp"
+    },
+    {
+      "img": "tg"
+    },
+    {
+      "img": "vk"
+    },
+    {
+      "img": "youtube"
+    }
   ]
 }

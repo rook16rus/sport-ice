@@ -1,3 +1,149 @@
 .model-card {
+  padding-top: 21rem;
+  padding-bottom: 6rem;
 
+  &__wrapper {
+    max-width: 146.5rem;
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    margin-bottom: 6rem;
+  }
+
+  &__img {
+    position: relative;
+    min-width: 0;
+  }
+
+  &__img-slider {
+    position: relative;
+  }
+
+  &__img-slide {
+    width: 77.5rem;
+    aspect-ratio: 775 / 538;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__sub-img-slider {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+  }
+
+  &__sub-img-slide {
+    width: 6.2rem;
+    aspect-ratio: 1 / 1;
+
+    border: 1px solid white;
+    border-radius: 1rem;
+    overflow: hidden;
+    opacity: 0.5;
+    cursor: pointer;
+
+    transition: $base-transition-time;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .slider-navigation {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 1;
+  }
+
+  &__title {
+    position: relative;
+
+    display: inline-block;
+
+    font: var(--title-h0);
+  }
+
+  &__title-tag {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 1.6rem);
+
+    display: block;
+    padding: 0.7rem 0.8rem 0.6rem;
+
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+
+    font: var(--text-XS);
+    line-height: 100%;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  &__lead {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 4rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+
+    font: var(--text-M);
+
+    img {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4rem;
+
+    font: var(--text-L);
+    opacity: 0.8;
+  }
+
+  &__button {
+    padding: 0 6rem;
+  }
+
+  &__features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  &__feature {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    font: 600 2rem/110% var(--secondary-ff);
+    color: var(--text-body);
+    opacity: 0.8;
+  }
+
+  &__feature-icon {
+    width: 6rem;
+    height: 6rem;
+  }
 }

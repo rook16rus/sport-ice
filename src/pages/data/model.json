@@ -1,0 +1,31 @@
+{
+  "modelImages": [
+    {
+      "img": "img/model-1.jpg"
+    },
+    {
+      "img": "img/gallery-1.jpg"
+    },
+    {
+      "img": "img/gallery-3.jpg"
+    }
+  ],
+  "features": [
+    {
+      "img": "img/model-feature-1.svg",
+      "text": "Выгодная стоимость среди аналогов"
+    },
+    {
+      "img": "img/model-feature-2.svg",
+      "text": "Полный привод и система торможения"
+    },
+    {
+      "img": "img/model-feature-3.svg",
+      "text": "Литий-ионная батарея "
+    },
+    {
+      "img": "img/model-feature-4.svg",
+      "text": "Комфортное место для оператора"
+    }
+  ]
+}

@@ -13,7 +13,7 @@
                                     </div>
                                 {{/each}}
                             </div>
-                            {{> slider-navigation }}
+                            {{> slider-navigation buttonMod='slider-navigation__button--bordered-dark slider-navigation__button--very-small' }}
                         </div>
                         <div class="model-card__sub-img-slider swiper">
                             <div class="swiper-wrapper">
@@ -32,6 +32,7 @@
                         </h1>
                         <span class="model-card__lead">
                             <img src="img/cup-icon.svg" alt="Иконка кубка">
+                            <span>Для достижения высоких целей</span>
                         </span>
                         <div class="model-card__desc">
                             <p>
@@ -46,7 +47,7 @@
                     {{#each features }}
                         <li class="model-card__feature">
                             <img class="model-card__feature-icon" src="{{this.img}}" alt="">
-                            <p class="model-card__feature-text">{{this.text}}</p>
+                            <p class="model-card__feature-text">{{{this.text}}}</p>
                         </li>
                     {{/each}}
                 </ul>
