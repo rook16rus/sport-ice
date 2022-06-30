@@ -6,6 +6,8 @@ import anchorLinks from './build-in/anchorLinks';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import validation from "./build-in/validation";
+import masks from "./build-in/masks";
 import editableTextContainer from './custom/editableTextContainer';
 import initSliders from "./custom/initSliders";
 import verticalScrollSlider from "./build-in/verticalScrollSlider";
@@ -19,6 +21,7 @@ import yandexMap from "./build-in/yandexMap";
 import blocksReveal from "./build-in/blockReveal";
 import features from "./build-in/features";
 import gallerySlider from "./build-in/gallerySlider";
+import fancybox from "./build-in/fancybox";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -36,6 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     blocksReveal();
     features();
     gallerySlider();
+    validation();
+    masks();
+    fancybox();
 
     // custom
     initSliders();

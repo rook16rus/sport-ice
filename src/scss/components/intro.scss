@@ -194,10 +194,6 @@
   }
 
   &__body-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-
     display: grid;
     grid-template-columns: 1fr auto;
     justify-content: flex-end;

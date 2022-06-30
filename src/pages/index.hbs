@@ -66,7 +66,7 @@
         <section class="features">
             <div class="container">
                 <h2 class="features__title section-title">
-                    <span>Американское качество</span> &nbsp;по доступной цене с доставкой по все россии
+                    <b>Американское качество</b> &nbsp;по доступной цене с доставкой по все россии
                 </h2>
                 <ul class="features__list">
                     {{#each features }}
@@ -204,7 +204,7 @@
                                 {{/each}}
                             </div>
                             <div class="models__buttons">
-                                <button class="models__button button button--red">Заказать</button>
+                                <a class="models__button button button--red" href="#">Заказать</a>
                                 <a class="models__link" href="#">Подробнее</a>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                         <div class="reviews__inner_items swiper-wrapper">
                             {{#each reviews }}
                                 <blockquote class="reviews__item swiper-slide">
-                                    <a class="reviews__item-graphic{{#if video }} reviews__item-graphic--video{{/if}}">
+                                    <a class="reviews__item-graphic{{#if video }} reviews__item-graphic--video{{/if}}" data-fancybox data-src="{{this.src}}">
                                         <img class="lazyload" data-src="{{this.img}}" alt="Фото отзыва">
                                     </a>
                                     <h3 class="reviews__item-title">{{this.title}}</h3>
@@ -238,13 +238,13 @@
         </section>
         <section class="order js-block-to-reveal">
             <div class="wide-container">
-                <div class="order__wrapper">
+                <div class="order__wrapper" style="background: url('img/order-bg.jpg') no-repeat center;">
                     <div class="order__img-wrapper">
                         <img class="order__img lazyload" data-src="img/person.png" alt="Персона">
                     </div>
                     <div class="order__content">
                         <h2 class="order__title">получите консультацию нашего эксперта</h2>
-                        <form class="order__form" action="#" data-need-validation novalidate>
+                        <form class="order__form" action="" data-need-validation="true" novalidate>
                             <div class="order__input-wrapper">
                                 <input class="order__input input input--light" type="text" name="name" required placeholder="Ваше имя">
                             </div>
@@ -274,7 +274,7 @@
                     <ul class="gallery__list swiper-wrapper">
                         {{#each gallery }}
                             <li class="gallery__item swiper-slide">
-                                <a class="gallery__link{{#if video }} gallery__link--video{{/if}}" href="#">
+                                <a class="gallery__link{{#if video }} gallery__link--video{{/if}}" data-fancybox="gallery" data-src="{{this.src}}" href="#">
                                     <img class="lazyload" data-src="{{this.img}}" alt="Фото">
                                 </a>
                             </li>
@@ -325,9 +325,7 @@
                     {{#each mapFeatures }}
                         <li class="map__feature">
                             <div class="map__feature-icon">
-                                <svg>
-                                    <use xlink:href="#{{this.img}}"></use>
-                                </svg>
+                                <img class="lazyload" data-src="{{this.img}}" alt="Иконка преимущества">
                             </div>
                             <div class="map__feature-content">
                                 <h3 class="map__feature-title">{{this.title}}</h3>
@@ -343,9 +341,7 @@
                 <h2 class="manufacturer__title">Производитель</h2>
                 <div class="manufacturer__header">
                     <a class="manufacturer__logo" href="#">
-                        <svg>
-                            <use xlink:href="#logo"></use>
-                        </svg>
+                        <img class="lazyload" data-src="img/icons/logo.svg" alt="Логотип">
                     </a>
                     <h3 class="manufacturer__subtitle section-title">sportice поволжье</h3>
                 </div>
@@ -431,7 +427,7 @@
                         <h3 class="contacts__subtitle">Закажите звонок</h3>
                         <form class="contacts__form" action="#">
                             <div class="contacts__input-wrapper">
-                                <input class="contacts__input input input--dark js-phone-input" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
+                                <input class="contacts__input input input--dark js-phone-inpuИконка преимуществаt" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
                             </div>
                             <button class="contacts__button button button--red" type="submit">
                                 <span>Отправить</span>

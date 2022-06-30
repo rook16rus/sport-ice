@@ -182,45 +182,55 @@
       "title": "Отличная модель для российских условий",
       "text": "Менеджер компании погрузился в суть вопроса и подобрал нам идеальную конфигурацию! Сотрудники компании высоко-квалифицированны и полностью оправдывают ожидания.",
       "author": "Алишер Нуриев",
-      "position": "Директор «Слобода арена», пос. Рыбная слобода"
+      "position": "Директор «Слобода арена», пос. Рыбная слобода",
+      "src": "https://youtu.be/QMCAGHqIKK4"
     },
     {
       "img": "img/review-2.jpg",
       "title": "Идеальна для заливки арены хоккея с мячом",
       "text": "Менеджер компании погрузился и подобрал лучшую конфигурацию, которая актуальна не толкьо в зимний период, но и летом. Огромная благодарность за столь уникальную модель!",
       "author": "Олег Петров",
-      "position": "Директор «Арена спорта»,\nг. Казань"
+      "position": "Директор «Арена спорта»,\nг. Казань",
+      "src": "img/review-2.jpg"
     },
     {
       "img": "img/review-3.jpg",
       "title": "Очень вместительная и производительная модель!",
       "text": "Подбирали модель для заливки на открытых катках, к нашему удивлению эта машина способна обрабатывать по 30 катков в день. Думаю это не предел, будем бить рекорды!",
       "author": "Давид Нургалиев",
-      "position": "Директор «Ледовый дворец», г. Набережные Челны"
+      "position": "Директор «Ледовый дворец», г. Набережные Челны",
+      "src": "img/review-3.jpg"
     }
   ],
   "gallery": [
     {
       "img": "img/gallery-1.jpg",
-      "video": true
+      "video": true,
+      "src": "https://youtu.be/QMCAGHqIKK4"
     },
     {
-      "img": "img/gallery-2.jpg"
+      "img": "img/gallery-2.jpg",
+      "src": "img/gallery-2.jpg"
     },
     {
-      "img": "img/gallery-3.jpg"
+      "img": "img/gallery-3.jpg",
+      "src": "img/gallery-3.jpg"
     },
     {
-      "img": "img/gallery-4.jpg"
+      "img": "img/gallery-4.jpg",
+      "src": "img/gallery-4.jpg"
     },
     {
-      "img": "img/gallery-5.jpg"
+      "img": "img/gallery-5.jpg",
+      "src": "img/gallery-5.jpg"
     },
     {
-      "img": "img/gallery-6.jpg"
+      "img": "img/gallery-6.jpg",
+      "src": "img/gallery-6.jpg"
     },
     {
-      "img": "img/gallery-7.jpg"
+      "img": "img/gallery-7.jpg",
+      "src": "img/gallery-7.jpg"
     }
   ],
   "mapCircles": [
@@ -305,17 +315,17 @@
   ],
   "mapFeatures": [
     {
-      "img": "map-feature-1",
+      "img": "img/map-feature-1.svg",
       "title": "Выезд на место",
       "text": "наш специалист выезжает и проводит обслуживание"
     },
     {
-      "img": "map-feature-2",
+      "img": "img/map-feature-2.svg",
       "title": "до 2 часов",
       "text": "время обнаружения проблемы"
     },
     {
-      "img": "map-feature-3",
+      "img": "img/map-feature-3.svg",
       "title": "2 года",
       "text": "гарантии на сервисное обслуживание"
     }

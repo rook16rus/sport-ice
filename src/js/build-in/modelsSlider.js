@@ -48,12 +48,10 @@ export default function modelsSlider() {
 
     /* Анимация пунктирных линий активного слайда */
 
-    const tl = gsap.timeline();
-
     const observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
             if (entry.intersectionRatio > (entry.target.hasAttribute('data-intersection-ratio') ? Number(entry.target.getAttribute('data-intersection-ratio')) : 0.5)) {
-                lineAnimationInit(tl, models, 0.2);
+                lineAnimationInit( models, 0.2);
             }
         });
     },{threshold: [0, 0.25, 0.5, 0.75, 1]});
@@ -61,11 +59,12 @@ export default function modelsSlider() {
     observer.observe(models);
 
     propertySwiper.on('slideChangeTransitionStart', () => {
-        lineAnimationInit(tl, models, 0.3)
+        lineAnimationInit( models, 0.3);
     });
 }
 
-function lineAnimationInit(tl, section, delay = 0) {
+function lineAnimationInit( section, delay = 0) {
+    const tl = gsap.timeline();
     let activeSlide = section.querySelector('.models__property-slider .swiper-slide-active');
     let masks = activeSlide.querySelectorAll('.mask');
     let circles = activeSlide.querySelectorAll('.circle');

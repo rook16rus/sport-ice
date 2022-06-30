@@ -1,0 +1,57 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="model-card">
+            <div class="wide-container">
+                <div class="model-card__wrapper">
+                    <div class="model-card__img">
+                        <div class="model-card__img-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each modelImages }}
+                                    <div class="model-card__img-slide swiper-slide">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото машины">
+                                    </div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation }}
+                        </div>
+                        <div class="model-card__sub-img-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each modelImages }}
+                                    <div class="model-card__sub-img-slide swiper-slide">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото машины">
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-card__content">
+                        <h1 class="model-card__title">
+                            <span>Kodiak</span>
+                            <span class="model-card__title-tag">хит продаж</span>
+                        </h1>
+                        <span class="model-card__lead">
+                            <img src="img/cup-icon.svg" alt="Иконка кубка">
+                        </span>
+                        <div class="model-card__desc">
+                            <p>
+                                Машина для шлифовки льда Sport Ice Kodiak предназначена для использования на всех
+                                больших (НХЛ или олимпийских) ледовых покрытиях.
+                            </p>
+                        </div>
+                        <button class="model-card__button button button--red">Заказать</button>
+                    </div>
+                </div>
+                <ul class="model-card__features">
+                    {{#each features }}
+                        <li class="model-card__feature">
+                            <img class="model-card__feature-icon" src="{{this.img}}" alt="">
+                            <p class="model-card__feature-text">{{this.text}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

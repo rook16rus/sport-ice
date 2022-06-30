@@ -72,6 +72,7 @@ function initLineAnimation(tl, slider) {
     tl.to(progress, {
         width: '100%',
         duration: 10,
+        ease: 'none',
         onComplete: () => {
             if (slider.activeIndex === slider.slides.length - 1) {
                 slider.slideTo(0)

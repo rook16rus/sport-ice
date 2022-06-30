@@ -24,6 +24,9 @@ module.exports = {
   optimization: {
     usedExports: true,
   },
+  externals: {
+    jquery: 'jQuery'
+  },
   mode: 'development',
   plugins: [
     new MomentLocalesPlugin({

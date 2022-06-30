@@ -26,6 +26,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@fancyapps/ui": "^4.0.27",
     "body-scroll-lock": "^3.1.5",
     "bootstrap-datepicker": "^1.9.0",
     "choices.js": "^9.1.0",
@@ -38,6 +39,7 @@
     "imagesloaded": "^4.1.4",
     "imask": "^6.4.2",
     "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
     "lazysizes": "^5.3.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",

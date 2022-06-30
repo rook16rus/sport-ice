@@ -1,14 +1,7 @@
-/* ######
-
-Как пользоваться:
-
-Пример:
-
-###### */
-
 import 'parsleyjs';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import $ from "jquery";
 
 dayjs.extend(customParseFormat);
 
@@ -88,6 +81,7 @@ Parsley.addMessages('ru', {
 Parsley.setLocale('ru');
 
 export default function validation() {
+    require('parsleyjs');
     const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
 
     formsToValidate.forEach((form) => {
