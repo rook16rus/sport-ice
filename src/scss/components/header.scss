@@ -9,6 +9,15 @@
   color: #fff;
 
   transition: 0.2s;
+  
+  &--color-dark {
+    color: var(--text-title);
+
+    .header__button {
+      border-color: var(--text-title);
+      color: var(--text-title);
+    }
+  }
 
   @include breakpoint(mobile) {
     padding: 2rem 0;
@@ -93,6 +102,10 @@
 
   &__menu-link {
     font: var(--text-S);
+    
+    &.active {
+      color: var(--primary);
+    }
   }
 
   &__phone {

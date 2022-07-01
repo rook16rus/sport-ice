@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header{{#if headerMod}} {{headerMod}}{{/if}}">
     <div class="container">
         <div class="header__wrapper">
             <a class="header__logo" href="#">
@@ -10,7 +10,7 @@
                 <ul class="header__menu">
                     {{#each menu }}
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="{{this.href}}">{{this.text}}</a>
+                            <a class="header__menu-link{{#if active}} active{{/if}}" href="{{this.href}}">{{this.text}}</a>
                         </li>
                     {{/each}}
                 </ul>

@@ -1,4 +1,20 @@
 {
+  "headerMod": "header--color-dark",
+  "menu": [
+    {
+      "link": "#",
+      "text": "Bumblebee"
+    },
+    {
+      "link": "#",
+      "text": "Bronco"
+    },
+    {
+      "link": "#",
+      "text": "Kodiak",
+      "active": true
+    }
+  ],
   "modelImages": [
     {
       "img": "img/model-1.jpg"
@@ -21,11 +37,11 @@
     },
     {
       "img": "img/model-feature-3.svg",
-      "text": "Литий-ионная батарея "
+      "text": "Литий-ионная<br>батарея "
     },
     {
       "img": "img/model-feature-4.svg",
-      "text": "Комфортное место для оператора"
+      "text": "Комфортное место<br>для оператора"
     }
   ]
 }
