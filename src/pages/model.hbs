@@ -53,6 +53,45 @@
                 </ul>
             </div>
         </section>
+        <section class="model-info">
+            <div class="container">
+                <div class="model-info__tabs">
+                    <a class="model-info__tab" href="#">Габариты и характеристики</a>
+                    <a class="model-info__tab" href="#">Комплектация</a>
+                </div>
+                <div class="model-info__tabs-contents">
+                    <div class="model-info__tabs-content">
+                        <div class="model-info__img-wrapper">
+                            <div class="model-info__img-block">
+                                <img src="img/model-info-1.svg" alt="Фото чертежа модели">
+                                <ul class="model-info__img-properties">
+                                    {{#each properties1 }}
+                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}}" style="left: {{this.left}}; top: {{this.top}}">
+                                            <span class="model-info__img-property-title">{{this.title}}</span>
+                                            <span class="model-info__img-property-text">{{this.text}}</span>
+                                            {{this.svg}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <div class="model-info__img-block">
+                                <img src="img/model-info-2.svg" alt="Фото чертежа модели">
+                                <ul class="model-info__img-properties">
+                                    {{#each properties2 }}
+                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}}" style="left: {{this.left}}; top: {{this.top}}">
+                                            <span class="model-info__img-property-title">{{this.title}}</span>
+                                            <span class="model-info__img-property-text">{{this.text}}</span>
+                                            {{this.svg}}
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model-info__tabs-content"></div>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}
