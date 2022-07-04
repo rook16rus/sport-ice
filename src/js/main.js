@@ -23,6 +23,7 @@ import features from "./build-in/features";
 import gallerySlider from "./build-in/gallerySlider";
 import fancybox from "./build-in/fancybox";
 import modelCard from "./build-in/modelCard";
+import modelTabs from "./build-in/modelTabs";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     masks();
     fancybox();
     modelCard();
+    modelTabs();
 
     // custom
     initSliders();
