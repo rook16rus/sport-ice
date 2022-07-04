@@ -47,20 +47,55 @@
   "properties1": [
     {
       "title": "850 л",
-      "text": "объем бункера для воды"
+      "text": "объем бункера для воды",
+      "mod": "model-info__img-property--view-1",
+      "svg": "<svg width=\"289\" height=\"71\" viewBox=\"0 0 289 71\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M0 1L277 1V47\" stroke=\"#AE261E\"/>\n<circle cx=\"277\" cy=\"59\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"277\" cy=\"59\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "top": "10%",
+      "left": "6.4%"
     },
     {
       "title": "3.11 м3",
-      "text": "объем бункера для снега"
+      "text": "объем бункера для снега",
+      "mod": "model-info__img-property--view-2",
+      "svg": "<svg width=\"263\" height=\"45\" viewBox=\"0 0 263 45\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M263 1L12 1L12 21\" stroke=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"33\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"33\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "top": "10%",
+      "left": "107%"
     },
     {
       "title": "7.2 кВт",
-      "text": "аккумулятор 48 V"
+      "text": "аккумулятор 48 V",
+      "mod": "model-info__img-property--view-3",
+      "svg": "<svg width=\"322\" height=\"42\" viewBox=\"0 0 322 42\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M1 41.5L1 12L297.5 12\" stroke=\"#AE261E\"/>\n<circle cx=\"309.5\" cy=\"12\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"309.5\" cy=\"12\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "top": "70%",
+      "left": "4.9%"
     },
     {
       "title": "1860 м2 ",
       "text": "площадь заливки",
-      "red": true
+      "mod": "model-info__img-property--view-4",
+      "red": true,
+      "svg": "<svg width=\"24\" height=\"58\" viewBox=\"0 0 24 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M12 58L12 24\" stroke=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"12\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "top": "113%",
+      "left": "50%"
+    }
+  ],
+  "properties2": [
+    {
+      "title": "160 Л",
+      "text": "объём бака для промывочной <br>воды",
+      "mod": "model-info__img-property--view-5",
+      "svg": "<svg width=\"176\" height=\"32\" viewBox=\"0 0 176 32\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M1 31.5L1 12L152 12\" stroke=\"#AE261E\"/>\n<circle cx=\"164\" cy=\"12\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"164\" cy=\"12\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "left": "5%",
+      "top": "70%"
+    },
+    {
+      "title": "220 см ",
+      "text": "ширина лезвия ножа",
+      "mod": "model-info__img-property--view-6",
+      "red": true,
+      "svg": "<svg width=\"24\" height=\"78\" viewBox=\"0 0 24 78\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path opacity=\"0.2\" d=\"M12 78L12 24\" stroke=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"12\" r=\"6\" fill=\"#AE261E\"/>\n<circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#AE261E\" stroke-opacity=\"0.15\" stroke-width=\"6\"/>\n</svg>\n",
+      "left": "60%",
+      "top": "113%"
     }
   ]
 }

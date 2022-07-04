@@ -8,7 +8,7 @@
   /* Layout containers */
   --max-container-width: 135.5rem;
   --max-wide-container-width: 155.5rem;
-  --content-padding: 6rem;
+  --content-padding: 60px;
 
   /* Font Family */
   --main-ff: 'Bebas Neue', sans-serif;
@@ -47,7 +47,7 @@
 @include breakpoint(mobile) {
   :root {
     /* Layout containers */
-    --content-padding: 1.5rem;
+    --content-padding: 15px;
 
     /* Body */
     --text-L: var(--medium) 1.6rem/120% var(--secondary-ff);

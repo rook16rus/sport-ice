@@ -43,6 +43,8 @@
                         <button class="model-card__button button button--red">Заказать</button>
                     </div>
                 </div>
+            </div>
+            <div class="container">
                 <ul class="model-card__features">
                     {{#each features }}
                         <li class="model-card__feature">
@@ -66,10 +68,10 @@
                                 <img src="img/model-info-1.svg" alt="Фото чертежа модели">
                                 <ul class="model-info__img-properties">
                                     {{#each properties1 }}
-                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}}" style="left: {{this.left}}; top: {{this.top}}">
+                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}} {{this.mod}}" style="left: {{this.left}}; top: {{this.top}}">
                                             <span class="model-info__img-property-title">{{this.title}}</span>
-                                            <span class="model-info__img-property-text">{{this.text}}</span>
-                                            {{this.svg}}
+                                            <span class="model-info__img-property-text">{{{this.text}}}</span>
+                                            {{{this.svg}}}
                                         </li>
                                     {{/each}}
                                 </ul>
@@ -78,17 +80,19 @@
                                 <img src="img/model-info-2.svg" alt="Фото чертежа модели">
                                 <ul class="model-info__img-properties">
                                     {{#each properties2 }}
-                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}}" style="left: {{this.left}}; top: {{this.top}}">
+                                        <li class="model-info__img-property{{#if red}} model-info__img-property--red{{/if}} {{this.mod}}" style="left: {{this.left}}; top: {{this.top}}">
                                             <span class="model-info__img-property-title">{{this.title}}</span>
-                                            <span class="model-info__img-property-text">{{this.text}}</span>
-                                            {{this.svg}}
+                                            <span class="model-info__img-property-text">{{{this.text}}}</span>
+                                            {{{this.svg}}}
                                         </li>
                                     {{/each}}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="model-info__tabs-content"></div>
+                    <div class="model-info__tabs-content">
+
+                    </div>
                 </div>
             </div>
         </section>
