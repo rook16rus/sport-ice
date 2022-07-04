@@ -157,6 +157,37 @@
                 </div>
             </div>
         </section>
+        <section class="model-video">
+            <div class="wide-container">
+                <div class="model-video__wrapper" style="background-color: var(--primary)">
+                    <a class="model-video__video" data-fancybox data-src="https://youtu.be/Chmycxs_164" href="#">
+                        <span class="model-video__video-time">12:10</span>
+                        <img class="lazyload" data-src="img/model-video.jpg" alt="Превью видео">
+                        <div class="model-video__play">
+                            <button class="model-video__play-button video-button"></button>
+                            <span>Посмотрите, как это работает</span>
+                        </div>
+                    </a>
+                    <div class="model-video__content">
+                        <ul class="model-video__properties">
+                            {{#each videoProperties }}
+                                <li class="model-video__properties-item">
+                                    <span class="model-video__property">{{{this.property}}}</span>
+                                    <span class="model-video__value">{{this.value}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <div class="model-video__text">
+                            <p>
+                                Машина не предназначена для использования в качестве снегоуборочной машины. Если вы
+                                используете машину на открытом катке, вы должны сначала убрать весь свежий снег,
+                                скопившийся на поверхности льда, перед тем как использовать шлифовальный станок.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}
