@@ -1,0 +1,32 @@
+.model-gallery {
+  position: relative;
+
+  padding-bottom: 12rem;
+
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+
+  &__slide {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    img {
+      aspect-ratio: 386 / 300;
+
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+  }
+
+  .slider-navigation {
+    position: absolute;
+    right: 11rem;
+    bottom: calc(100% + 6.5rem);
+  }
+}
