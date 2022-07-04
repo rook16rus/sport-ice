@@ -150,3 +150,16 @@
     text-transform: uppercase;
     @extend %fs-h1;
 }
+
+.text-container {
+    h2 {
+        margin-bottom: 4rem;
+
+        font: var(--title-h2);
+        color: var(--text-title);
+    }
+
+    p {
+        font: var(--text-L);
+    }
+}

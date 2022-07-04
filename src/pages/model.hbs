@@ -188,6 +188,50 @@
                 </div>
             </div>
         </section>
+        <section class="model-text">
+            <div class="container text-container">
+                <h2>Пример текстового блока</h2>
+                <p>
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                </p>
+                <br>
+                <p>
+                    Эта парадигматическая страна, в которой предложения залетают прямо в рот. Даже всемогущая пунктуация
+                    не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая
+                    строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики.
+                </p>
+            </div>
+        </section>
+        <section class="model-features">
+            <div class="container">
+                <div class="model-features__wrapper">
+                    <ul class="model-features__list">
+                        {{#each modelFeatures }}
+                            <li class="model-features__item">
+                                <div class="model-features__icon">
+                                    <img class="lazyload" data-src="{{this.icon}}" alt="Инонка преимущества">
+                                </div>
+                                <h3 class="model-features__title">{{this.title}}</h3>
+                                <p class="model-features__text">{{this.text}}</p>
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <div class="model-features__slider">
+                        <div class="swiper js-init-slider">
+                            <div class="swiper-wrapper">
+                                {{#each modelFeatures }}
+                                    <div class="model-features__slide swiper-slide">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото премущества">
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}K
