@@ -229,7 +229,7 @@
     align-items: flex-start;
     gap: 2rem;
     padding: 2rem 1rem 2rem 1.8rem;
-    
+
     border-radius: 1rem;
     background-color: #fff;
 
@@ -309,7 +309,7 @@
       position: absolute;
       z-index: 1;
 
-      @include breakpoint(mobile) {
+      @include breakpoint(desktop) {
         display: none;
       }
     }
@@ -323,7 +323,7 @@
 
     &--view-2 {
       svg {
-        left: -17.4rem;
+        right: 11rem;
         top: 5.5rem;
       }
     }
@@ -331,14 +331,14 @@
     &--view-3 {
       svg {
         left: 50%;
-        bottom: -12.4rem;
+        top: 10.4rem;
       }
     }
 
     &--view-4 {
       svg {
         left: -6.9rem;
-        top: -16rem;
+        bottom: 6rem;
       }
     }
 
