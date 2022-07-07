@@ -51,8 +51,8 @@
         {
           "value": "3,11 м³",
           "desc": "ёмкость для&nbsp;снега",
-          "left": "34.8%",
-          "top": "0",
+          "left": "32.8%",
+          "top": "3%",
           "mod": "models__property-item--view-1",
           "view1": "true",
           "id": 1
@@ -61,7 +61,7 @@
           "value": "850&nbsp;л",
           "desc": "ёмкость для&nbsp;воды",
           "left": "87.3%",
-          "top": "0",
+          "top": "3%",
           "mod": "models__property-item--view-2",
           "view2": "true",
           "id": 2

@@ -312,7 +312,7 @@
       position: absolute;
       z-index: 1;
 
-      @include breakpoint(desktop) {
+      @include breakpoint(mobile) {
         display: none;
       }
     }
