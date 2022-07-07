@@ -1,6 +1,14 @@
 .model-info {
   padding: 6rem 0 12rem;
 
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(3rem);
+  transition: 0.5s;
+
+  @include revealed;
+
   &__tabs {
     display: flex;
     gap: 5.6rem;

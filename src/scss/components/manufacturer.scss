@@ -4,6 +4,9 @@
   opacity: 0;
   visibility: hidden;
 
+  transform: translateY(3rem);
+  transition: 0.5s;
+
   @include revealed;
 
   @include breakpoint(mobile) {

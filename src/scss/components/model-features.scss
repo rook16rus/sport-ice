@@ -1,6 +1,14 @@
 .model-features {
   padding-bottom: 16rem;
 
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(3rem);
+  transition: 0.5s;
+
+  @include revealed;
+
   &__wrapper {
     display: flex;
     gap: 8rem;
