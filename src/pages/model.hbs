@@ -189,7 +189,7 @@
                         {{#each modelFeatures }}
                             <li class="model-features__item">
                                 <div class="model-features__icon">
-                                    <img class="lazyload" data-src="{{this.icon}}" alt="Инонка преимущества">
+                                    <img class="lazyload" data-src="{{this.icon}}" alt="Иконка преимущества">
                                 </div>
                                 <h3 class="model-features__title">{{this.title}}</h3>
                                 <p class="model-features__text">{{this.text}}</p>
@@ -197,15 +197,15 @@
                         {{/each}}
                     </ul>
                     <div class="model-features__slider">
-                        <div class="swiper js-init-slider">
-                            <div class="swiper-wrapper">
-                                {{#each modelFeatures }}
-                                    <div class="model-features__slide swiper-slide">
-                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото премущества">
-                                    </div>
-                                {{/each}}
-                            </div>
+                        <div class="card-slider">
+                            {{#each modelFeatures }}
+                                <div class="model-features__slide card-slider-slide" data-class="{{this.count}}" data-position="{{this.count}}">
+                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото премущества">
+                                </div>
+                            {{/each}}
                         </div>
+                        <span class="card-slider-prev"></span>
+                        <span class="card-slider-next"></span>
                     </div>
                 </div>
             </div>

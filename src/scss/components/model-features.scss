@@ -66,6 +66,9 @@
   }
 
   &__slider {
+    position: relative;
+
+    width: 100%;
     min-width: 0;
     max-width: 44rem;
     aspect-ratio: 440 / 600;
@@ -82,5 +85,9 @@
 
     border-radius: 1rem;
     overflow: hidden;
+  }
+
+  .card-slider-next, .card-slider-prev {
+    display: none;
   }
 }
