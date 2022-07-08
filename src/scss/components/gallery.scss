@@ -41,6 +41,7 @@
 
     border-radius: 1rem;
     overflow: hidden;
+    cursor: pointer;
 
     &:nth-child(7n + 1) {
       grid-column: span 10;

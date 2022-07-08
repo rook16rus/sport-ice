@@ -38,12 +38,17 @@
 
   &__cities-slide {
     width: auto;
+    padding: 0 2rem;
+
+    cursor: pointer;
+
+    transition: $base-transition-time;
 
     &:not(:last-child)::after {
       content: '';
 
       position: absolute;
-      right: -2.4rem;
+      left: calc(100% - 0.2rem);
       top: 50%;
       transform: translateY(-50%);
 
@@ -52,6 +57,10 @@
       
       border-radius: 50%;
       background-color: #878C93;
+    }
+
+    &.active {
+      color: var(--primary);
     }
   }
 
@@ -102,6 +111,18 @@
     position: absolute;
     cursor: pointer;
 
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 200%;
+      height: 2rem;
+    }
+
     &:hover {
       .map__circle-name {
         top: -4rem;
@@ -151,116 +172,49 @@
 
   &__slider-container {
     position: relative;
-
     grid-column: -5 / -1;
+
+    @include breakpoint(mobile) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__slider {
     aspect-ratio: 435 / 500;
     margin-top: 1rem;
 
     @include breakpoint(mobile) {
-      grid-column: 1 / -1;
+      width: calc(100% - 1.5rem);
       aspect-ratio: 1 / 1;
       margin-top: 0;
     }
   }
 
-  &__slider {
-    height: 100%;
-    overflow: visible;
-
-    @include breakpoint(mobile) {
-      height: auto;
-    }
-
-    .swiper-wrapper {
-      transform: none !important;
-
-      @include breakpoint(mobile) {
-        aspect-ratio: 1 / 1;
-      }
-    }
-
-    .swiper-pagination {
-      position: static;
-
-      display: none;
-      margin-top: 3.5rem;
-
-      @include breakpoint(mobile) {
-        display: flex;
-      }
-    }
-  }
-
   &__slide {
+    width: 100%;
+    height: 100%;
     border-radius: 1rem;
-    overflow: hidden;
-
-    @include breakpoint(mobile) {
-      width: calc(100% - 1.5rem) !important;
-      aspect-ratio: 1 / 1;
-    }
 
     img {
       width: 100%;
       height: 100%;
     }
+  }
 
-    &.swiper-slide {
-      position: absolute;
-      top: 8rem;
-      left: 8rem;
+  &__slider-dots {
+    margin: 3.5rem 0 3rem;
+  }
 
-      opacity: 0;
+  &__slider-prev, &__slider-next {
+    display: none;
 
-      transition: 0.3s;
-
-      @include breakpoint(mobile) {
-        top: 3rem;
-        left: 3rem;
-      }
+    @include breakpoint(mobile) {
+      display: flex;
     }
+  }
 
-    &.swiper-slide-active {
-      position: absolute;
-      top: 4rem;
-      left: 4rem;
-      z-index: 2;
-
-      width: 100%;
-      height: 100%;
-
-      opacity: 1;
-
-      @include breakpoint(mobile) {
-        top: 0;
-        left: 0;
-
-        height: auto;
-      }
-    }
-
-    &.swiper-slide-prev {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      opacity: 1;
-
-      @include breakpoint(mobile) {
-        top: -6rem;
-        left: -6rem;
-        opacity: 0;
-      }
-    }
-
-    &.swiper-slide-next {
-      @include breakpoint(mobile) {
-        top: 1.5rem;
-        left: 1.5rem;
-
-        opacity: 1;
-      }
-    }
+  &__slider-next {
+    right: 11%;
   }
 
   &__features {

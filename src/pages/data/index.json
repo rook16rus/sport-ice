@@ -243,78 +243,92 @@
   ],
   "mapCircles": [
     {
+      "count": 1,
       "name": "Санкт-Петербург",
       "left": "10.8rem",
       "top": "24rem",
-      "img": "img/map-1.jpg"
+      "img": "img/map-1.jpg",
+      "active": true
     },
     {
+      "count": 2,
       "name": "Москва",
       "left": "10.3rem",
       "top": "32.1rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 3,
       "name": "Краснодар",
       "left": "3.5rem",
       "top": "47.8rem",
       "img": "img/map-1.jpg"
     },
     {
+      "count": 4,
       "name": "Казань",
       "left": "19.7rem",
       "top": "34.6rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 5,
       "name": "Екатеринбург",
       "left": "32.4rem",
       "top": "35.9rem",
       "img": "img/map-1.jpg"
     },
     {
+      "count": 6,
       "name": "Уфа",
       "left": "26.3rem",
       "top": "40.8rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 7,
       "name": "Салехард",
       "left": "43.9rem",
       "top": "30rem",
       "img": "img/map-1.jpg"
     },
     {
+      "count": 8,
       "name": "Норильск",
       "left": "58.8rem",
       "top": "27.5rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 9,
       "name": "Нижневартовск",
       "left": "54.6rem",
       "top": "42.2rem",
       "img": "img/map-1.jpg"
     },
     {
+      "count": 10,
       "name": "Мирный",
       "left": "73rem",
       "top": "38.8rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 11,
       "name": "Омск",
       "left": "41.8rem",
       "top": "48.4rem",
       "img": "img/map-1.jpg"
     },
     {
+      "count": 12,
       "name": "Новосибирск",
       "left": "52.8rem",
       "top": "52.7rem",
       "img": "img/map-2.jpg"
     },
     {
+      "count": 13,
       "name": "Иркутск",
       "left": "70rem",
       "top": "57rem",
