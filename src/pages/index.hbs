@@ -316,7 +316,7 @@
                 <div class="map__cities swiper">
                     <div class="swiper-wrapper">
                         {{#each mapCircles }}
-                            <div class="map__cities-slide swiper-slide">
+                            <div class="map__cities-slide swiper-slide{{#if active}} active{{/if}}">
                                 {{this.name}}
                             </div>
                         {{/each}}

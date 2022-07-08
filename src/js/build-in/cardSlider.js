@@ -29,17 +29,6 @@ export default function cardSlider() {
                 detect_active();
             });
 
-            $(slider).find(".card-slider-dots button").click(function(){
-                $(slider).find(".card-slider-dots button").removeClass("active");
-                $(this).addClass("active");
-                let get_slide = $(this).attr('data-class');
-                $(slider).find(".card-slider-slide[data-class=" + get_slide + "]").hide().prependTo($(slider).find(".card-slider")).fadeIn();
-                $.each($(slider).find(".card-slider-slide"), function (index, slide) {
-                    $(slide).attr('data-position', index + 1);
-                });
-            });
-
-
             $("body").on("click", $(slider).find(".card-slider .card-slider-slide:not(:first-child)"), function(){
                 let get_slide = $(this).attr('data-class');
                 console.log(get_slide);

@@ -45,7 +45,7 @@ export default function mapSlider() {
     /* Смена слайда при нажатии на город (кнопки, пагинацию) на мобилке */
 
     const mapCities = document.querySelectorAll('.map__cities-slide');
-    const sliderDots = document.querySelectorAll('.map__slider-dots button');
+    const mapDots = document.querySelectorAll('.map__slider-dots button')
     const buttonPrev = document.querySelector('.map__slider-prev');
     const buttonNext = document.querySelector('.map__slider-next');
 
@@ -65,19 +65,18 @@ export default function mapSlider() {
         })
     })
 
-    sliderDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            citiesSwiper.slideTo(index);
-            citiesSwiper.slides.forEach((slide, index) => {
-                (index === citiesSwiper.activeIndex) ? slide.classList.add('active') : slide.classList.remove('active');
-            });
-        })
-    })
+    buttonPrev.addEventListener('click', (e) => {
+        let activeIndex = document.querySelector('.map__slide:first-child').dataset.class * 1;
 
-    buttonPrev.addEventListener('click', () => {
-        (citiesSwiper.activeIndex === 0) ? citiesSwiper.slideTo(citiesSwiper.activeIndex - 1) : citiesSwiper.slidePrev();
-        citiesSwiper.slides.forEach((slide, index) => {
-            (index === citiesSwiper.activeIndex) ? slide.classList.add('active') : slide.classList.remove('active');
+        (activeIndex === 1) ? citiesSwiper.slideTo(citiesSwiper.slides.length - 1) : citiesSwiper.slidePrev();
+
+        citiesSwiper.slides.forEach((slide, index, array) => {
+            slide.classList.remove('active')
+            if (index - 1 <= 0) {
+                array[array.length - 1].classList.add('active')
+            } else {
+                array[index - 1].classList.add('active')
+            }
         });
     });
 
