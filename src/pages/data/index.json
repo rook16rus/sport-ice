@@ -204,31 +204,39 @@
   ],
   "gallery": [
     {
+      "count": 1,
       "img": "img/gallery-1.jpg",
       "video": true,
-      "src": "https://youtu.be/QMCAGHqIKK4"
+      "src": "https://youtu.be/QMCAGHqIKK4",
+      "active": true
     },
     {
+      "count": 2,
       "img": "img/gallery-2.jpg",
       "src": "img/gallery-2.jpg"
     },
     {
+      "count": 3,
       "img": "img/gallery-3.jpg",
       "src": "img/gallery-3.jpg"
     },
     {
+      "count": 4,
       "img": "img/gallery-4.jpg",
       "src": "img/gallery-4.jpg"
     },
     {
+      "count": 5,
       "img": "img/gallery-5.jpg",
       "src": "img/gallery-5.jpg"
     },
     {
+      "count": 6,
       "img": "img/gallery-6.jpg",
       "src": "img/gallery-6.jpg"
     },
     {
+      "count": 7,
       "img": "img/gallery-7.jpg",
       "src": "img/gallery-7.jpg"
     }

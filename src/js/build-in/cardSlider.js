@@ -5,7 +5,7 @@ export default function cardSlider() {
             // get active
             let get_active = $(".card-slider .card-slider-slide:first-child").data("class");
             $(".card-slider-dots button").removeClass("active");
-            $(".card-slider-dots li[data-class="+ get_active +"]").addClass("active");
+            $(".card-slider-dots button[data-class="+ get_active +"]").addClass("active");
         }
 
         $(".card-slider-next").click(function(){

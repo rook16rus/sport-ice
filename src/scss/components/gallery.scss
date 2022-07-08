@@ -21,17 +21,17 @@
     }
   }
 
+  &__inner {
+    position: relative;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(15,1fr);
     gap: 1rem;
 
     @include breakpoint(mobile) {
-      display: block;
-      aspect-ratio: 315 / 195;
-      box-sizing: border-box;
-
-      transform: none !important;
+      display: none;
     }
   }
 
@@ -58,40 +58,6 @@
       @include breakpoint(mobile) {
         aspect-ratio: 315 / 195;
       }
-    }
-
-    @include breakpoint(mobile) {
-      position: absolute;
-      top: 3rem;
-      left: 3rem;
-
-      width: calc(100% - 1.5rem) !important;
-      aspect-ratio: 315 / 195;
-
-      opacity: 0;
-
-      transition: $base-transition-time;
-    }
-
-    &.swiper-slide-active {
-      top: 0;
-      left: 0;
-      z-index: 2;
-
-      opacity: 1;
-    }
-
-    &.swiper-slide-next {
-      top: 1.5rem;
-      left: 1.5rem;
-
-      opacity: 1;
-    }
-
-    &.swiper-slide-prev {
-      left: -6rem;
-      top: -6rem;
-      z-index: 2;
     }
   }
 
@@ -122,12 +88,39 @@
     }
   }
 
-  .swiper-pagination {
+  &__mobile-list {
+    display: none;
+    
+    @include breakpoint(mobile) {
+      position: relative;
+
+      display: block;
+      width: calc(100% - 1.5rem);
+      aspect-ratio: 315 / 195;
+    }
+  }
+
+  &__mobile-item {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__mobile-next, &__mobile-prev {
     display: none;
 
     @include breakpoint(mobile) {
-      position: static;
+      display: flex;
+    }
+  }
 
+  &__mobile-next {
+    right: 11%;
+  }
+
+  &__mobile-dots {
+    display: none;
+
+    @include breakpoint(mobile) {
       display: flex;
       margin-top: 3.5rem;
     }
