@@ -1,4 +1,5 @@
 import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode} from "swiper";
+import ar from "@fancyapps/ui/src/Fancybox/l10n/ar";
 
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
@@ -42,48 +43,43 @@ export default function mapSlider() {
         })
     })
 
-    /* Смена слайда при нажатии на город (кнопки, пагинацию) на мобилке */
+    /* Синхронизация карточного слайдера со слайдером городов */
 
     const mapCities = document.querySelectorAll('.map__cities-slide');
-    const mapDots = document.querySelectorAll('.map__slider-dots button')
     const buttonPrev = document.querySelector('.map__slider-prev');
     const buttonNext = document.querySelector('.map__slider-next');
 
-    mapCities.forEach((city, index) => {
-        index += 1;
-
-        city.addEventListener('click', () => {
-            $(".map .card-slider .card-slider-slide[data-class=" + index + "]").hide().prependTo(".map .card-slider").fadeIn();
-            $.each($('.card-slider-slide'), function (i, slide) {
-                $(slide).attr('data-position', i + 1);
-            });
-
-            citiesSwiper.slideTo(index - 1);
-            citiesSwiper.slides.forEach((slide, index) => {
-                (index === citiesSwiper.activeIndex) ? slide.classList.add('active') : slide.classList.remove('active');
-            });
-        })
-    })
-
     buttonPrev.addEventListener('click', (e) => {
-        let activeIndex = document.querySelector('.map__slide:first-child').dataset.class * 1;
-
-        (activeIndex === 1) ? citiesSwiper.slideTo(citiesSwiper.slides.length - 1) : citiesSwiper.slidePrev();
+        const activeIndex = document.querySelector('.map__slide:first-child').dataset.class * 1;
 
         citiesSwiper.slides.forEach((slide, index, array) => {
-            slide.classList.remove('active')
-            if (index - 1 <= 0) {
+            slide.classList.remove('active');
+            if (activeIndex === 1) {
+                if (array[array.length - 1].classList.contains('active')) return;
                 array[array.length - 1].classList.add('active')
+                citiesSwiper.slideTo(array.length - 1)
             } else {
-                array[index - 1].classList.add('active')
+                if (array[activeIndex - 2].classList.contains('active')) return;
+                array[activeIndex - 2].classList.add('active')
+                citiesSwiper.slideTo(activeIndex - 2)
             }
         });
     });
 
     buttonNext.addEventListener('click', () => {
-        (citiesSwiper.activeIndex === citiesSwiper.slides.length - 1) ? citiesSwiper.slideTo(0) : citiesSwiper.slideNext();
-        citiesSwiper.slides.forEach((slide, index) => {
-            (index === citiesSwiper.activeIndex) ? slide.classList.add('active') : slide.classList.remove('active');
+        const activeIndex = document.querySelector('.map__slide:first-child').dataset.class * 1;
+
+        citiesSwiper.slides.forEach((slide, index, array) => {
+            slide.classList.remove('active');
+            if (activeIndex === array.length) {
+                if (array[0].classList.contains('active')) return;
+                array[0].classList.add('active')
+                citiesSwiper.slideTo(0)
+            } else {
+                if (array[activeIndex].classList.contains('active')) return;
+                array[activeIndex].classList.add('active')
+                citiesSwiper.slideTo(activeIndex)
+            }
         });
     });
 }

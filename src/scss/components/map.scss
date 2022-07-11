@@ -202,7 +202,16 @@
   }
 
   &__slider-dots {
-    margin: 3.5rem 0 3rem;
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      margin: 6.5rem 0 3rem;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+      margin: 3.5rem 0 3rem;
+    }
   }
 
   &__slider-prev, &__slider-next {

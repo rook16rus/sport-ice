@@ -31,7 +31,6 @@ export default function cardSlider() {
 
             $("body").on("click", $(slider).find(".card-slider .card-slider-slide:not(:first-child)"), function(){
                 let get_slide = $(this).attr('data-class');
-                console.log(get_slide);
                 $(slider).find(".card-slider .card-slider-slide[data-class=" + get_slide + "]").hide().prependTo($(slider).find(".card-slider")).fadeIn();
                 $.each($(slider).find(".card-slider-slide"), function (index, slide) {
                     $(slide).attr('data-position', index + 1);

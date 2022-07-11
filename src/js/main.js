@@ -29,6 +29,7 @@ import modelFeatures from "./build-in/modelFeatures";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
+    cardSlider();
     detectTouch();
     setScrollbarWidth();
     anchorLinks();
@@ -48,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fancybox();
     modelCard();
     modelTabs();
-    cardSlider();
     modelFeatures();
 
     // custom
