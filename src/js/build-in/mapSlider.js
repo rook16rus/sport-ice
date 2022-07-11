@@ -45,9 +45,10 @@ export default function mapSlider() {
 
     /* Синхронизация карточного слайдера со слайдером городов */
 
-    const mapCities = document.querySelectorAll('.map__cities-slide');
     const buttonPrev = document.querySelector('.map__slider-prev');
     const buttonNext = document.querySelector('.map__slider-next');
+
+    if (!buttonPrev) return
 
     buttonPrev.addEventListener('click', (e) => {
         const activeIndex = document.querySelector('.map__slide:first-child').dataset.class * 1;

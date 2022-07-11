@@ -160,7 +160,12 @@
   }
 
   &__slider-dots {
+    display: none;
     margin: 6.5rem 0 3rem;
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
 
     @include breakpoint(supersmall-mobile) {
       margin: 3.5rem 0 3rem;
