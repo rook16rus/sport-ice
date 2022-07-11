@@ -219,6 +219,7 @@
 
     @include breakpoint(mobile) {
       display: flex;
+      top: 45%;
     }
   }
 

@@ -406,6 +406,34 @@
                             <div class="swiper-pagination"></div>
                             {{> slider-navigation buttonMod='slider-navigation__button--bordered slider-navigation__button--small' }}
                         </div>
+                        <div class="manufacturer__mobile-slider-container card-slider-container">
+                            <div class="manufacturer__mobile-slider card-slider">
+                                <div class="manufacturer__mobile-slide card-slider-slide" data-position="1" data-class="1">
+                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                </div>
+                                <div class="manufacturer__mobile-slide card-slider-slide" data-position="2" data-class="2">
+                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                </div>
+                                <div class="manufacturer__mobile-slide card-slider-slide" data-position="3" data-class="3">
+                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                </div>
+                            </div>
+                            <button class="manufacturer__slider-prev card-slider-prev">
+                                <svg>
+                                    <use xlink:href="#slider-arrow"></use>
+                                </svg>
+                            </button>
+                            <button class="manufacturer__slider-next card-slider-next">
+                                <svg>
+                                    <use xlink:href="#slider-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="manufacturer__slider-dots card-slider-dots">
+                                <button class="active" data-class="1"></button>
+                                <button data-class="2"></button>
+                                <button data-class="3"></button>
+                            </div>
+                        </div>
                     </div>
                     <ul class="manufacturer__stats">
                         {{#each stats }}
