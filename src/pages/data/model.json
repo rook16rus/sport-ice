@@ -268,7 +268,8 @@
       "icon": "img/model-feature-icon-1.svg",
       "title": "Литий-ионные батареи",
       "text": "Модель работает от литий-ионной батареи 48 ватт. Емкость батареи 200 AH, хватит на несколько часов беспрерывной работы.",
-      "img": "img/model-feature-photo-1.jpg"
+      "img": "img/model-feature-photo-1.jpg",
+      "active": true
     },
     {
       "count": 2,
