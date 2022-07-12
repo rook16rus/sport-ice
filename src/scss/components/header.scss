@@ -17,6 +17,12 @@
       border-color: var(--text-title);
       color: var(--text-title);
     }
+
+    .header__burger {
+      &::before, &::after {
+        background-color: var(--text-title);
+      }
+    }
   }
 
   @include breakpoint(mobile) {

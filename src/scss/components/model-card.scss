@@ -2,12 +2,28 @@
   padding-top: 21rem;
   padding-bottom: 6rem;
 
+  background-color: var(--bg-grey);
+
+  @include breakpoint(mobile) {
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+  }
+
   &__wrapper {
     max-width: 146.5rem;
     display: flex;
     align-items: center;
     gap: 14rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+      position: relative;
+
+      flex-direction: column;
+      align-items: stretch;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__img {
@@ -26,6 +42,11 @@
     border-radius: 2rem;
     overflow: hidden;
 
+    @include breakpoint(mobile) {
+      width: 100%;
+      aspect-ratio: 330 / 230;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -37,6 +58,11 @@
     position: absolute;
     top: 3rem;
     left: 3rem;
+
+    @include breakpoint(mobile) {
+      top: 1rem;
+      left: 1rem;
+    }
   }
 
   &__sub-img-slide {
@@ -50,6 +76,10 @@
     cursor: pointer;
 
     transition: $base-transition-time;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
 
     &.swiper-slide-thumb-active {
       opacity: 1;
@@ -67,6 +97,10 @@
     top: 3rem;
     right: 3rem;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__title {
@@ -75,6 +109,11 @@
     display: inline-block;
 
     font: var(--title-h0);
+
+    @include breakpoint(mobile) {
+      position: static;
+      font-size: 6rem;
+    }
   }
 
   &__title-tag {
@@ -92,6 +131,12 @@
     line-height: 100%;
     white-space: nowrap;
     color: #fff;
+
+    @include breakpoint(mobile) {
+      top: 1rem;
+      left: 1rem;
+      z-index: 2;
+    }
   }
 
   &__lead {
@@ -105,6 +150,13 @@
     border-radius: 1rem;
 
     font: var(--text-M);
+
+    @include breakpoint(mobile) {
+      padding: 1rem;
+      margin-bottom: 3rem;
+
+      border-radius: 0.6rem;
+    }
 
     img {
       width: 1.6rem;
@@ -120,16 +172,31 @@
 
     font: var(--text-L);
     opacity: 0.8;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__button {
     padding: 0 6rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+
+      text-align: center;
+    }
   }
 
   &__features {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
   }
 
   &__feature {
@@ -140,10 +207,19 @@
     font: 600 2rem/110% var(--secondary-ff);
     color: var(--text-body);
     opacity: 0.8;
+
+    @include breakpoint(mobile) {
+      font-size: 1.3rem;
+    }
   }
 
   &__feature-icon {
     width: 6rem;
     height: 6rem;
+
+    @include breakpoint(mobile) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
