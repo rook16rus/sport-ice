@@ -112,6 +112,7 @@
 
     @include breakpoint(mobile) {
       position: static;
+      display: block;
       font-size: 6rem;
     }
   }
