@@ -300,6 +300,30 @@
                     </div>
                     {{> slider-navigation buttonMod='slider-navigation__button--dark' }}
                 </div>
+                <div class="card-slider-container">
+                    <div class="model-gallery__mobile-slider card-slider">
+                        {{# each gallery }}
+                            <div class="model-gallery__mobile-slide card-slider-slide" data-position="{{this.count}}" data-class="{{this.count}}">
+                                <img class="lazyload" data-src="{{this.img}}" alt="Фото модели">
+                            </div>
+                        {{/each}}
+                    </div>
+                    <button class="model-gallery__prev card-slider-prev">
+                        <svg>
+                            <use xlink:href="#slider-arrow"></use>
+                        </svg>
+                    </button>
+                    <button class="model-gallery__next card-slider-next">
+                        <svg>
+                            <use xlink:href="#slider-arrow"></use>
+                        </svg>
+                    </button>
+                    <div class="model-gallery__dots card-slider-dots">
+                        {{#each gallery }}
+                            <button class="{{#if active}}active{{/if}}" data-class="{{this.count}}"></button>
+                        {{/each}}
+                    </div>
+                </div>
             </div>
         </section>
         <section class="contacts js-block-to-reveal">

@@ -295,28 +295,37 @@
   ],
   "gallery": [
     {
-      "img": "img/model-gallery-1.jpg"
+      "img": "img/model-gallery-1.jpg",
+      "count": 1,
+      "active": true
     },
     {
-      "img": "img/model-gallery-2.jpg"
+      "img": "img/model-gallery-2.jpg",
+      "count": 2
     },
     {
-      "img": "img/model-gallery-3.jpg"
+      "img": "img/model-gallery-3.jpg",
+      "count": 3
     },
     {
-      "img": "img/model-gallery-4.jpg"
+      "img": "img/model-gallery-4.jpg",
+      "count": 4
     },
     {
-      "img": "img/model-gallery-5.jpg"
+      "img": "img/model-gallery-5.jpg",
+      "count": 5
     },
     {
-      "img": "img/model-gallery-6.jpg"
+      "img": "img/model-gallery-6.jpg",
+      "count": 6
     },
     {
-      "img": "img/model-gallery-7.jpg"
+      "img": "img/model-gallery-7.jpg",
+      "count": 7
     },
     {
-      "img": "img/model-gallery-8.jpg"
+      "img": "img/model-gallery-8.jpg",
+      "count": 8
     }
   ]
 }

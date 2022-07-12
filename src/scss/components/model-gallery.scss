@@ -11,12 +11,24 @@
 
   @include revealed;
 
+  @include breakpoint(mobile) {
+    padding-bottom: 6rem;
+  }
+
   &__title {
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__slider-container {
     position: relative;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
 
   &__slide {
@@ -37,5 +49,61 @@
     position: absolute;
     right: 11rem;
     bottom: calc(100% + 6.5rem);
+  }
+
+  .card-slider-container {
+    position: relative;
+  }
+
+  &__mobile-slider {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: block;
+      width: calc(100% - 1.5rem);
+      aspect-ratio: 315 / 195;
+    }
+  }
+
+  &__mobile-slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__next, &__prev {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      top: 45%;
+    }
+  }
+
+  &__next {
+    @include breakpoint(mobile) {
+      right: 11%;
+    }
+  }
+
+  &__dots {
+    display: none;
+
+    position: static;
+    margin-top: 6.5rem;
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+      margin-top: 3.5rem;
+    }
   }
 }

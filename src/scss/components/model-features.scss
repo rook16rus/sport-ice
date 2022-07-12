@@ -158,7 +158,17 @@
   }
 
   &__dots {
+    display: none;
+
     position: static;
-    margin-top: 4.5rem;
+    margin-top: 6.5rem;
+
+    @include breakpoint(mobile) {
+      display: flex;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+      margin-top: 4.5rem;
+    }
   }
 }
