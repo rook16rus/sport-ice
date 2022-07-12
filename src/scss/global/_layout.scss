@@ -157,6 +157,10 @@
 
         font: var(--title-h2);
         color: var(--text-title);
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
     }
 
     p {
