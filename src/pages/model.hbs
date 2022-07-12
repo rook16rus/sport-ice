@@ -73,6 +73,25 @@
                                 <img src="img/model-info-2.svg" alt="Фото чертежа модели">
                             </div>
                         </div>
+                        <div class="model-info__mobile-img-slider swiper js-init-slider">
+                            <div class="swiper-wrapper">
+                                <div class="model-info__mobile-img-slide swiper-slide">
+                                    <img class="lazyload" data-src="img/mobile-model-info-1.svg" alt="Фото чертежа">
+                                </div>
+                                <div class="model-info__mobile-img-slide swiper-slide">
+                                    <img class="lazyload" data-src="img/mobile-model-info-1.svg" alt="Фото чертежа">
+                                </div>
+                            </div>
+                            <div class="model-info__mobile-img-pagination swiper-pagination"></div>
+                        </div>
+                        <ul class="model-info__properties">
+                            {{#each properties }}
+                                <li class="model-info__property{{#if red}} model-info__property--red{{/if}}">
+                                    <h3 class="model-info__property-title">{{this.title}}</h3>
+                                    <span class="model-info__property-desc">{{this.desc}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
                         <div class="model-info__buttons">
                             <a class="model-info__consult-button button" href="#">
                                 <span>Консультация эксперта</span>
@@ -83,24 +102,27 @@
                                 <img class="lazyload" data-src="img/doc-icon.svg" alt="Фото эксперта">
                             </a>
                         </div>
-                        <ul class="model-info__characteristics">
-                            {{#each characteristics }}
-                                <li class="model-info__characteristics-item">
-                                    <h3 class="model-info__characteristics-title">
-                                        <img src="{{this.icon}}" alt="Иконка характеристики">
-                                        <span>{{this.title}}</span>
-                                    </h3>
-                                    <ul class="model-info__characteristics-list">
-                                        {{#each this.list }}
-                                            <li class="model-info__characteristics-list-item">
-                                                <span class="model-info__characteristic">{{this.characteristic}}</span>
-                                                <span class="model-info__characteristics-value">{{this.value}}</span>
-                                            </li>
-                                        {{/each}}
-                                    </ul>
-                                </li>
-                            {{/each}}
-                        </ul>
+                        <div class="model-info__characteristic-slider swiper">
+                            <ul class="model-info__characteristics swiper-wrapper">
+                                {{#each characteristics }}
+                                    <li class="model-info__characteristics-item swiper-slide">
+                                        <h3 class="model-info__characteristics-title">
+                                            <img src="{{this.icon}}" alt="Иконка характеристики">
+                                            <span>{{this.title}}</span>
+                                        </h3>
+                                        <ul class="model-info__characteristics-list">
+                                            {{#each this.list }}
+                                                <li class="model-info__characteristics-list-item">
+                                                    <span class="model-info__characteristic">{{this.characteristic}}</span>
+                                                    <span class="model-info__characteristics-value">{{this.value}}</span>
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            <div class="model-info__characteristics-pagination swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="model-info__tabs-content model-info__tabs-content--equipment">
