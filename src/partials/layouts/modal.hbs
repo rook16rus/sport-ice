@@ -1,4 +1,4 @@
-<div class="modal js-modal" id="{{id}}">
+<div class="modal js-modal js-modal-consult" id="{{id}}">
     <div class="modal__container">
         <div class="modal__inner">
             <button class="modal__close js-close-modal" type="button" title="Закрыть">
@@ -8,7 +8,7 @@
             </button>
             <h3 class="modal__title">Получите консультацию нашего эксперта</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" action="#">
+            <form class="modal__form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="consultName" required placeholder="Ваше имя">
                 </div>
@@ -27,7 +27,7 @@
     </div>
 </div>
 
-<div class="modal js-modal" id="{{id}}">
+<div class="modal js-modal js-modal-model" id="{{id}}">
     <div class="modal__container">
         <div class="modal__inner">
             <button class="modal__close js-close-modal" type="button" title="Закрыть">
@@ -37,7 +37,7 @@
             </button>
             <h3 class="modal__title">Оставьте заявку на&nbsp;модель</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" action="#">
+            <form class="modal__form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="modelName" required placeholder="Ваше имя">
                 </div>
@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<div class="modal js-modal active" id="{{id}}">
+<div class="modal js-modal js-modal-doc" id="{{id}}">
     <div class="modal__container">
         <div class="modal__inner">
             <button class="modal__close js-close-modal" type="button" title="Закрыть">
@@ -66,7 +66,7 @@
             </button>
             <h3 class="modal__title">Оставьте заявку на&nbsp;тех.&nbsp;документацию</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" action="#">
+            <form class="modal__form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="docName" required placeholder="Ваше имя">
                 </div>
@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<div class="modal modal--small js-modal" id="{{id}}">
+<div class="modal modal--small js-modal js-modal-access" id="{{id}}">
     <div class="modal__container">
         <div class="modal__inner">
             <button class="modal__close js-close-modal" type="button" title="Закрыть">

@@ -180,6 +180,7 @@
   }
 
   &__button {
+    display: inline-flex;
     padding: 0 6rem;
 
     @include breakpoint(mobile) {

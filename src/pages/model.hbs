@@ -40,7 +40,7 @@
                                 больших (НХЛ или олимпийских) ледовых покрытиях.
                             </p>
                         </div>
-                        <button class="model-card__button button button--red">Заказать</button>
+                        <a class="model-card__button button button--red" href="#model">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -93,11 +93,11 @@
                             {{/each}}
                         </ul>
                         <div class="model-info__buttons">
-                            <a class="model-info__consult-button button" href="#">
+                            <a class="model-info__consult-button button" href="#consult">
                                 <span>Консультация эксперта</span>
                                 <img class="lazyload" data-src="img/expert.png" alt="Фото эксперта">
                             </a>
-                            <a class="model-info__doc-button button button--red-border" download>
+                            <a class="model-info__doc-button button button--red-border" href="#doc">
                                 <span>Техническая документация</span>
                                 <img class="lazyload" data-src="img/doc-icon.svg" alt="Фото эксперта">
                             </a>
@@ -371,7 +371,7 @@
                             <address class="contacts__info-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
                         </div>
                         <h3 class="contacts__subtitle">Закажите звонок</h3>
-                        <form class="contacts__form" action="#">
+                        <form class="contacts__form" data-need-validation action="#">
                             <div class="contacts__input-wrapper">
                                 <input class="contacts__input input input--dark js-phone-input" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
                             </div>

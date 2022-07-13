@@ -12,7 +12,7 @@ export default function modals() {
     window.activeModal = null;
 
     function openModal(id, event) {
-        const modal = document.querySelector(`.js-modal${id}`);
+        const modal = document.querySelector(`.js-modal-${id}`);
         if (!modal) {
             // console.error(`Modal with ID: ${id} not found`);
             return;
@@ -69,7 +69,7 @@ export default function modals() {
     document.addEventListener('click', (event) => {
         if (event.target.matches('a') || event.target.closest('a')) {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
-            const hash = link.hash;
+            const hash = link.hash.slice(1);
             if (!hash) return;
             openModal(hash, event);
         } else if (event.target.matches('.js-close-modal') || event.target.closest('.js-close-modal')) {
