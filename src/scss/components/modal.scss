@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
 
-  background: $overlay-color;
+  background: rgba(0, 0, 0, 0.85);
 
   overflow-x: hidden;
   opacity: 0;
@@ -30,8 +30,15 @@
     transition: opacity 0.4s, visibility 0.4s;
   }
 
+  &--small {
+    .modal__container {
+      max-width: 65rem  ;
+    }
+  }
+
   &__container {
-    max-width: var(--max-container-width);
+    width: 100%;
+    max-width: 84rem;
     margin: 0 auto;
     padding: 6rem 0;
   }
@@ -39,12 +46,81 @@
   &__inner {
     position: relative;
 
-    padding: 4rem;
+    padding: 5rem 5rem 4.6rem;
+
+    border-radius: 1rem;
+    background-color: #FCFDFF;
   }
 
   &__close {
     position: absolute;
-    bottom: 100%;
-    right: 0;
+    top: 5rem;
+    right: 5rem;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.5rem;
+    max-width: 48rem;
+
+    font: var(--body-XL);
+  }
+
+  &__text {
+    max-width: 32rem;
+    margin-bottom: 3.4rem;
+
+    opacity: 0.8;
+
+    font: 500 2rem/130% var(--secondary-ff);
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__input {
+    height: 100%;
+    border-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &__form-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__confidence {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 36rem;
+
+    font: var(--text-M);
+
+    opacity: 0.8;
+
+    &::before {
+      content: '*';
+    }
   }
 }
