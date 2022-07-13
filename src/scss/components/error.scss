@@ -5,6 +5,13 @@
   display: flex;
   align-items: center;
 
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: calc(var(--header-height) + 2rem) 0 5rem;
+  }
+
   &__wrapper {
     position: relative;
 
@@ -12,33 +19,67 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 2.5rem;
     align-items: center;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+      align-items: stretch;
+    }
   }
 
   &__content {
     grid-column: span 7;
+
+    @include breakpoint(mobile) {
+      grid-column: span 1
+    }
   }
 
   &__title {
     margin-bottom: 4rem;
     font: 600 2rem/110% var(--secondary-ff);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
   }
 
   &__lead {
     margin-bottom: 5rem;
     font: var(--title-h2);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.5rem;
+      font-size: 2.8rem;
+    }
   }
 
   &__button {
     display: inline-flex;
     padding: 0 6rem;
+
+    @include breakpoint(mobile) {
+      padding: 0 5rem;
+    }
   }
 
   &__img {
     grid-column: span 5;
 
+    @include breakpoint(mobile) {
+      grid-column: span 1;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
     img {
       width: 100%;
       margin-left: 2.8rem;
+
+      @include breakpoint(mobile) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -51,5 +92,14 @@
 
     font: 700 80rem/110% var(--main-ff);
     color: rgba(174, 176, 178, 0.1);
+
+    @include breakpoint(mobile) {
+      top: auto;
+      transform: none;
+      bottom: -9rem;
+      right: -1.5rem;
+
+      font-size: 26rem;
+    }
   }
 }
