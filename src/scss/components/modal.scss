@@ -24,6 +24,10 @@
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+  @include breakpoint(mobile) {
+    justify-content: flex-end;
+  }
+
   &.active {
     opacity: 1;
     visibility: inherit;
@@ -41,6 +45,10 @@
     max-width: 84rem;
     margin: 0 auto;
     padding: 6rem 0;
+
+    @include breakpoint(mobile) {
+      padding: 0;
+    }
   }
 
   &__inner {
@@ -50,6 +58,13 @@
 
     border-radius: 1rem;
     background-color: #FCFDFF;
+
+    @include breakpoint(mobile) {
+      margin: 1.5rem;
+      padding: 2.5rem 2rem;
+
+      border-radius: 0.7rem;
+    }
   }
 
   &__close {
@@ -57,9 +72,24 @@
     top: 5rem;
     right: 5rem;
 
+    color: rgba(15, 25, 38, 0.3);
+
+    @include breakpoint(mobile) {
+      right: 0;
+      top: auto;
+      bottom: calc(100% + 1.5rem);
+
+      color: #fff;
+    }
+
     svg {
       width: 4rem;
       height: 4rem;
+
+      @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 
@@ -68,6 +98,10 @@
     max-width: 48rem;
 
     font: var(--body-XL);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.2rem;
+    }
   }
 
   &__text {
@@ -77,6 +111,13 @@
     opacity: 0.8;
 
     font: 500 2rem/130% var(--secondary-ff);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2.5rem;
+      max-width: 26rem;
+
+      font-size: 1.6rem;
+    }
   }
 
   &__form {
@@ -84,6 +125,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__input-wrapper {
@@ -95,6 +142,11 @@
   &__input {
     height: 100%;
     border-color: rgba(0, 0, 0, 0.15);
+
+    @include breakpoint(mobile) {
+      height: 6rem;
+      border-radius: 0.7rem;
+    }
   }
 
   &__form-button {
@@ -103,9 +155,18 @@
     justify-content: space-between;
     padding: 0 2.5rem;
 
+    @include breakpoint(mobile) {
+      border-radius: 0.7rem;
+    }
+
     svg {
       width: 4rem;
       height: 4rem;
+
+      @include breakpoint(mobile) {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 
@@ -119,8 +180,18 @@
 
     opacity: 0.8;
 
+    @include breakpoint(mobile) {
+      font-size: 1.3rem;
+    }
+
     &::before {
       content: '*';
+    }
+  }
+
+  &__button {
+    @include breakpoint(mobile) {
+      width: 100%;
     }
   }
 }
