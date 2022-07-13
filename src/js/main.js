@@ -28,6 +28,7 @@ import cardSlider from "./build-in/cardSlider";
 import modelFeatures from "./build-in/modelFeatures";
 import characteristicsSlider from "./build-in/characteristicsSlider";
 import modals from "./build-in/modals";
+import error from "./build-in/error"
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modelFeatures();
     characteristicsSlider();
     modals();
+    error();
 
     // custom
     initSliders();
