@@ -8,14 +8,14 @@
             </button>
             <h3 class="modal__title">Получите консультацию нашего эксперта</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" data-need-validation action="#">
+            <form class="modal__form js-handle-form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="consultName" required placeholder="Ваше имя">
                 </div>
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark js-phone-input" type="tel" name="consultPhone" data-parsley-phone required placeholder="Ваш телефон">
                 </div>
-                <button class="modal__form-button button button--red" type="submit">
+                <button class="modal__form-button button button--red js-submit-form" type="submit">
                     <span>Отправить</span>
                     <svg>
                         <use xlink:href="#letter-icon"></use>
@@ -37,14 +37,14 @@
             </button>
             <h3 class="modal__title">Оставьте заявку на&nbsp;модель</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" data-need-validation action="#">
+            <form class="modal__form js-handle-form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="modelName" required placeholder="Ваше имя">
                 </div>
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark js-phone-input" type="tel" name="modelPhone" data-parsley-phone required placeholder="Ваш телефон">
                 </div>
-                <button class="modal__form-button button button--red" type="submit">
+                <button class="modal__form-button button button--red js-submit-form" type="submit">
                     <span>Отправить</span>
                     <svg>
                         <use xlink:href="#letter-icon"></use>
@@ -66,14 +66,14 @@
             </button>
             <h3 class="modal__title">Оставьте заявку на&nbsp;тех.&nbsp;документацию</h3>
             <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
-            <form class="modal__form" data-need-validation action="#">
+            <form class="modal__form js-handle-form" data-need-validation action="#">
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark" type="text" name="docName" required placeholder="Ваше имя">
                 </div>
                 <div class="modal__input-wrapper">
                     <input class="modal__input input input--dark js-phone-input" type="tel" name="docPhone" data-parsley-phone required placeholder="Ваш телефон">
                 </div>
-                <button class="modal__form-button button button--red" type="submit">
+                <button class="modal__form-button button button--red js-submit-form" type="submit">
                     <span>Отправить</span>
                     <svg>
                         <use xlink:href="#letter-icon"></use>
@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<div class="modal modal--small js-modal js-modal-access" id="{{id}}">
+<div class="modal modal--small js-modal js-modal-success" id="{{id}}">
     <div class="modal__container">
         <div class="modal__inner">
             <button class="modal__close js-close-modal" type="button" title="Закрыть">
@@ -95,7 +95,7 @@
             </button>
             <h3 class="modal__title">Ваша заявка успешно отправлена</h3>
             <p class="modal__text">Наш эксперт свяжется с вами в&nbsp;ближайшее время</p>
-            <button class="modal__button button button--red-border">Отправить еще раз</button>
+            <button class="modal__button button button--red-border js-close-modal">Отлично</button>
         </div>
     </div>
-</div>
+</div>npm
