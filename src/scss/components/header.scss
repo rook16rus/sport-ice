@@ -16,6 +16,11 @@
     .header__button {
       border-color: var(--text-title);
       color: var(--text-title);
+      
+      &:hover {
+        background-color: var(--text-title);
+        color: #fff;
+      }
     }
 
     .header__burger {
@@ -39,6 +44,11 @@
     .header__button {
       border-color: var(--text-title);
       color: var(--text-title);
+
+      &:hover {
+        background-color: var(--text-title);
+        color: #fff;
+      }
     }
 
     .header__burger {
@@ -107,10 +117,31 @@
   }
 
   &__menu-link {
+    position: relative;
+
     font: var(--text-S);
     
     &.active {
       color: var(--primary);
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background-color: var(--primary);
+
+      transition: $base-transition-time;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 
@@ -124,9 +155,34 @@
       margin-top: 0.4rem;
       margin-left: auto;
     }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 0;
+      height: 1px;
+
+      background-color: var(--primary);
+
+      transition: $base-transition-time;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &__whatsapp {
+    transition: $base-transition-time;
+
+    &:hover {
+      color: var(--primary);
+    }
+
     svg {
       width: 2.4rem;
       height: 2.4rem;

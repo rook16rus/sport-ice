@@ -31,7 +31,7 @@
                             <span class="model-card__title-tag">хит продаж</span>
                         </h1>
                         <span class="model-card__lead">
-                            <img src="img/cup-icon.svg" alt="Иконка кубка">
+                            <img src="img/cup-icon.png" alt="Иконка кубка">
                             <span>Для достижения высоких целей</span>
                         </span>
                         <div class="model-card__desc">
@@ -148,10 +148,10 @@
                                     <li class="model-info__options-item">{{{this}}}</li>
                                 {{/each}}
                             </ul>
-                            <button class="model-info__options-button button">
+                            <a class="model-info__options-button button" href="#model">
                                 <span>ОБСУДИТЬ с ЭКСПЕРТОМ</span>
                                 <img class="lazyload" data-src="img/expert.png" alt="Фото эксперта">
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
         </section>
         <section class="order js-block-to-reveal">
             <div class="wide-container">
-                <div class="order__wrapper" style="background: url('img/order-bg-2.jpg') no-repeat center; background-size: cover;">
+                <div class="order__wrapper" style="background: url('img/order-bg.jpg') no-repeat center; background-size: cover;">
                     <div class="order__img-wrapper">
                         <img class="order__img lazyload" data-src="img/person.png" alt="Персона">
                     </div>
@@ -257,11 +257,12 @@
                         <h2 class="order__title">получите консультацию нашего эксперта</h2>
                         <form class="order__form" action="" data-need-validation="true" novalidate>
                             <div class="order__input-wrapper">
-                                <input class="order__input input input--light" type="text" name="name" required placeholder="Ваше имя">
+                                <input class="order__input input input--light" id="orderName" type="text" name="name" required>
+                                <label for="orderName">Ваше имя</label>
                             </div>
                             <div class="order__input-wrapper">
-                                <input class="order__input input input--light js-phone-input" type="tel"
-                                       name="name" data-parsley-phone required placeholder="Ваш телефон">
+                                <input class="order__input input input--light js-phone-input" id="orderPhone" type="tel" name="phone" data-parsley-phone required>
+                                <label for="orderPhone">Ваш телефон</label>
                             </div>
                             <button class="order__button button button--white" type="submit">
                                 <span>Отправить</span>
@@ -270,8 +271,9 @@
                                 </svg>
                             </button>
                         </form>
-                        <p class="order__confidence">Нажимая кнопку «Отправить» вы соглашаетесь с политикой
-                            конфиденциальности</p>
+                        <p class="order__confidence">
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -286,7 +288,7 @@
                         <div class="swiper-wrapper">
                             <div class="model-gallery__slide swiper-slide">
                                 {{#each gallery }}
-                                    <a class="model-gallery__link" data-src="{{this.img}}" data-fancybox="gallery">
+                                    <a class="model-gallery__link{{#if video }} model-gallery__link--video{{/if}}" data-src="{{this.src}}" data-fancybox="gallery">
                                         <img class="lazyload" data-src="{{this.img}}" alt="Фото галлереи">
                                     </a>
                                 {{/each}}
@@ -298,14 +300,14 @@
                             </div>
                         </div>
                     </div>
-                    {{> slider-navigation buttonMod='slider-navigation__button--dark' }}
+                    {{> slider-navigation buttonMod='slider-navigation__button--bordered-dark' }}
                 </div>
                 <div class="card-slider-container">
                     <div class="model-gallery__mobile-slider card-slider">
                         {{# each gallery }}
-                            <div class="model-gallery__mobile-slide card-slider-slide" data-position="{{this.count}}" data-class="{{this.count}}">
+                            <a class="model-gallery__mobile-slide{{#if video }} model-gallery__mobile-slide--video{{/if}} card-slider-slide" data-src="{{this.src}}" data-fancybox="galleryMobile" data-position="{{this.count}}" data-class="{{this.count}}">
                                 <img class="lazyload" data-src="{{this.img}}" alt="Фото модели">
-                            </div>
+                            </a>
                         {{/each}}
                     </div>
                     <button class="model-gallery__prev card-slider-prev">
@@ -371,9 +373,10 @@
                             <address class="contacts__info-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
                         </div>
                         <h3 class="contacts__subtitle">Закажите звонок</h3>
-                        <form class="contacts__form" data-need-validation action="#">
+                        <form class="contacts__form" data-need-validation="true" action="#">
                             <div class="contacts__input-wrapper">
-                                <input class="contacts__input input input--dark js-phone-input" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
+                                <input class="contacts__input input input--dark js-phone-input" id="contactsPhone" type="tel" name="contactsPhone" data-parsley-phone required>
+                                <label for="contactsPhone">Ваш телефон</label>
                             </div>
                             <button class="contacts__button button button--red" type="submit">
                                 <span>Отправить</span>
@@ -383,7 +386,7 @@
                             </button>
                         </form>
                         <p class="contacts__confidence">
-                            Нажимая кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
                         </p>
                     </div>
                     <div class="contacts__map" id="contact-map">

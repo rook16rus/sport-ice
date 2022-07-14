@@ -31,8 +31,18 @@
       border: 2px solid #fff;
       color: #fff;
 
+      &:hover {
+        background-color: #fff;
+        color: var(--text-title);
+      }
+
       &.swiper-button-disabled {
         opacity: 0.5;
+
+        &:hover {
+          background-color: transparent;
+          color: #fff;
+        }
       }
     }
 
@@ -40,8 +50,18 @@
       border: 1.5px solid var(--text-title);
       color: var(--text-title);
 
+      &:hover {
+        background-color: var(--text-title);
+        color: #fff;
+      }
+
       &.swiper-button-disabled {
         opacity: 0.4;
+
+        &:hover {
+          background-color: transparent;
+          color: var(--text-title);
+        }
       }
     }
 

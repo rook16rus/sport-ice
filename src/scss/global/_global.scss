@@ -202,3 +202,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
 }
+
+fieldset {
+    border: none;
+}

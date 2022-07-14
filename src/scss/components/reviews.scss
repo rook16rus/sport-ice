@@ -20,6 +20,7 @@
 
   &__slider {
     width: 96.3vw;
+    padding-right: 5rem !important;
 
     @include breakpoint(mobile) {
       width: 97.8vw;

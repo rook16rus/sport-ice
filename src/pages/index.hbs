@@ -216,7 +216,7 @@
             <div class="container">
                 <div class="reviews__inner js-init-slider-container">
                     <h2 class="reviews__title section-title">Отзывы клиентов</h2>
-                    <div class="reviews__slider swiper js-init-slider" data-space="25" data-loop="true" data-slides-breakpoints="280:1.4,640:3.5">
+                    <div class="reviews__slider swiper js-init-slider" data-space="25" data-slides-breakpoints="280:1.4,640:3.5">
                         <div class="reviews__inner_items swiper-wrapper">
                             {{#each reviews }}
                                 <blockquote class="reviews__item swiper-slide">
@@ -232,7 +232,7 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-                    {{> slider-navigation buttonMod='slider-navigation__button--dark' }}
+                    {{> slider-navigation buttonMod='slider-navigation__button--bordered-dark' }}
                 </div>
             </div>
         </section>
@@ -246,11 +246,12 @@
                         <h2 class="order__title">получите консультацию нашего эксперта</h2>
                         <form class="order__form" action="" data-need-validation="true" novalidate>
                             <div class="order__input-wrapper">
-                                <input class="order__input input input--light" type="text" name="name" required placeholder="Ваше имя">
+                                <input class="order__input input input--light" id="orderName" type="text" name="name" required>
+                                <label for="orderName">Ваше имя</label>
                             </div>
                             <div class="order__input-wrapper">
-                                <input class="order__input input input--light js-phone-input" type="tel"
-                                       name="phone" data-parsley-phone required placeholder="Ваш телефон">
+                                <input class="order__input input input--light js-phone-input" id="orderPhone" type="tel" name="phone" data-parsley-phone required>
+                                <label for="orderPhone">Ваш телефон</label>
                             </div>
                             <button class="order__button button button--white" type="submit">
                                 <span>Отправить</span>
@@ -259,8 +260,9 @@
                                 </svg>
                             </button>
                         </form>
-                        <p class="order__confidence">Нажимая кнопку «Отправить» вы соглашаетесь с политикой
-                            конфиденциальности</p>
+                        <p class="order__confidence">
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -394,13 +396,19 @@
                         <div class="manufacturer__slider swiper">
                             <div class="swiper-wrapper">
                                 <div class="manufacturer__slide swiper-slide">
-                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                        <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    </a>
                                 </div>
                                 <div class="manufacturer__slide swiper-slide">
-                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                        <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    </a>
                                 </div>
                                 <div class="manufacturer__slide swiper-slide">
-                                    <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                        <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-pagination"></div>
@@ -491,9 +499,10 @@
                             <address class="contacts__info-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
                         </div>
                         <h3 class="contacts__subtitle">Закажите звонок</h3>
-                        <form class="contacts__form" action="#">
+                        <form class="contacts__form" data-need-validation="true" action="#">
                             <div class="contacts__input-wrapper">
-                                <input class="contacts__input input input--dark js-phone-inpuИконка преимуществаt" type="tel" name="contactsPhone" data-parsley-phone required placeholder="Ваш телефон">
+                                <input class="contacts__input input input--dark js-phone-input" id="contactsPhone" type="tel" name="contactsPhone" data-parsley-phone required>
+                                <label for="contactsPhone">Ваш телефон</label>
                             </div>
                             <button class="contacts__button button button--red" type="submit">
                                 <span>Отправить</span>
@@ -503,7 +512,7 @@
                             </button>
                         </form>
                         <p class="contacts__confidence">
-                            Нажимая кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
                         </p>
                     </div>
                     <div class="contacts__map" id="contact-map">

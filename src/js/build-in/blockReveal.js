@@ -4,7 +4,7 @@ export default function blocksReveal() {
     };
     const callback = function(entries, observer) {
         entries.forEach(entry => {
-            if (entry.intersectionRatio > (entry.target.hasAttribute('data-intersection-ratio') ? Number(entry.target.getAttribute('data-intersection-ratio')) : 0.5)) {
+            if (entry.intersectionRatio > 0.05) {
                 entry.target.classList.add('revealed');
             }
 

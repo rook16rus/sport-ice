@@ -115,6 +115,10 @@
           font-size: 6.8rem;
         }
       }
+
+      .models__list-img {
+        right: 1.6rem;
+      }
     }
 
     &::before {
@@ -166,12 +170,14 @@
 
   &__list-img {
     position: absolute;
-    right: -1.6rem;
+    right: -2.2em;
     top: 50%;
     transform: translateY(-50%);
 
     width: 24rem;
     aspect-ratio: 240 / 150;
+
+    transition: $base-transition-time;
 
     @include breakpoint(mobile) {
       display: none;
@@ -441,6 +447,12 @@
     font: var(--body-XS);
     color: var(--text-title);
     text-transform: uppercase;
+
+    transition: $base-transition-time;
+
+    &:hover {
+      color: var(--primary);
+    }
   }
 }
 

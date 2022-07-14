@@ -61,6 +61,14 @@
     }
   }
 
+  &__menu-link {
+    transition: $base-transition-time;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+
   &__socials {
     display: flex;
     gap: 1rem;
@@ -74,6 +82,13 @@
       width: 3rem;
       height: 3rem;
       opacity: 0.6;
+
+      transition: $base-transition-time;
+
+      &:hover {
+        opacity: 1;
+        color: var(--primary);
+      }
 
       @include breakpoint(mobile) {
         width: 2.5rem;
@@ -98,6 +113,13 @@
     gap: 0.8rem;
 
     font: var(--text-M);
+    font-weight: 600;
+
+    transition: $base-transition-time;
+
+    &:hover {
+      color: var(--primary);
+    }
 
     @include breakpoint(mobile) {
       font-weight: 600;
@@ -123,6 +145,12 @@
 
     font: var(--text-M);
 
+    transition: $base-transition-time;
+
+    &:hover {
+      color: var(--primary);
+    }
+
     @include breakpoint(mobile) {
       gap: 1.4rem;
     }
@@ -131,7 +159,7 @@
       opacity: 0.45;
     }
 
-    img {
+    svg {
       width: 9.3rem;
       height: 2.4rem;
 

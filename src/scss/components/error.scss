@@ -47,7 +47,9 @@
 
   &__lead {
     margin-bottom: 5rem;
+
     font: var(--title-h2);
+    color: #000;
 
     @include breakpoint(mobile) {
       margin-bottom: 2.5rem;

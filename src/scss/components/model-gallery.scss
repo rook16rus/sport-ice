@@ -35,6 +35,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    overflow: hidden;
 
     img {
       width: 100%;
@@ -42,6 +43,34 @@
 
       border-radius: 1rem;
       overflow: hidden;
+
+      transition: $base-transition-time;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  &__link {
+    position: relative;
+
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--video {
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        @extend .video-button;
+      }
     }
   }
 
@@ -66,9 +95,24 @@
   }
 
   &__mobile-slide {
+    display: block;
     width: 100%;
     height: 100%;
     border-radius: 1rem;
+
+    &--video {
+      &::before {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        @extend .video-button;
+      }
+    }
 
     img {
       width: 100%;

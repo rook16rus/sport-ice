@@ -78,9 +78,29 @@
   }
 
   &__input-wrapper {
+    position: relative;
+
     display: flex;
     gap: 1rem;
     flex-direction: column;
+    
+    input:focus + label {
+      background-color: #26282a;
+    }
+
+    input + label.active {
+      background-color: #26282a;
+    }
+
+    &:last-of-type {
+      input:focus + label, input:hover + label {
+        background-color: #3C2324;
+      }
+
+      input + label.active {
+        background-color: #3C2324;
+      }
+    }
   }
 
   &__button {
@@ -115,6 +135,30 @@
 
     &::before {
       content: '*';
+    }
+
+    a {
+      position: relative;
+      color: var(--primary);
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 0;
+        height: 1px;
+
+        background-color: var(--primary);
+
+        transition: $base-transition-time;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 }
