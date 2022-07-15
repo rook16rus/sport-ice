@@ -24,10 +24,10 @@ export default function yandexMap() {
     function addMarker(coords, map) {
         const marker = new ymaps.Placemark(coords, {}, {
             iconLayout: 'default#image',
-            iconImageHref: '../img/placemarker.svg',
+            iconImageHref: 'img/placemarker.svg',
             iconImageSize: [40, 40],
             iconImageOffset: [-20, -40]
-        })
+        });
 
         map.geoObjects.add(marker);
     }

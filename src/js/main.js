@@ -30,6 +30,7 @@ import characteristicsSlider from "./build-in/characteristicsSlider";
 import modals from "./build-in/modals";
 import error from "./build-in/error"
 import inputPlaceholder from "./build-in/inputPlaceholder";
+import equipmentsList from "./build-in/equipmentsList";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     modals();
     error();
     inputPlaceholder();
+    equipmentsList();
 
     // custom
     initSliders();

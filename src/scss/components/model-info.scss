@@ -131,7 +131,6 @@
         color: var(--primary);
       }
     }
-
   }
 
   &__property-title {
@@ -351,6 +350,14 @@
       margin-bottom: 0;
 
       font-size: 1.3rem;
+
+      &:nth-child(n + 5) {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+
+        transition: $base-transition-time;
+      }
     }
 
     &::before {
@@ -369,6 +376,18 @@
         height: 0.3rem;
         margin-top: 0.5rem;
       }
+    }
+  }
+
+  &__equipment-more-button {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: inline-block;
+      margin-left: 2rem;
+
+      font: 500 1.3rem/110% var(--secondary-ff);
+      color: var(--primary);
     }
   }
 
