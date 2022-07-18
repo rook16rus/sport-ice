@@ -11,6 +11,10 @@
 
     color: #B0B1B3;
 
+    @media (min-width: 1700px) {
+      margin-bottom: 7rem;
+    }
+
     @include breakpoint(mobile) {
       max-width: 34rem;
       margin-bottom: 3rem;
