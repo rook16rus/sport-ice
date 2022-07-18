@@ -232,7 +232,7 @@
     .swiper-slide {
       position: relative;
 
-      aspect-ratio: 780 / 600;
+      aspect-ratio: 780 / 440;
       cursor: pointer;
 
       @include breakpoint(mobile) {

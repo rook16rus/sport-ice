@@ -22,12 +22,13 @@ export default function features() {
     });
 
     timeline
-        .to(".features__item:not(:first-child)", {
+        .fromTo(".features__item:not(:first-child)", {color: '#B0B1B3'}, {
             yPercent: 0,
             stagger: 4,
             opacity: 1,
             duration: 2,
             ease: "none",
+            color: '#A6120A'
         })
         .to(".features__item:first-child", {
             opacity: 0,

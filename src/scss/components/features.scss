@@ -35,7 +35,7 @@
     display: flex;
     align-items: flex-start;
     gap: 8rem;
-    padding: 4rem 0;
+    padding: 0 0 4rem;
 
     border-radius: 11rem 1rem 12rem 1rem;
     background-color: #fff;
@@ -46,6 +46,10 @@
 
     &:first-child {
       padding-top: 0;
+
+      .features__item-title {
+        color: var(--primary);
+      }
     }
 
 
@@ -101,7 +105,6 @@
     margin-bottom: 2.4rem;
     
     font: var(--title-h1);
-    color: #B0B1B3;
 
     transition: $base-transition-time;
 
@@ -131,12 +134,15 @@
     opacity: 0.6;
 
     font: var(--text-L);
+    color: var(--text-body);
   }
 
   &__property {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+
+    color: var(--text-body);
   }
 
   &__value {
