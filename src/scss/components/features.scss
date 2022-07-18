@@ -22,27 +22,34 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 7rem;
-
-    @include breakpoint(mobile) {
-      gap: 3rem;
-    }
   }
 
   &__item {
     display: flex;
     align-items: flex-start;
     gap: 8rem;
+    padding: 4rem 0;
 
-    opacity: 0;
-    visibility: hidden;
+    border-radius: 11rem 1rem 12rem 1rem;
+    background-color: #fff;
 
-    transform: translateY(3rem);
-    transition: 0.5s;
+    @include breakpoint(mobile) {
+      border-radius: 4rem 1rem 4rem 1rem;
+    }
 
-    @include revealed;
+    &:first-child {
+      padding-top: 0;
+    }
+
+
+    &:nth-child(n + 2) {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
 
     @include breakpoint(mobile) {
       flex-direction: column;

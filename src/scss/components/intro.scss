@@ -8,6 +8,10 @@
 
   color: #fff;
 
+  @include breakpoint(tablet) {
+    min-height: 0;
+  }
+
   @include breakpoint(mobile) {
     padding-top: calc(var(--header-height) + 2rem);
     padding-bottom: 3rem;
