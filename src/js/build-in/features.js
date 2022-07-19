@@ -4,6 +4,8 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function features() {
+    if (!matchMedia('(min-width: 640px)').matches) return;
+
     const timeline = gsap.timeline({
         scrollTrigger: {
             trigger: ".features .container",
