@@ -51,6 +51,10 @@
 
       .features__item-title {
         color: var(--primary);
+
+        @include breakpoint(mobile) {
+          color: inherit;
+        }
       }
     }
 
@@ -119,7 +123,7 @@
     }
 
     &--red {
-      color: var(--primary);
+      color: var(--primary) !important;
     }
   }
 

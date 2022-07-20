@@ -32,5 +32,12 @@ export default function modelCard() {
             nextEl: modelCard.querySelector('.js-next-slide'),
             prevEl: modelCard.querySelector('.js-prev-slide'),
         },
+        pagination: {
+            el: document.querySelector('.model-card__img-slider .swiper-pagination'),
+            clickable: true,
+            bulletElement: 'button',
+            bulletClass: 'slider-bullet',
+            bulletActiveClass: 'slider-bullet--active',
+        },
     })
 }

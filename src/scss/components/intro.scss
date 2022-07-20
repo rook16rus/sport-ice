@@ -200,11 +200,11 @@
   &__body {
     position: relative;
     flex-grow: 1;
+    margin-bottom: 5.5rem;
 
     @include breakpoint(mobile) {
       flex-grow: 0;
       margin-top: auto;
-      margin-bottom: auto;
     }
   }
 
