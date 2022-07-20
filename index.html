@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Заголовок">
+        <meta property="og:description" content="Описание">
+        <meta property="og:url" content="https://example.com/">
+        <meta property="og:image" content="https://via.placeholder.com/350x150">
+        <meta property="og:site_name" content="Бренд или имя сайта">
+        <meta property="og:locale" content="ru_RU">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="stylesheet" href="assets/backend/backend.css">
+        <title></title>
+    </head>
+    <body class="no-touch" ontouchstart="">
+        <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 0 14 11" fill="none" id="check-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.171 11a.856.856 0 01-.615-.262L.255 7.344a.913.913 0 010-1.266c.34-.349.89-.349 1.23 0L4.172 8.84 12.514.262c.34-.35.891-.35 1.231 0 .34.35.34.916 0 1.265l-8.958 9.21A.852.852 0 014.17 11z" fill="#171719" />
+                </symbol>
+                <symbol viewBox="0 0 40 40" id="close-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.4 4.8l28.284 28.284-2.262 2.263L4.137 7.062z" />
+                    <path d="M4.8 33.6L33.086 5.316l2.263 2.262L7.064 35.863z" />
+                </symbol>
+                <symbol viewBox="0 0 20 20" fill="none" id="download-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.968 9.258l-2.964 2.964-2.965-2.964" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.003 3.332v8.893" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M17.425 13.703a.75.75 0 00-1.5 0h1.5zm-13.34 0a.75.75 0 00-1.5 0h1.5zm11.84 0a2.215 2.215 0 01-2.215 2.215v1.5a3.715 3.715 0 003.715-3.715h-1.5zm-2.215 2.215H6.3v1.5h7.41v-1.5zm-7.41 0a2.215 2.215 0 01-2.214-2.215h-1.5A3.715 3.715 0 006.3 17.418v-1.5z" fill="currentColor" />
+                </symbol>
+                <symbol viewBox="0 0 40 40" fill="none" id="letter-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.469 31.183l18.312-9.72c1.181-.627 1.181-2.314 0-2.942L17.496 8.816c-1.38-.733-2.927.65-2.342 2.093l3.648 9-3.678 9.184c-.577 1.445.968 2.82 2.345 2.09z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M18.805 19.917L36.67 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.672 25h2.667" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5 20h4.333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.336 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </symbol>
+                <symbol viewBox="0 0 145 70" id="logo" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M78.74 41.71H74.29s3.15-8.644 3.65-10.009c.502-1.364 2.596-3.155 5.704-3.155h3.223l-1.084 2.956h-1.426c-1.112 0-1.934.2-2.624 2.076-.69 1.877-.256.682-.256.682l-1.569 4.294-1.17 3.156z" />
+                    <path d="M124.228 41.795h-7.643c-2.823 0-3.879-1.678-3.308-3.241.57-1.564 1.91-5.289 2.481-6.796.57-1.507 2.765-3.213 5.732-3.212h7.585l-1.083 2.956h-5.532c-1.74 0-2.521 1.024-2.938 2.133-.418 1.109-1.027 2.843-1.027 2.843-.627 1.65-.741 2.133 1.512 2.133h5.39l-1.169 3.184z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M130.537 41.794h10.516l1.17-3.184h-8.264c-2.203 0-2.288 0-1.747-1.506l6.93-2.047 2.653-.796c2.225-.682 2.766-1.986 3.051-2.758.684-1.847-.998-2.958-3.308-2.958h-6.096c-2.966 0-5.162 1.705-5.733 3.212-.408 1.08-1.212 3.3-1.846 5.047-.249.69-.473 1.306-.635 1.749-.57 1.563.485 3.241 3.309 3.241zm2.558-7.077s.427-1.111.771-2.076c.342-.965.655-1.109 1.654-1.109h4.591c.542 0 .914.738-.797 1.278l-6.219 1.907z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M60.431 41.71h6.103c3.08 0 5.105-1.735 5.647-3.184.542-1.45 1.925-5.175 2.481-6.71.556-1.536-.37-3.242-3.337-3.242h-5.989c-2.966 0-5.133 1.621-5.703 3.128-.57 1.507-1.94 5.232-2.51 6.795-.57 1.563.485 3.213 3.308 3.213zm7.586-10.093H65.65c-1.208 0-2.041.625-2.281 1.308-.24.682-1.237 3.49-1.455 4.094-.218.605.292 1.62 1.455 1.62h2.79c1.028 0 1.881-.597 2.172-1.393.097-.266.235-.654.392-1.097.312-.88.702-1.975 1.005-2.77.456-1.194-.2-1.762-1.711-1.762z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M35.876 47.026h4.477l1.94-5.345s3.023.029 6.103.029c3.08 0 5.133-1.735 5.647-3.185.288-.813.858-2.343 1.402-3.8.426-1.14.835-2.236 1.079-2.91.556-1.535-.371-3.298-3.337-3.298h-5.989c-3.108 0-5.202 1.763-5.704 3.128-.5 1.364-5.618 15.381-5.618 15.381zm14.08-15.41H47.59c-1.208 0-2.018.655-2.219 1.226-.126.357-.6 1.657-.992 2.733a636.6 636.6 0 00-.525 1.444c-.218.604.292 1.62 1.454 1.62h2.79c1.03 0 1.882-.598 2.172-1.393.098-.267.235-.654.393-1.097.312-.88.702-1.976 1.005-2.77.456-1.194-.2-1.763-1.711-1.763z" />
+                    <path d="M94.837 24.68h-4.461l-6.217 17.059h4.449l3.764-10.236h2.823l1.084-2.957h-2.852l1.41-3.867z" />
+                    <path d="M28.034 23.627C36.414 7.907 43.919.825 61.144 0c-15.058 4.52-18.68 17.799-19.421 23.627h-13.69z" />
+                    <path d="M33.11 46.373C24.73 62.093 17.225 69.176 0 70c15.058-4.52 18.68-17.799 19.421-23.627h13.69z" />
+                    <path d="M115.358 24.707h-5.704l-6.217 17.06h5.675l6.246-17.06z" />
+                    <path d="M40.154 30.423l1.426-3.924s-5.476-.028-10.039-.028-6.046.966-7.13 3.952c-1.083 2.986-.513 1.422-1.083 2.957s.143 2.9 3.45 2.9h3.338c1.311 0 1.967.597 1.71 1.308-.256.711-.114.37-.484 1.336-.371.966-1.398 1.393-2.938 1.393H20.79l-1.17 3.213h10.04c4.106 0 6.045-.967 6.872-3.184 0 0 .606-1.707 1.17-3.214.563-1.506-.913-3.752-4.335-3.752h-2.795c-1.084 0-1.37-.484-1.17-1.024.2-.54.286-.768.286-.768.256-.71.855-1.165 1.768-1.165h8.698z" />
+                </symbol>
+                <symbol viewBox="0 0 88 22" id="mark-webber" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M47.312 5.327c.212.221 2.117 5.497 2.316 6.148.198.698.479 1.367.834 1.993.66.156.722-.534.922-1.081 1.083-2.957 2.726-7.268 3.548-10.173.573-1.407.622-1.785-.41-1.785-1.034 0-.922.704-1.333 1.616-.361 1.732-1.756 5.392-2.266 7.072 0 .222 0 .222-.262.222-.859-2.501-1.855-5.562-2.826-8.037-.261-.482-.722-.586-1.033.495-.523 1.72-1.245 3.764-1.806 5.432 0 0-.672 2.11-.722 2.214a6.684 6.684 0 01-.772-1.94c-.772-1.994-1.444-4.143-2.104-6.136-.162-.377-.162-.599-.523-.82a2.065 2.065 0 00-1.133-.105c-1.02.17-.36 1.03-.15 1.668 1.246 3.504 2.628 7.71 4.01 11.045a.506.506 0 00.153.21.474.474 0 00.481.067.489.489 0 00.2-.16c.2-.403 2.727-7.945 2.876-7.945z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M.2.649c-.052.217-.035.446.049.651.212.912-.411 11.306-.25 11.723a2.389 2.389 0 001.607.157c.249-.274.15-.534.15-.964 0-1.837.149-3.608.149-5.497.062-.704.112-1.185.112-1.615 0-.43 0-.378.1-.482.099-.104 1.73 2.865 1.892 3.191.311.638.921 1.615 1.332 2.37.623 1.186.934.378 1.083.105.361-.482 3.15-5.601 3.35-5.705.186.208.186 5.327.186 5.705 0 2.8-.311 3.074 1.382 2.957.523 0 .573-.43.523-.912V9.48a129.162 129.162 0 01-.236-7.268c0-.273.1-1.302.1-1.459a.998.998 0 00-.586-.34.97.97 0 00-.66.119c-.36.221-.46.703-.722 1.029C8.715 3.5 7.308 5.703 6.325 7.539c-.361.652-.361.43-.673 0C4.98 6.51 4.11 4.74 3.498 3.71L2.253 1.56a4.474 4.474 0 00-.66-1.028C1.246.272.56.48.2.649z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M65.898 6.68c.441-.376.964-.632 1.522-.746a3.303 3.303 0 011.678.095c1.644.756 1.855 3.296 1.133 4.533-.307.482-.75.853-1.268 1.06a2.566 2.566 0 01-1.62.1 3.652 3.652 0 01-1.445-.652V6.68zm0-1.836a38.994 38.994 0 010-4.26c0-.586-.199-.69-.722-.481-1.245.547-1.245.325-1.07 1.51.099.6 0 7.542 0 8.52 0 1.927-.262 2.37 2.415 3.177a5.529 5.529 0 002.313.013 5.644 5.644 0 002.132-.937c2.627-2.254 1.905-8.61-2.889-8.128a9.194 9.194 0 00-1.245.156c-.162.052-.772.43-.846.43h-.088z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.592 13.142c.195-.68.25-1.394.162-2.098a16.042 16.042 0 010-2.214c.149 0 .31.274.622.6.311.325 2.876 3.125 3.287 3.438.143.14.316.242.504.298.189.057.387.066.58.028.36 0 .933 0 1.132-.26 0-.379-.722-.978-1.033-1.303-.311-.326-.71-.743-1.07-1.186a22.525 22.525 0 01-2.217-2.357c0-.118 2.826-2.605 3.35-3.074.198-.222.41-.274.36-.6a3.196 3.196 0 00-1.967 0c-.249.118-1.955 1.733-2.415 2.163-.15.156-1.034 1.133-1.133 1.08-.15-.494 0-7.228-.1-7.606-.1-.378-1.855.221-1.805.873.097.457.147.925.15 1.393v9.314c0 .325-.1 1.302.111 1.458a3.3 3.3 0 001.482.053z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.178 8.725c.573-.156 2.49.325 2.577.86.05.576.05 1.156 0 1.732-.36.482-2.838 1.446-3.66-.274a1.893 1.893 0 010-1.563c.12-.198.278-.368.464-.498.187-.13.398-.218.62-.257zm2.627-.651a4.4 4.4 0 00-1.593-.69 5.649 5.649 0 00-2.117.156 2.826 2.826 0 00-1.463 1.04 3.044 3.044 0 00-.585 1.748 3.052 3.052 0 00.523 1.768c.35.516.85.9 1.425 1.097a4.51 4.51 0 003.038 0c.212-.105.623-.378.772-.43.15-.052.212.377.411.482.2.104 1.133 0 1.394-.26.262-.261.312-.222.15-.6a2.806 2.806 0 01-.25-1.615V6.888a2.362 2.362 0 00-.36-1.563c-.984-2.045-6.91-1.237-6.437.495.473 1.733 1.245-.599 3.86-.273 1.407.156 1.257 1.563 1.257 2.527h-.025z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M79.756 7.815h-4.27c.057-.534.29-1.032.66-1.406.403-.37.91-.594 1.444-.639.278-.024.558.011.824.103.265.092.51.238.72.431.21.182.378.414.486.677.108.263.155.549.136.834zM75.374 9.21c.31-.156 4.98 0 5.827 0 .846 0 .46-2.905-1.084-4.09a4.016 4.016 0 00-4.432-.365 4.261 4.261 0 00-1.67 1.676 4.524 4.524 0 00-.559 2.35c-.03.798.148 1.59.514 2.292a4.345 4.345 0 001.566 1.693c1.382.977 5.092.925 5.552-.586.573-1.94-.771-.86-1.245-.651-.398.17-.817.28-1.245.325-2.751.326-3.424-2.214-3.224-2.644z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M56.685 7.814a2.268 2.268 0 01.677-1.454c.392-.378.906-.59 1.44-.59 1.07-.118 2.315.859 2.104 2.044h-4.221zm-.212 1.303h5.777c.672 0 .56-.43.51-.964a4.316 4.316 0 00-.624-2.034 4.071 4.071 0 00-1.504-1.446 3.853 3.853 0 00-1.99-.48 3.87 3.87 0 00-1.957.612 4.31 4.31 0 00-1.57 1.717 4.557 4.557 0 00-.485 2.321 4.23 4.23 0 00.493 2.284c.374.694.934 1.259 1.612 1.624 1.755 1.133 5.204.651 5.515-.638 0-.378.25-1.303-.311-1.082-.677.4-1.414.678-2.179.821a2.98 2.98 0 01-1.22-.083 3.06 3.06 0 01-1.096-.568c-.448-.378-1.17-1.511-.97-2.084z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M84.437 13.193c.311-.325.261-.482.261-.964v-1.302c0-1.72-.311-4.572 1.594-5.002.41-.104.51.26 1.033.156.309-.29.54-.657.673-1.068 0-.82-1.245-.977-2.378-.443-.361.17-.66.756-.922.808 0-.482.1-.69-.211-1.12-.4.04-.786.169-1.133.378-.51.26-.61.26-.51.911.099.652 0 5.12 0 6.187.049 1.629.049 1.576 1.593 1.46z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.73 13.141v-.104c.145-1.323.183-2.656.113-3.986 0-1.029.249-2.696 1.332-3.022.872-.325.921.534 1.494 0 1.332-1.459-.46-2.045-1.544-1.563-1.083.482-.933.86-1.245.964a2.725 2.725 0 010-.638c0-.274-.112-.274-.211-.43-.4-.003-.792.11-1.133.326-.51.208-.673.26-.51.911a19.8 19.8 0 01.099 3.01v2.97c.112 1.614-.1 1.731 1.606 1.562z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M46.951 14.876a27.048 27.048 0 00-6.026 1.498c-.61.273-1.245.43-1.855.703-1.245.482-2.415.912-3.648 1.407-.41.156-3.35 1.068-3.86 1.185-2.49.638-6.225 1.394-8.603.26-1.133-.586-1.245 1.238 1.332 1.89a10.07 10.07 0 004.532-.21c1.245-.273 2.74-.755 3.922-1.132 1.183-.378 2.578-.808 3.86-1.186.311-.117.56-.221.921-.325l1.905-.6c.361-.104.623-.26.934-.377l1.967-.482c.361-.105.623-.209.934-.326a35.765 35.765 0 017.93-.86c.66 0 1.644.17 2.317.274 1.245.156.97-.534.149-.977a12.558 12.558 0 00-6.71-.742z" />
+                </symbol>
+                <symbol viewBox="0 0 25 28" fill="none" id="play-arrow-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.164 13.135a1 1 0 010 1.732l-22 12.701a1 1 0 01-1.5-.866V1.3a1 1 0 011.5-.866l22 12.702z" fill="#FCFDFF" />
+                </symbol>
+                <symbol viewBox="0 0 10 18" fill="none" id="slider-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1l8 8-8 8" stroke="currentColor" />
+                </symbol>
+                <symbol viewBox="0 0 30 30" id="tg" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.921 14.59l5.293 1.976 2.05 6.588a.623.623 0 00.989.298l2.95-2.405a.88.88 0 011.073-.03l5.322 3.863a.624.624 0 00.977-.377l3.898-18.751a.624.624 0 00-.835-.71l-21.723 8.38a.624.624 0 00.006 1.168zm7.012.924l10.344-6.371c.186-.114.378.137.218.285l-8.537 7.936c-.3.28-.494.653-.549 1.059l-.29 2.155c-.04.288-.443.316-.523.038l-1.118-3.93a1.041 1.041 0 01.455-1.172z" />
+                </symbol>
+                <symbol viewBox="0 0 30 30" id="vk" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.881 20.55c-.898-1.677-3.212-3.691-4.168-4.568a.66.66 0 01-.052-.92c1.824-2.031 3.282-4.366 3.784-5.776.222-.623-.237-1.281-.883-1.281h-1.876c-.619 0-.98.23-1.153.596-1.516 3.22-2.816 4.613-3.726 5.427-.509.457-1.303.079-1.303-.615V9.12c0-.595-.47-1.076-1.048-1.076l-3.428-.04c-.431 0-.678.506-.419.861l.566.842c.213.292.328.647.328 1.012l-.003 3.793c0 .66-.771.982-1.23.52-1.549-1.564-2.893-4.759-3.377-6.287-.14-.442-.54-.74-.993-.741L5.052 8c-.694 0-1.2.682-1.012 1.368 1.689 6.146 5.154 11.993 11.33 12.627.609.062 1.133-.446 1.133-1.075v-1.993c0-.572.433-1.063.989-1.078h.058c1.634 0 3.463 2.464 4.104 3.617.183.332.527.534.9.534h2.486c.725 0 1.19-.798.841-1.45z" />
+                </symbol>
+                <symbol viewBox="0 0 55 55" id="whatsapp-green-icon" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="55" height="55" rx="27.5" fill="currenColor" />
+                    <g clip-path="url(#clip0_0_668)">
+                        <path d="M27.21 11c-9.465 0-17.17 7.697-17.173 17.16a17.124 17.124 0 002.293 8.581L10 45.375l8.994-2.125a17.158 17.158 0 008.205 2.088h.007c9.463 0 17.164-7.699 17.169-17.16.003-4.588-1.78-8.901-5.023-12.146A17.058 17.058 0 0027.21 11zm-.004 3.438a13.667 13.667 0 019.716 4.024 13.628 13.628 0 014.015 9.712c-.003 7.57-6.16 13.727-13.734 13.727a13.75 13.75 0 01-6.56-1.669l-1.159-.63-1.279.301-3.384.8.826-3.07.373-1.375-.712-1.236a13.713 13.713 0 01-1.833-6.861c.003-7.566 6.163-13.724 13.731-13.724zm-6.073 5.8c-.287 0-.752.108-1.145.537-.394.428-1.504 1.465-1.504 3.576 0 2.11 1.537 4.15 1.752 4.437.213.286 2.968 4.754 7.33 6.473 3.623 1.428 4.359 1.146 5.146 1.074.787-.07 2.54-1.036 2.897-2.038.358-1.002.359-1.864.252-2.04-.107-.18-.393-.286-.822-.501-.429-.215-2.538-1.25-2.931-1.393-.394-.143-.682-.215-.967.215-.286.43-1.106 1.393-1.357 1.678-.25.287-.5.326-.93.11-.43-.216-1.811-.67-3.45-2.13-1.276-1.137-2.137-2.539-2.388-2.968-.25-.428-.023-.663.192-.877.192-.192.426-.5.64-.751.214-.251.288-.43.43-.715.143-.286.07-.538-.037-.752-.106-.215-.94-2.334-1.322-3.183-.322-.713-.661-.73-.967-.742-.25-.01-.534-.01-.82-.01z" fill="#fff" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_0_668">
+                            <path fill="#fff" transform="translate(10 11)" d="M0 0h34.375v34.375H0z" />
+                        </clipPath>
+                    </defs>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="whatsapp-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.886 7.17c.183.005.386.015.579.443.128.285.343.81.519 1.238.137.333.249.607.277.663.064.128.104.275.02.448l-.028.058a1.43 1.43 0 01-.23.37 9.386 9.386 0 00-.143.17c-.085.104-.17.206-.242.278-.129.128-.262.266-.114.522.149.256.668 1.098 1.435 1.777a6.634 6.634 0 001.903 1.2c.07.03.127.055.17.076.257.128.41.108.558-.064.149-.173.643-.749.817-1.005.168-.256.34-.216.578-.128.238.089 1.504.71 1.761.837l.143.07c.179.085.3.144.352.23.064.109.064.62-.148 1.222-.218.6-1.267 1.176-1.742 1.22l-.135.016c-.436.052-.988.12-2.956-.655-2.426-.954-4.027-3.32-4.35-3.799a2.768 2.768 0 00-.053-.076l-.006-.008c-.147-.197-1.048-1.402-1.048-2.646 0-1.19.587-1.81.854-2.092l.047-.05a.95.95 0 01.687-.32c.173 0 .347 0 .495.005z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.184 21.331a.4.4 0 00.487.494l4.607-1.204a10 10 0 004.76 1.207h.004c5.486 0 9.958-4.447 9.958-9.912a9.828 9.828 0 00-2.914-7.011A9.917 9.917 0 0012.042 2c-5.486 0-9.958 4.446-9.958 9.911 0 1.739.458 3.447 1.33 4.954l-1.23 4.466zm2.677-4.068a1.5 1.5 0 00-.148-1.15 8.377 8.377 0 01-1.129-4.202c0-4.63 3.793-8.411 8.458-8.411 2.27 0 4.388.877 5.986 2.468a8.328 8.328 0 012.472 5.948c0 4.63-3.793 8.412-8.458 8.412h-.005a8.5 8.5 0 01-4.044-1.026 1.5 1.5 0 00-1.094-.132l-2.762.721.724-2.628z" />
+                </symbol>
+                <symbol viewBox="0 0 30 30" id="wp" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.014 4C8.957 4 4.026 8.926 4.024 14.983a10.96 10.96 0 001.467 5.491L4 26l5.756-1.36a10.981 10.981 0 005.252 1.336h.004c6.056 0 10.985-4.927 10.988-10.982a10.914 10.914 0 00-3.214-7.773A10.917 10.917 0 0015.014 4zm-.002 2.2a8.747 8.747 0 016.218 2.576 8.721 8.721 0 012.57 6.215c-.002 4.845-3.943 8.785-8.79 8.785a8.8 8.8 0 01-4.199-1.067l-.741-.404-.819.193-2.166.511.529-1.963.239-.881-.456-.79a8.777 8.777 0 01-1.173-4.392C6.226 10.14 10.168 6.2 15.012 6.2zm-3.887 3.712c-.184 0-.48.07-.733.344-.252.274-.962.938-.962 2.288 0 1.351.984 2.657 1.121 2.84.137.183 1.9 3.043 4.69 4.143 2.32.914 2.79.733 3.295.687.503-.045 1.625-.662 1.854-1.304.229-.641.23-1.193.161-1.306-.068-.114-.251-.183-.526-.32-.274-.138-1.624-.8-1.876-.892-.252-.091-.436-.137-.619.138s-.707.891-.868 1.074c-.16.184-.32.208-.595.07-.275-.138-1.16-.428-2.209-1.363-.816-.728-1.367-1.625-1.528-1.9-.16-.274-.015-.424.123-.56.123-.124.273-.321.41-.482.137-.16.184-.275.275-.457.091-.183.045-.344-.023-.482-.069-.137-.603-1.493-.847-2.036-.206-.457-.423-.467-.619-.475-.16-.007-.341-.007-.524-.007z" />
+                </symbol>
+                <symbol viewBox="0 0 30 30" id="youtube" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.498 10.406c-.167-.962-.96-1.663-1.88-1.881C20.241 8.219 17.693 8 14.936 8c-2.755 0-5.344.219-6.722.525-.919.218-1.713.875-1.88 1.881A30.042 30.042 0 006 15c0 1.969.166 3.5.375 4.594.168.962.961 1.663 1.88 1.881 1.461.306 3.967.525 6.724.525s5.262-.219 6.724-.525c.919-.218 1.711-.875 1.88-1.881.166-1.094.375-2.67.417-4.594-.085-1.969-.294-3.5-.502-4.594zm-10.816 7.656v-6.125L17.776 15l-5.094 3.063z" />
+                </symbol>
+            </svg>
+        </div>
+        <div class="page-content">
+
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <a class="header__logo" href="#">
+                            <svg>
+                                <use xlink:href="#logo"></use>
+                            </svg>
+                        </a>
+                        <nav class="header__nav">
+                            <ul class="header__menu">
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="">Kodiak</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="">Bumblebee</a>
+                                </li>
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="">Bronco</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <a class="header__phone" href="tel:+78001019228">8 800 101 92 28</a>
+                        <a class="header__whatsapp" href="#">
+                            <svg>
+                                <use xlink:href="#whatsapp-icon"></use>
+                            </svg>
+                        </a>
+                        <a class="header__button button button--white-border" href="#">Консультация</a>
+                        <div class="header__burger"></div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <ul class="header__mobile-menu">
+                        <li class="header__mobile-menu-item">
+                            <a class="header__mobile-menu-link" href="#">Kodiak</a>
+                        </li>
+                        <li class="header__mobile-menu-item">
+                            <a class="header__mobile-menu-link" href="#">Bumblebee</a>
+                        </li>
+                        <li class="header__mobile-menu-item">
+                            <a class="header__mobile-menu-link" href="#">Bronco</a>
+                        </li>
+                    </ul>
+                    <a class="header__mobile-button button button--white-border" href="#">Консультация</a>
+                    <a class="header__mobile-whatsapp" href="#">
+                        <svg>
+                            <use xlink:href="#whatsapp-icon"></use>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </header>
+
+            <main class="page-main">
+                <section class="intro">
+                    <div class="container">
+                        <div class="intro__inner">
+                            <div class="intro__header">
+                                <h1 class="intro__title">Ледозаливочная техника бренда SportIce</h1>
+                                <div class="intro__pagination js-intro-pagination">
+                                    <span class="intro__pagination-number">01</span>
+                                    <div class="intro__pagination-line">
+                                        <div class="intro__pagination-line-progress"></div>
+                                    </div>
+                                    <span class="intro__pagination-number">03</span>
+                                </div>
+                                <div class="intro__navigation">
+                                    <button class="js-prev-slide">
+                                        <svg>
+                                            <use xlink:href="#slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="js-next-slide">
+                                        <svg>
+                                            <use xlink:href="#slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="intro__body">
+                                <div class="intro__body-wrapper">
+                                    <div class="intro__img-slider-container">
+                                        <div class="intro__img-slider swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide" data-background="0%">
+                                                    <img class="lazyload" data-src="img/intro-1.png" alt="Фото машины">
+                                                    <span class="intro__img-desc">KODIAK</span>
+                                                </div>
+                                                <div class="swiper-slide" data-background="55%">
+                                                    <img class="lazyload" data-src="img/intro-2.png" alt="Фото машины">
+                                                    <span class="intro__img-desc">Bumblebee</span>
+                                                </div>
+                                                <div class="swiper-slide" data-background="100%">
+                                                    <img class="lazyload" data-src="img/intro-3.png" alt="Фото машины">
+                                                    <span class="intro__img-desc">BRONCO</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="intro__text-slider swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">KODIAK</div>
+                                            <div class="swiper-slide">Bumblebee</div>
+                                            <div class="swiper-slide">BRONCO</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="intro__footer">
+                                <a class="intro__button button button--white" href="#model">Подберите технику со скидкой 10%</a>
+                                <div class="intro__brand">
+                                    <div class="intro__brand-check">
+                                        <svg>
+                                            <use xlink:href="#check-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <p class="intro__brand-text">новый бренд на российском рынке</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="features">
+                    <div class="container">
+                        <h2 class="features__title section-title">
+                            <b>Американское качество</b>&nbsp;по доступной цене с доставкой по всей россии
+                        </h2>
+                        <ul class="features__list">
+                            <li class="features__item">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="img/feature-1.png" alt="Приемущество">
+                                </div>
+                                <div class="features__content">
+                                    <h3 class="features__item-title">лучшая цена</h3>
+                                    <div class="features__text-block">
+                                        <p class="features__text">Модели бренда отличаются технологичностью в сборке и используемых материалах, поэтому они значительно выгоднее аналогичных флагманских моделей на рынке.</p>
+                                        <div class="features__property">
+                                            <span class="features__value">100 %</span>
+                                            <span class="features__desc">гарантия качества</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="features__item">
+                                <div class="features__img">
+                                    <img class="lazyload" data-src="img/feature-2.png" alt="Приемущество">
+                                </div>
+                                <div class="features__content">
+                                    <h3 class="features__item-title">Литий-ионные батареи</h3>
+                                    <div class="features__text-block">
+                                        <p class="features__text">Все модели работают от литий-ионных батарей 48 ватт. Емкость батареи от 200 AH, хватит на несколько часов беспрерывной работы. Кроме того, литий-ионные батареи можно перезаряжать в течение дня от обычной розетки 220V, что увеличивает эффективность машин.</p>
+                                        <div class="features__property">
+                                            <span class="features__value">200 AH</span>
+                                            <span class="features__desc">емкость батареи</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="features__item">
+                                <div class="features__img features__img--fill">
+                                    <img class="lazyload" data-src="img/feature-3.jpg" alt="Приемущество">
+                                </div>
+                                <div class="features__content">
+                                    <h3 class="features__item-title">гарантия поставки</h3>
+                                    <div class="features__text-block">
+                                        <p class="features__text">Все модели машин Sport Ice уже готовы к отгрузке. После заключения договора мы доставим ледозаливочную технику в течение 30 дней.</p>
+                                        <div class="features__property">
+                                            <span class="features__value">30 дней</span>
+                                            <span class="features__desc">отгрузка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="models js-block-to-reveal">
+                    <div class="wide-container wide-container--without-padding">
+                        <div class="models__inner">
+                            <h2 class="models__title">Модельный ряд</h2>
+                            <div class="models__wrapper">
+                                <div class="models__list-slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="models__list-slide swiper-slide" data-background="linear-gradient(180deg, #1D1D1D, #2C2C2C, #fff, #fff)">
+                                            <h3 class="models__list-title">kodiak</h3>
+                                            <p class="models__list-text">Для достижения высоких&nbsp;целей</p>
+                                            <div class="models__list-img">
+                                                <img class="lazyload" data-src="img/model-1.png" alt="Фото модели">
+                                            </div>
+                                            <span class="models__list-tag">Хит продаж</span>
+                                        </div>
+                                        <div class="models__list-slide swiper-slide" data-background="linear-gradient(180deg, #FFD700, #DCC442, #fff, #fff)">
+                                            <h3 class="models__list-title">Bumblebee</h3>
+                                            <p class="models__list-text">Маленький, но очень эффективный</p>
+                                            <div class="models__list-img">
+                                                <img class="lazyload" data-src="img/model-2.png" alt="Фото модели">
+                                            </div>
+                                        </div>
+                                        <div class="models__list-slide swiper-slide" data-background="linear-gradient(180deg, #034155, #135E76, #fff, #fff)">
+                                            <h3 class="models__list-title">bronco</h3>
+                                            <p class="models__list-text">Надежный помощник на&nbsp;аренах средних размеров</p>
+                                            <div class="models__list-img">
+                                                <img class="lazyload" data-src="img/model-3.png" alt="Фото модели">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="models__property-slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="models__property-slide swiper-slide">
+                                            <div class="models__property-check-block">
+                                                <div class="models__property-check">
+                                                    <svg>
+                                                        <use xlink:href="#check-icon"></use>
+                                                    </svg>
+                                                </div>
+                                                <span class="models__property-check-desc">большая ширина ножа</span>
+                                            </div>
+                                            <ul class="models__property-list">
+                                                <li class="models__property-item models__property-item--view-1" style="left: 32.8%; top: 0%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">3,11 м³</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;снега</span>
+                                                    </div>
+                                                    <svg width="4.8rem" height="14.2rem" viewBox="0 0 48 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line1">
+                                                            <path fill="none" d="M0 1H32V117" />
+                                                        </symbol>
+                                                        <mask id="mask1">
+                                                            <use class="mask" xlink:href="#line1" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line1" mask="url(#mask1)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="34.5" cy="128.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="34.5" cy="128.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-2" style="left: 87.3%; top: 0%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">850&nbsp;л</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;воды</span>
+                                                    </div>
+                                                    <svg width="16.7rem" height="17.2rem" viewBox="0 0 167 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line2">
+                                                            <path fill="none" d="M167 1H13V148" />
+                                                        </symbol>
+                                                        <mask id="mask2">
+                                                            <use class="mask" xlink:href="#line2" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line2" mask="url(#mask2)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="158.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="158.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-3" style="left: 0; top: 26.8%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">1800 м²</span>
+                                                        <span class="models__property-desc">площадь заливки</span>
+                                                    </div>
+                                                    <svg width="15.4rem" height="13.2rem" viewBox="0 0 154 132" fill="none">
+                                                        <symbol id="line3">
+                                                            <path fill="none" d="M1.86353 0.976096L1.00005 117.404L118.814 118.277" />
+                                                        </symbol>
+                                                        <mask id="mask3">
+                                                            <use class="mask" xlink:href="#line3" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line3" mask="url(#mask3)" stroke="#0F1926" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="140.5" cy="118.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="140.5" cy="118.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-4" style="left: 72.2%; top: 80.6%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">48 V, 7.2 кВт</span>
+                                                        <span class="models__property-desc">аккумулятор</span>
+                                                    </div>
+                                                    <svg width="5.7rem" height="18.2rem" viewBox="0 0 57 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line4">
+                                                            <path fill="none" d="M57 181H11V27" />
+                                                        </symbol>
+                                                        <mask id="mask4">
+                                                            <use class="mask" xlink:href="#line4" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line4" mask="url(#mask4)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="13.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                            <div class="models__property-img">
+                                                <img class="lazyload" data-src="img/model-1.png" alt="Фото модели">
+                                            </div>
+                                        </div>
+                                        <div class="models__property-slide swiper-slide">
+                                            <div class="models__property-check-block">
+                                                <div class="models__property-check">
+                                                    <svg>
+                                                        <use xlink:href="#check-icon"></use>
+                                                    </svg>
+                                                </div>
+                                                <span class="models__property-check-desc">большая ширина ножа</span>
+                                            </div>
+                                            <ul class="models__property-list">
+                                                <li class="models__property-item models__property-item--view-1" style="left: 34.8%; top: 0">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">3,11 м³</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;снега</span>
+                                                    </div>
+                                                    <svg width="4.8rem" height="14.2rem" viewBox="0 0 48 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line5">
+                                                            <path fill="none" d="M0 1H32V117" />
+                                                        </symbol>
+                                                        <mask id="mask5">
+                                                            <use class="mask" xlink:href="#line5" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line5" mask="url(#mask5)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="34.5" cy="128.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="34.5" cy="128.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-2" style="left: 87.3%; top: 0">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">850&nbsp;л</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;воды</span>
+                                                    </div>
+                                                    <svg width="16.7rem" height="17.2rem" viewBox="0 0 167 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line6">
+                                                            <path fill="none" d="M167 1H13V148" />
+                                                        </symbol>
+                                                        <mask id="mask6">
+                                                            <use class="mask" xlink:href="#line6" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line6" mask="url(#mask6)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="158.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="158.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-3" style="left: 0; top: 26.8%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">1800 м²</span>
+                                                        <span class="models__property-desc">площадь заливки</span>
+                                                    </div>
+                                                    <svg width="15.4rem" height="13.2rem" viewBox="0 0 154 132" fill="none">
+                                                        <symbol id="line7">
+                                                            <path fill="none" d="M1.86353 0.976096L1.00005 117.404L118.814 118.277" />
+                                                        </symbol>
+                                                        <mask id="mask7">
+                                                            <use class="mask" xlink:href="#line7" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line7" mask="url(#mask7)" stroke="#0F1926" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="140.5" cy="118.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="140.5" cy="118.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-4" style="left: 72.2%; top: 80.6%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">48 V, 7.2 кВт</span>
+                                                        <span class="models__property-desc">аккумулятор</span>
+                                                    </div>
+                                                    <svg width="5.7rem" height="18.2rem" viewBox="0 0 57 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line8">
+                                                            <path fill="none" d="M57 181H11V27" />
+                                                        </symbol>
+                                                        <mask id="mask8">
+                                                            <use class="mask" xlink:href="#line8" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line8" mask="url(#mask8)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="13.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                            <div class="models__property-img">
+                                                <img class="lazyload" data-src="img/model-2.png" alt="Фото модели">
+                                            </div>
+                                        </div>
+                                        <div class="models__property-slide swiper-slide">
+                                            <div class="models__property-check-block">
+                                                <div class="models__property-check">
+                                                    <svg>
+                                                        <use xlink:href="#check-icon"></use>
+                                                    </svg>
+                                                </div>
+                                                <span class="models__property-check-desc">большая ширина ножа</span>
+                                            </div>
+                                            <ul class="models__property-list">
+                                                <li class="models__property-item models__property-item--view-1" style="left: 34.8%; top: 0">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">3,11 м³</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;снега</span>
+                                                    </div>
+                                                    <svg width="4.8rem" height="14.2rem" viewBox="0 0 48 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line9">
+                                                            <path fill="none" d="M0 1H32V117" />
+                                                        </symbol>
+                                                        <mask id="mask9">
+                                                            <use class="mask" xlink:href="#line9" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line9" mask="url(#mask9)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="34.5" cy="128.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="34.5" cy="128.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-2" style="left: 87.3%; top: 0">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">850&nbsp;л</span>
+                                                        <span class="models__property-desc">ёмкость для&nbsp;воды</span>
+                                                    </div>
+                                                    <svg width="16.7rem" height="17.2rem" viewBox="0 0 167 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line10">
+                                                            <path fill="none" d="M167 1H13V148" />
+                                                        </symbol>
+                                                        <mask id="mask10">
+                                                            <use class="mask" xlink:href="#line10" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line10" mask="url(#mask10)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="158.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="158.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-3" style="left: 0; top: 26.8%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">1800 м²</span>
+                                                        <span class="models__property-desc">площадь заливки</span>
+                                                    </div>
+                                                    <svg width="15.4rem" height="13.2rem" viewBox="0 0 154 132" fill="none">
+                                                        <symbol id="line11">
+                                                            <path fill="none" d="M1.86353 0.976096L1.00005 117.404L118.814 118.277" />
+                                                        </symbol>
+                                                        <mask id="mask11">
+                                                            <use class="mask" xlink:href="#line11" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line11" mask="url(#mask11)" stroke="#0F1926" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="140.5" cy="118.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="140.5" cy="118.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                                <li class="models__property-item models__property-item--view-4" style="left: 72.2%; top: 80.6%">
+                                                    <div class="models__property-content">
+                                                        <span class="models__property-value">48 V, 7.2 кВт</span>
+                                                        <span class="models__property-desc">аккумулятор</span>
+                                                    </div>
+                                                    <svg width="5.7rem" height="18.2rem" viewBox="0 0 57 182" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <symbol id="line12">
+                                                            <path fill="none" d="M57 181H11V27" />
+                                                        </symbol>
+                                                        <mask id="mask12">
+                                                            <use class="mask" xlink:href="#line12" stroke="#fff" />
+                                                        </mask>
+                                                        <use class="dashed" xlink:href="#line12" mask="url(#mask12)" stroke="#000" stroke-dasharray="3 3" opacity="1" />
+                                                        <g class="circle">
+                                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#FCFDFF" />
+                                                            <circle cx="13.5" cy="13.5" r="4.5" fill="#AE261E" />
+                                                        </g>
+                                                    </svg>
+                                                </li>
+                                            </ul>
+                                            <div class="models__property-img">
+                                                <img class="lazyload" data-src="img/model-3.png" alt="Фото модели">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="models__buttons">
+                                        <a class="models__button button button--red" href="#model">Заказать</a>
+                                        <a class="models__link" href="model.html">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="reviews js-block-to-reveal" id="reviews">
+                    <div class="container">
+                        <div class="reviews__inner js-init-slider-container">
+                            <h2 class="reviews__title section-title">Отзывы клиентов</h2>
+                            <div class="reviews__slider swiper js-init-slider" data-space="25" data-slides-breakpoints="280:1.4,640:3.5">
+                                <div class="reviews__inner_items swiper-wrapper">
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic reviews__item-graphic--video" data-fancybox data-src="https://youtu.be/QMCAGHqIKK4">
+                                            <img class="lazyload" data-src="img/review-1.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Отличная модель для российских условий</h3>
+                                        <p class="reviews__item-text">Менеджер компании погрузился в суть вопроса и подобрал нам идеальную конфигурацию! Сотрудники компании высоко-квалифицированны и полностью оправдывают ожидания.</p>
+                                        <cite class="reviews__item-author">Алишер Нуриев</cite>
+                                        <span class="reviews__item-position">Директор «Слобода арена», пос. Рыбная слобода</span>
+                                    </blockquote>
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic" data-fancybox data-src="img/review-2.jpg">
+                                            <img class="lazyload" data-src="img/review-2.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Идеальна для заливки арены хоккея с мячом</h3>
+                                        <p class="reviews__item-text">Менеджер компании погрузился и подобрал лучшую конфигурацию, которая актуальна не толкьо в зимний период, но и летом. Огромная благодарность за столь уникальную модель!</p>
+                                        <cite class="reviews__item-author">Олег Петров</cite>
+                                        <span class="reviews__item-position">Директор «Арена спорта», г. Казань</span>
+                                    </blockquote>
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic" data-fancybox data-src="img/review-3.jpg">
+                                            <img class="lazyload" data-src="img/review-3.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Очень вместительная и производительная модель!</h3>
+                                        <p class="reviews__item-text">Подбирали модель для заливки на открытых катках, к нашему удивлению эта машина способна обрабатывать по 30 катков в день. Думаю это не предел, будем бить рекорды!</p>
+                                        <cite class="reviews__item-author">Давид Нургалиев</cite>
+                                        <span class="reviews__item-position">Директор «Ледовый дворец», г. Набережные Челны</span>
+                                    </blockquote>
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic reviews__item-graphic--video" data-fancybox data-src="https://youtu.be/QMCAGHqIKK4">
+                                            <img class="lazyload" data-src="img/review-1.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Отличная модель для российских условий</h3>
+                                        <p class="reviews__item-text">Менеджер компании погрузился в суть вопроса и подобрал нам идеальную конфигурацию! Сотрудники компании высоко-квалифицированны и полностью оправдывают ожидания.</p>
+                                        <cite class="reviews__item-author">Алишер Нуриев</cite>
+                                        <span class="reviews__item-position">Директор «Слобода арена», пос. Рыбная слобода</span>
+                                    </blockquote>
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic" data-fancybox data-src="img/review-2.jpg">
+                                            <img class="lazyload" data-src="img/review-2.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Идеальна для заливки арены хоккея с мячом</h3>
+                                        <p class="reviews__item-text">Менеджер компании погрузился и подобрал лучшую конфигурацию, которая актуальна не толкьо в зимний период, но и летом. Огромная благодарность за столь уникальную модель!</p>
+                                        <cite class="reviews__item-author">Олег Петров</cite>
+                                        <span class="reviews__item-position">Директор «Арена спорта», г. Казань</span>
+                                    </blockquote>
+                                    <blockquote class="reviews__item swiper-slide">
+                                        <a class="reviews__item-graphic" data-fancybox data-src="img/review-3.jpg">
+                                            <img class="lazyload" data-src="img/review-3.jpg" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">Очень вместительная и производительная модель!</h3>
+                                        <p class="reviews__item-text">Подбирали модель для заливки на открытых катках, к нашему удивлению эта машина способна обрабатывать по 30 катков в день. Думаю это не предел, будем бить рекорды!</p>
+                                        <cite class="reviews__item-author">Давид Нургалиев</cite>
+                                        <span class="reviews__item-position">Директор «Ледовый дворец», г. Набережные Челны</span>
+                                    </blockquote>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="slider-navigation js-slider-navigation">
+                                <button class="slider-navigation__button slider-navigation__button--bordered-dark js-prev-slide">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="slider-navigation__button slider-navigation__button--bordered-dark js-next-slide">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="order js-block-to-reveal">
+                    <div class="wide-container">
+                        <div class="order__wrapper" style="background: url('img/order-bg.jpg') no-repeat center; background-size: cover;">
+                            <div class="order__img-wrapper">
+                                <img class="order__img lazyload" data-src="img/person.png" alt="Персона">
+                            </div>
+                            <div class="order__content">
+                                <h2 class="order__title">получите консультацию нашего эксперта</h2>
+                                <form class="order__form" action="" data-need-validation="true" novalidate>
+                                    <div class="order__input-wrapper">
+                                        <input class="order__input input input--light" id="orderName" type="text" name="name" required>
+                                        <label for="orderName">Ваше имя</label>
+                                    </div>
+                                    <div class="order__input-wrapper">
+                                        <input class="order__input input input--light js-phone-input" id="orderPhone" type="tel" name="phone" data-parsley-phone required>
+                                        <label for="orderPhone">Ваш телефон</label>
+                                    </div>
+                                    <button class="order__button button button--white" type="submit">
+                                        <span>Отправить</span>
+                                        <svg>
+                                            <use xlink:href="#letter-icon"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                                <p class="order__confidence">
+                                    <span>Нажимая кнопку «Отправить» вы соглашаетесь с<a href="#">политикой конфиденциальности</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="gallery js-block-to-reveal">
+                    <div class="container">
+                        <h2 class="gallery__title section-title">Медиагалерея</h2>
+                    </div>
+                    <div class="wide-container">
+                        <div class="gallery__inner">
+                            <ul class="gallery__list">
+                                <li class="gallery__item">
+                                    <a class="gallery__link gallery__link--video" data-fancybox="gallery" data-src="https://youtu.be/QMCAGHqIKK4" href="#">
+                                        <img class="lazyload" data-src="img/gallery-1.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-2.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-2.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-3.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-3.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-4.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-4.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-5.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-5.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-6.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-6.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                                <li class="gallery__item">
+                                    <a class="gallery__link" data-fancybox="gallery" data-src="img/gallery-7.jpg" href="#">
+                                        <img class="lazyload" data-src="img/gallery-7.jpg" alt="Фото">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="card-slider-container">
+                                <ul class="gallery__mobile-list card-slider">
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="1" data-position="1">
+                                        <a class="gallery__link gallery__link--video" data-fancybox="gallery-mobile" data-src="https://youtu.be/QMCAGHqIKK4">
+                                            <img class="lazyload" data-src="img/gallery-1.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="2" data-position="2">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-2.jpg">
+                                            <img class="lazyload" data-src="img/gallery-2.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="3" data-position="3">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-3.jpg">
+                                            <img class="lazyload" data-src="img/gallery-3.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="4" data-position="4">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-4.jpg">
+                                            <img class="lazyload" data-src="img/gallery-4.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="5" data-position="5">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-5.jpg">
+                                            <img class="lazyload" data-src="img/gallery-5.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="6" data-position="6">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-6.jpg">
+                                            <img class="lazyload" data-src="img/gallery-6.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                    <li class="gallery__mobile-item card-slider-slide" data-class="7" data-position="7">
+                                        <a class="gallery__link" data-fancybox="gallery-mobile" data-src="img/gallery-7.jpg">
+                                            <img class="lazyload" data-src="img/gallery-7.jpg" alt="Фото">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="gallery__mobile-prev card-slider-prev">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="gallery__mobile-next card-slider-next">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="gallery__mobile-dots card-slider-dots">
+                                    <button class="active" data-class="1"></button>
+                                    <button class="" data-class="2"></button>
+                                    <button class="" data-class="3"></button>
+                                    <button class="" data-class="4"></button>
+                                    <button class="" data-class="5"></button>
+                                    <button class="" data-class="6"></button>
+                                    <button class="" data-class="7"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="map js-block-to-reveal">
+                    <div class="container">
+                        <h2 class="map__title section-title">Сервисные центры во&nbsp;всех уголках страны</h2>
+                        <div class="map__cities swiper">
+                            <div class="swiper-wrapper">
+                                <div class="map__cities-slide swiper-slide active">Санкт-Петербург</div>
+                                <div class="map__cities-slide swiper-slide">Москва</div>
+                                <div class="map__cities-slide swiper-slide">Краснодар</div>
+                                <div class="map__cities-slide swiper-slide">Казань</div>
+                                <div class="map__cities-slide swiper-slide">Екатеринбург</div>
+                                <div class="map__cities-slide swiper-slide">Уфа</div>
+                                <div class="map__cities-slide swiper-slide">Салехард</div>
+                                <div class="map__cities-slide swiper-slide">Норильск</div>
+                                <div class="map__cities-slide swiper-slide">Нижневартовск</div>
+                                <div class="map__cities-slide swiper-slide">Мирный</div>
+                                <div class="map__cities-slide swiper-slide">Омск</div>
+                                <div class="map__cities-slide swiper-slide">Новосибирск</div>
+                                <div class="map__cities-slide swiper-slide">Иркутск</div>
+                            </div>
+                        </div>
+                        <div class="map__wrapper">
+                            <div class="map__img">
+                                <img class="lazyload" data-src="img/map.svg" alt="Карта России">
+                                <div class="map__circles">
+                                    <div class="map__circle" style="left: 10.8rem; top: 24rem">
+                                        <span class="map__circle-name">Санкт-Петербург</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 10.3rem; top: 32.1rem">
+                                        <span class="map__circle-name">Москва</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 3.5rem; top: 47.8rem">
+                                        <span class="map__circle-name">Краснодар</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 19.7rem; top: 34.6rem">
+                                        <span class="map__circle-name">Казань</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 32.4rem; top: 35.9rem">
+                                        <span class="map__circle-name">Екатеринбург</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 26.3rem; top: 40.8rem">
+                                        <span class="map__circle-name">Уфа</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 43.9rem; top: 30rem">
+                                        <span class="map__circle-name">Салехард</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 58.8rem; top: 27.5rem">
+                                        <span class="map__circle-name">Норильск</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 54.6rem; top: 42.2rem">
+                                        <span class="map__circle-name">Нижневартовск</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 73rem; top: 38.8rem">
+                                        <span class="map__circle-name">Мирный</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 41.8rem; top: 48.4rem">
+                                        <span class="map__circle-name">Омск</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 52.8rem; top: 52.7rem">
+                                        <span class="map__circle-name">Новосибирск</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                    <div class="map__circle" style="left: 70rem; top: 57rem">
+                                        <span class="map__circle-name">Иркутск</span>
+                                        <div class="map__circle-icon"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map__slider-container card-slider-container">
+                                <div class="map__slider card-slider">
+                                    <div class="map__slide card-slider-slide" data-position="1" data-class="1">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="2" data-class="2">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="3" data-class="3">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="4" data-class="4">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="5" data-class="5">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="6" data-class="6">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="7" data-class="7">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="8" data-class="8">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="9" data-class="9">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="10" data-class="10">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="11" data-class="11">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="12" data-class="12">
+                                        <img class="lazyload" data-src="img/map-2.jpg" alt="Фото">
+                                    </div>
+                                    <div class="map__slide card-slider-slide" data-position="13" data-class="13">
+                                        <img class="lazyload" data-src="img/map-1.jpg" alt="Фото">
+                                    </div>
+                                </div>
+                                <button class="map__slider-prev card-slider-prev">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="map__slider-next card-slider-next">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <div class="map__slider-dots card-slider-dots">
+                                    <button class="active" data-class="1"></button>
+                                    <button class="" data-class="2"></button>
+                                    <button class="" data-class="3"></button>
+                                    <button class="" data-class="4"></button>
+                                    <button class="" data-class="5"></button>
+                                    <button class="" data-class="6"></button>
+                                    <button class="" data-class="7"></button>
+                                    <button class="" data-class="8"></button>
+                                    <button class="" data-class="9"></button>
+                                    <button class="" data-class="10"></button>
+                                    <button class="" data-class="11"></button>
+                                    <button class="" data-class="12"></button>
+                                    <button class="" data-class="13"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="map__features">
+                            <li class="map__feature">
+                                <div class="map__feature-icon">
+                                    <img class="lazyload" data-src="img/map-feature-1.svg" alt="Иконка преимущества">
+                                </div>
+                                <div class="map__feature-content">
+                                    <h3 class="map__feature-title">Выезд на место</h3>
+                                    <p class="map__feature-text">наш специалист выезжает и проводит обслуживание</p>
+                                </div>
+                            </li>
+                            <li class="map__feature">
+                                <div class="map__feature-icon">
+                                    <img class="lazyload" data-src="img/map-feature-2.svg" alt="Иконка преимущества">
+                                </div>
+                                <div class="map__feature-content">
+                                    <h3 class="map__feature-title">до 2 часов</h3>
+                                    <p class="map__feature-text">время обнаружения проблемы</p>
+                                </div>
+                            </li>
+                            <li class="map__feature">
+                                <div class="map__feature-icon">
+                                    <img class="lazyload" data-src="img/map-feature-3.svg" alt="Иконка преимущества">
+                                </div>
+                                <div class="map__feature-content">
+                                    <h3 class="map__feature-title">2 года</h3>
+                                    <p class="map__feature-text">гарантии на сервисное обслуживание</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="manufacturer js-block-to-reveal">
+                    <div class="container">
+                        <h2 class="manufacturer__title">Производитель</h2>
+                        <div class="manufacturer__header">
+                            <a class="manufacturer__logo" href="#">
+                                <img class="lazyload" data-src="img/icons/logo.svg" alt="Логотип">
+                            </a>
+                            <h3 class="manufacturer__subtitle section-title">sportice поволжье</h3>
+                        </div>
+                        <div class="manufacturer__wrapper">
+                            <div class="manufacturer__slider-container">
+                                <div class="manufacturer__lead">
+                                    <p>Машиностроительное предприятие выпускает уникальные многофункциональные комбинированные машины на автомобильном шасси малого размера.</p>
+                                </div>
+                                <div class="manufacturer__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="manufacturer__slide swiper-slide">
+                                            <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                                <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                            </a>
+                                        </div>
+                                        <div class="manufacturer__slide swiper-slide">
+                                            <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                                <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                            </a>
+                                        </div>
+                                        <div class="manufacturer__slide swiper-slide">
+                                            <a class="manufacturer__slide-link" data-fancybox="manufacturer" data-src="img/manufacturer-1.jpg">
+                                                <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото из производства">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="slider-navigation js-slider-navigation">
+                                        <button class="slider-navigation__button slider-navigation__button--bordered slider-navigation__button--small js-prev-slide">
+                                            <svg>
+                                                <use xlink:href="#slider-arrow"></use>
+                                            </svg>
+                                        </button>
+                                        <button class="slider-navigation__button slider-navigation__button--bordered slider-navigation__button--small js-next-slide">
+                                            <svg>
+                                                <use xlink:href="#slider-arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="manufacturer__mobile-slider-container card-slider-container">
+                                    <div class="manufacturer__mobile-slider card-slider">
+                                        <div class="manufacturer__mobile-slide card-slider-slide" data-position="1" data-class="1">
+                                            <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                        </div>
+                                        <div class="manufacturer__mobile-slide card-slider-slide" data-position="2" data-class="2">
+                                            <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                        </div>
+                                        <div class="manufacturer__mobile-slide card-slider-slide" data-position="3" data-class="3">
+                                            <img class="lazyload" data-src="img/manufacturer-1.jpg" alt="Фото">
+                                        </div>
+                                    </div>
+                                    <button class="manufacturer__slider-prev card-slider-prev">
+                                        <svg>
+                                            <use xlink:href="#slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="manufacturer__slider-next card-slider-next">
+                                        <svg>
+                                            <use xlink:href="#slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="manufacturer__slider-dots card-slider-dots">
+                                        <button class="active" data-class="1"></button>
+                                        <button data-class="2"></button>
+                                        <button data-class="3"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="manufacturer__stats">
+                                <li class="manufacturer__stat">
+                                    <span class="manufacturer__stat-title">25 лет</span>
+                                    <p class="manufacturer__stat-text">завод производит модели&nbsp;спецтехники</p>
+                                </li>
+                                <li class="manufacturer__stat">
+                                    <span class="manufacturer__stat-title">65 регионов</span>
+                                    <p class="manufacturer__stat-text">активно используют технику Липецкого завода</p>
+                                </li>
+                                <li class="manufacturer__stat">
+                                    <span class="manufacturer__stat-title">50 партнеров</span>
+                                    <p class="manufacturer__stat-text">ведущих брендов-партнеров</p>
+                                </li>
+                                <li class="manufacturer__stat">
+                                    <span class="manufacturer__stat-title">35 фзк</span>
+                                    <p class="manufacturer__stat-text">физкультурно-оздоровительных комплексов оснащены компанией</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="contacts js-block-to-reveal">
+                    <div class="container">
+                        <h2 class="contacts__title section-title">Свяжитесь с нами</h2>
+                        <div class="contacts__wrapper">
+                            <div class="contacts__content">
+                                <div class="contacts__consultant">
+                                    <span class="contacts__consultant-live-mobile">Работаем сейчас</span>
+                                    <a href="tel:+78000008888" class="contacts__consultant-phone">8 800 000-88-88</a>
+                                    <div class="contacts__consultant-wrapper">
+                                        <div class="contacts__consultant-img">
+                                            <img class="lazyload" data-src="img/consultant.jpg" alt="Консультант">
+                                        </div>
+                                        <div class="contacts__consultant-content">
+                                            <div class="contacts__consultant-content-wrapper">
+                                                <div class="contacts__consultant-content-text">
+                                                    <h3 class="contacts__consultant-title">Алёна Аношина</h3>
+                                                    <p class="contacts__consultant-desc">Позвоните для консультации эксперту компании</p>
+                                                </div>
+                                                <span class="contacts__consultant-live">Работаем сейчас</span>
+                                            </div>
+                                            <div class="contacts__consultant-links">
+                                                <a class="contacts__consultant-link" href="tel:+78000008888">8 800 000-88-88</a>
+                                                <a class="contacts__consultant-link" href="mailto:nms@sportlp.ru">nms@sportlp.ru</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="contacts__consultant-call button button--red" href="#">
+                                        <span>Заказать звонок</span>
+                                        <img src="img/call-icon.svg" alt="Иконка звонка">
+                                    </a>
+                                    <div class="contacts__consultant-email-block">
+                                        <a class="contacts__consultant-email-link" href="mailto:nms@sportlp.ru">nms@sportlp.ru</a>
+                                        <address class="contacts__consultant-email-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
+                                    </div>
+                                </div>
+                                <div class="contacts__info">
+                                    <a class="contacts__info-link" href="#">
+                                        <span>Пишите прямо сейчас, мы онлайн</span>
+                                        <svg>
+                                            <use xlink:href="#whatsapp-green-icon"></use>
+                                        </svg>
+                                    </a>
+                                    <address class="contacts__info-address">420141, г. Казань, ул. Кул Гали, 7Б</address>
+                                </div>
+                                <h3 class="contacts__subtitle">Закажите звонок</h3>
+                                <form class="contacts__form" data-need-validation="true" action="#">
+                                    <div class="contacts__input-wrapper">
+                                        <input class="contacts__input input input--dark js-phone-input" id="contactsPhone" type="tel" name="contactsPhone" data-parsley-phone required>
+                                        <label for="contactsPhone">Ваш телефон</label>
+                                    </div>
+                                    <button class="contacts__button button button--red" type="submit">
+                                        <span>Отправить</span>
+                                        <svg>
+                                            <use xlink:href="#letter-icon"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                                <p class="contacts__confidence">
+                                    <span>Нажимая кнопку «Отправить» вы соглашаетесь с<a href="#">политикой конфиденциальности</a>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="contacts__map" id="contact-map"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <div class="footer__top">
+                            <p class="footer__name">ООО «Спорт Лайн Поволжье» ИНН:&nbsp;5260422236 ОГРН:&nbsp;1165260051835</p>
+                            <nav class="footer__nav">
+                                <ul class="footer__menu">
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="#">kodiak</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="#">Bumblebee</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="#">bronco</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <ul class="footer__socials">
+                                <li class="footer__social">
+                                    <a class="footer__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="#wp"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__social">
+                                    <a class="footer__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="#tg"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__social">
+                                    <a class="footer__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer__social">
+                                    <a class="footer__social-link" href="#">
+                                        <svg>
+                                            <use xlink:href="#youtube"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__bottom">
+                            <a class="footer__download" download="#" href="#">
+                                <span>Скачать реквизиты</span>
+                                <svg>
+                                    <use xlink:href="#download-icon"></use>
+                                </svg>
+                            </a>
+                            <a class="footer__developer" href="https://markweber.ru/">
+                                <span>Разработано в</span>
+                                <svg>
+                                    <use xlink:href="#mark-webber"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <style>
+                .ie-placeholder {
+                    z-index: 4000;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #202020;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                .ie-placeholder__message {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    font-weight: 500;
+                    margin: auto;
+                }
+
+                @supports (display: grid) {
+                    .ie-placeholder {
+                        display: none;
+                    }
+                }
+            </style>
+            <div class="ie-placeholder">
+                <div class="ie-placeholder__message">Извините, ваш браузер не поддерживается</div>
+            </div>
+            <div class="modal js-modal js-modal-consult" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <h3 class="modal__title">Получите консультацию нашего эксперта</h3>
+                        <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
+                        <form class="modal__form js-handle-form" data-need-validation action="#">
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark" type="text" id="consultName" name="consultName" required>
+                                <label for="consultName">Ваше имя</label>
+                            </div>
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark js-phone-input" type="tel" id="consultPhone" name="consultPhone" data-parsley-phone required>
+                                <label for="consultPhone">Ваш телефон</label>
+                            </div>
+                            <button class="modal__form-button button button--red js-submit-form" type="submit">
+                                <span>Отправить</span>
+                                <svg>
+                                    <use xlink:href="#letter-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <p class="modal__confidence">
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с<a href="#">политикой конфиденциальности</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal js-modal js-modal-model" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <h3 class="modal__title">Оставьте заявку на&nbsp;модель</h3>
+                        <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
+                        <form class="modal__form js-handle-form" data-need-validation action="#">
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark" type="text" id="modelName" name="modelName" required>
+                                <label for="modelName">Ваше имя</label>
+                            </div>
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark js-phone-input" type="tel" id="modelPhone" name="modelPhone" data-parsley-phone required>
+                                <label for="modelPhone">Ваш телефон</label>
+                            </div>
+                            <button class="modal__form-button button button--red js-submit-form" type="submit">
+                                <span>Отправить</span>
+                                <svg>
+                                    <use xlink:href="#letter-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <p class="modal__confidence">
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с<a href="#">политикой конфиденциальности</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal js-modal js-modal-doc" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <h3 class="modal__title">Оставьте заявку на&nbsp;тех.&nbsp;документацию</h3>
+                        <p class="modal__text">Заполните форму и наш эксперт свяжется с вами в ближайшее время</p>
+                        <form class="modal__form js-handle-form" data-need-validation action="#">
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark" type="text" id="docName" name="docName" required>
+                                <label for="docName">Ваше имя</label>
+                            </div>
+                            <div class="modal__input-wrapper">
+                                <input class="modal__input input input--dark js-phone-input" type="tel" id="docPhone" name="docPhone" data-parsley-phone required>
+                                <label for="docPhone">Ваш телефон</label>
+                            </div>
+                            <button class="modal__form-button button button--red js-submit-form" type="submit">
+                                <span>Отправить</span>
+                                <svg>
+                                    <use xlink:href="#letter-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <p class="modal__confidence">
+                            <span>Нажимая кнопку «Отправить» вы соглашаетесь с<a href="#">политикой конфиденциальности</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal--small js-modal js-modal-success" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <h3 class="modal__title">Ваша заявка успешно отправлена</h3>
+                        <p class="modal__text">Наш эксперт свяжется с вами в&nbsp;ближайшее время</p>
+                        <button class="modal__button button button--red-border js-close-modal">Отлично</button>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+            <script src="js/app.js"></script>
+            <script src="assets/backend/backend.js"></script>
+        </div>
+
+    </body>
+</html>
