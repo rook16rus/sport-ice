@@ -96,10 +96,9 @@
         color: rgba(15, 25, 38, 0.3);
     }
 
-    & + label {
+    & + label, & + ul + label {
         position: absolute;
-        bottom: 50%;
-        transform: translateY(50%);
+        top: 33%;
         left: 2.5rem;
 
         display: block;
@@ -109,9 +108,9 @@
         transition: $base-transition-time;
     }
 
-    &:focus + label,  &.js-phone-input:hover + label{
+    &:focus + label, &:focus + ul + label {
         left: 1rem;
-        bottom: 98%;
+        top: -5%;
 
         padding: 0 0.8rem;
 
@@ -120,9 +119,9 @@
         font-size: 1.6rem;
     }
 
-    & + label.active {
+    & + label.active, & + ul + label.active {
         left: 1rem;
-        bottom: 98%;
+        top: -5%;
 
         padding: 0 0.8rem;
 
