@@ -222,6 +222,12 @@
   }
 
   &__button {
+    &:hover {
+      background-color: #8B1009;
+      border-color: #8B1009;
+      color: #fff;
+    }
+
     @include breakpoint(mobile) {
       width: 100%;
     }

@@ -2,15 +2,15 @@
   "menu": [
     {
       "link": "#",
+      "text": "Kodiak"
+    },
+    {
+      "link": "#",
       "text": "Bumblebee"
     },
     {
       "link": "#",
       "text": "Bronco"
-    },
-    {
-      "link": "#",
-      "text": "Kodiak"
     }
   ],
   "mobileMenu": [

@@ -3,16 +3,16 @@
   "menu": [
     {
       "link": "#",
+      "text": "Kodiak",
+      "active": true
+    },
+    {
+      "link": "#",
       "text": "Bumblebee"
     },
     {
       "link": "#",
       "text": "Bronco"
-    },
-    {
-      "link": "#",
-      "text": "Kodiak",
-      "active": true
     }
   ],
   "modelImages": [
