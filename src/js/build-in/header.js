@@ -18,9 +18,4 @@ export default function header() {
             header.classList.remove('header--white');
         }
     });
-
-    const intro = document.querySelector('.intro');
-    if (!intro) return;
-
-    intro.style.setProperty('--header-height', header.clientHeight + 'px');
 }

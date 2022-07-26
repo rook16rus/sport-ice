@@ -37,7 +37,7 @@
 
     <div class="page-content">
         {{> header }}
-        <main class="page-main">
+        <main class="page-main{{#if pageMode }} {{pageMode}}{{/if}}">
             {{#block "main"}}
 
             {{/block}}
