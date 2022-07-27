@@ -25,7 +25,11 @@ html {
         font-size: 10px;
     }
 
-    @media (min-width: 2000px) {
+    @media (min-width: 1680px) {
+        font-size: 10px;
+    }
+
+    @media (min-width: 2500px) {
         font-size: 13px;
     }
 }
