@@ -31,6 +31,7 @@ import modals from "./build-in/modals";
 import error from "./build-in/error"
 import inputPlaceholder from "./build-in/inputPlaceholder";
 import equipmentsList from "./build-in/equipmentsList";
+import reviewsSlider from "./build-in/reviewsSlider";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
     blocksReveal();
     features();
     gallerySlider();
+    reviewsSlider()
     validation();
     masks();
     fancybox();
