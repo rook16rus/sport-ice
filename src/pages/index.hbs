@@ -219,15 +219,17 @@
                     <div class="reviews__slider swiper">
                         <div class="reviews__inner_items swiper-wrapper">
                             {{#each reviews }}
-                                <blockquote class="reviews__item swiper-slide">
-                                    <a class="reviews__item-graphic{{#if video }} reviews__item-graphic--video{{/if}}" data-fancybox data-src="{{this.src}}">
-                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото отзыва">
-                                    </a>
-                                    <h3 class="reviews__item-title">{{this.title}}</h3>
-                                    <p class="reviews__item-text">{{this.text}}</p>
-                                    <cite class="reviews__item-author">{{this.author}}</cite>
-                                    <span class="reviews__item-position">{{this.position}}</span>
-                                </blockquote>
+                                <div class="swiper-slide">
+                                    <blockquote class="reviews__item">
+                                        <a class="reviews__item-graphic{{#if video }} reviews__item-graphic--video{{/if}}" data-fancybox data-src="{{this.src}}">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото отзыва">
+                                        </a>
+                                        <h3 class="reviews__item-title">{{this.title}}</h3>
+                                        <p class="reviews__item-text">{{this.text}}</p>
+                                        <cite class="reviews__item-author">{{this.author}}</cite>
+                                        <span class="reviews__item-position">{{this.position}}</span>
+                                    </blockquote>
+                                </div>
                             {{/each}}
                         </div>
                         <div class="swiper-pagination"></div>

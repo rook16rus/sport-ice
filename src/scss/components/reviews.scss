@@ -19,8 +19,7 @@
   }
 
   &__slider {
-    width: 96.3vw;
-    padding-right: 5rem !important;
+    overflow: visible;
 
     @include breakpoint(mobile) {
       width: 97.8vw;
@@ -35,10 +34,21 @@
     }
   }
 
+  .swiper-slide {
+    width: auto;
+
+    &:last-child {
+      .reviews__item {
+        margin-right: 0;
+      }
+    }
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     width: auto;
+    margin-right: 2.5rem;
   }
 
   &__item-graphic {

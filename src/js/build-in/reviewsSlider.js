@@ -6,7 +6,6 @@ export default function reviewsSlider() {
     const slider = document.querySelector('.reviews__slider');
 
     const swiper = new Swiper('.reviews__slider', {
-        spaceBetween: 25,
         breakpoints: {
             280: {slidesPerView: 1.4},
             640: {slidesPerView: 3.5},
