@@ -21,43 +21,50 @@ export default function features() {
                     title.classList.remove('features__item-title--red')
                 }
             })
-
         })
-        return;
+    } else {
+        const features = Array.from(document.querySelectorAll('.features__item'));
+
+        gsap.utils.toArray('.features__img').forEach((elem, index) => {
+            gsap.set(elem, {
+                opacity: 0,
+            })
+
+            const currentItem = features[index];
+            const currentItemImg = currentItem.querySelector('.features__img');
+            const currentItemTitle = currentItem.querySelector('.features__item-title');
+            const previousItem = features[index - 1];
+
+            gsap.to(elem, {
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: elem,
+                    start: 'top 40%',
+                    end: 'top 40%',
+                    onEnter: () => {
+                        if (previousItem) {
+                            const previousItemImg = previousItem.querySelector('.features__img');
+                            const previousItemTitle = previousItem.querySelector('.features__item-title');
+
+                            gsap.to(currentItemImg, {opacity: 1})
+                            gsap.to(previousItemImg, {opacity: 0})
+                            previousItemTitle.classList.remove('features__item-title--red');
+                            currentItemTitle.classList.add('features__item-title--red');
+                        }
+                    },
+                    onEnterBack: () => {
+                        if (previousItem) {
+                            const previousItemImg = previousItem.querySelector('.features__img');
+                            const previousItemTitle = previousItem.querySelector('.features__item-title');
+
+                            gsap.to(currentItemImg, {opacity: 0})
+                            gsap.to(previousItemImg, {opacity: 1})
+                            previousItemTitle.classList.add('features__item-title--red');
+                            currentItemTitle.classList.remove('features__item-title--red');
+                        }
+                    }
+                },
+            })
+        })
     }
-
-    const timeline = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".features .container",
-            scrub: true,
-            pin: ".features .container",
-            start: "top 20%",
-        }
-    });
-
-
-    gsap.utils.toArray(".features__item:not(:first-child)").forEach(item => {
-        gsap.set(item, {
-            yPercent: 100,
-            opacity: 0
-        })
-    });
-
-    timeline
-        .fromTo(".features__item:not(:first-child)", {color: '#B0B1B3'}, {
-            yPercent: 0,
-            stagger: 4,
-            opacity: 1,
-            duration: 2,
-            ease: "none",
-            color: '#A6120A'
-        })
-        .to(".features__item:first-child", {
-            opacity: 0,
-            duration: 2
-        }, "-=2")
-        .to(".features__item:nth-child(2)", {
-            opacity: 0,
-            duration: 2,
-        })
 }
