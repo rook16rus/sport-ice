@@ -4,6 +4,7 @@ Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, 
 
 export default function reviewsSlider() {
     const slider = document.querySelector('.reviews__slider');
+    if (!slider) return;
 
     const swiper = new Swiper('.reviews__slider', {
         breakpoints: {

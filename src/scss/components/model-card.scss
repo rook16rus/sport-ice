@@ -45,6 +45,8 @@
     @include breakpoint(mobile) {
       width: 100%;
       aspect-ratio: 330 / 230;
+
+      border-radius: 2rem;
     }
 
     img {
@@ -135,11 +137,11 @@
 
   &__title-tag {
     position: absolute;
-    top: 0;
+    top: 2.5rem;
     left: calc(100% + 1.6rem);
 
     display: block;
-    padding: 1.1rem 0.8rem 0.6rem;
+    padding: 0.8rem 0.8rem 0.6rem;
 
     background-color: var(--primary);
     border-radius: 0.5rem;

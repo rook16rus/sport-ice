@@ -12,6 +12,7 @@
   
   &--color-dark {
     color: var(--text-title);
+    background-color: transparent;
 
     .header__button {
       border-color: var(--text-title);
