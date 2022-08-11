@@ -65,7 +65,7 @@
     transition: $base-transition-time;
 
     &:hover {
-      color: var(--primary);
+      color: var(--accent);
     }
   }
 
@@ -87,7 +87,7 @@
 
       &:hover {
         opacity: 1;
-        color: var(--primary);
+        color: var(--accent);
       }
 
       @include breakpoint(mobile) {
@@ -118,7 +118,7 @@
     transition: $base-transition-time;
 
     &:hover {
-      color: var(--primary);
+      color: var(--accent);
     }
 
     @include breakpoint(mobile) {
@@ -148,7 +148,7 @@
     transition: $base-transition-time;
 
     &:hover {
-      color: var(--primary);
+      color: var(--accent);
     }
 
     @include breakpoint(mobile) {

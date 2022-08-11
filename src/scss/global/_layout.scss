@@ -37,7 +37,7 @@
     }
 
     &--red {
-        background-color: var(--primary);
+        background-color: var(--accent);
         color: #fff;
 
         &:hover {
@@ -65,8 +65,8 @@
     }
     
     &--red-border {
-        border: 0.2rem solid var(--primary);
-        color: var(--primary);
+        border: 0.2rem solid var(--accent);
+        color: var(--accent);
     }
 }
 
@@ -139,7 +139,7 @@
     height: 10rem;
 
     border-radius: 50%;
-    background: var(--primary) url("../img/icons/play-arrow-icon.svg") no-repeat center;
+    background: var(--accent) url("../img/icons/play-arrow-icon.svg") no-repeat center;
     background-size: 3.3rem 3.3rem;
 
     transition: $base-transition-time;

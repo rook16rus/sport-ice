@@ -44,7 +44,7 @@
 
     &.active {
       opacity: 1;
-      border-color: var(--primary);
+      border-color: var(--accent);
     }
   }
 
@@ -128,7 +128,7 @@
 
     &--red {
       .model-info__property-title {
-        color: var(--primary);
+        color: var(--accent);
       }
     }
   }
@@ -389,14 +389,14 @@
       margin-left: 2rem;
 
       font: 500 1.3rem/110% var(--secondary-ff);
-      color: var(--primary);
+      color: var(--accent);
     }
   }
 
   &__options {
     padding: 6rem 11rem;
 
-    border: 0.2rem solid var(--primary);
+    border: 0.2rem solid var(--accent);
     border-radius: 2.5rem;
 
     @include breakpoint(mobile) {
