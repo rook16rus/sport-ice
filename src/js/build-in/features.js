@@ -35,6 +35,7 @@ export default function features() {
             const currentItemTitle = currentItem.querySelector('.features__item-title');
             const previousItem = features[index - 1];
 
+
             gsap.to(elem, {
                 opacity: 1,
                 scrollTrigger: {
@@ -46,11 +47,12 @@ export default function features() {
                             const previousItemImg = previousItem.querySelector('.features__img');
                             const previousItemTitle = previousItem.querySelector('.features__item-title');
 
-                            gsap.to(currentItemImg, {opacity: 1})
                             gsap.to(previousItemImg, {opacity: 0})
                             previousItemTitle.classList.remove('features__item-title--red');
-                            currentItemTitle.classList.add('features__item-title--red');
                         }
+
+                        gsap.to(currentItemImg, {opacity: 1})
+                        currentItemTitle.classList.add('features__item-title--red');
                     },
                     onEnterBack: () => {
                         if (previousItem) {
@@ -62,7 +64,9 @@ export default function features() {
                             previousItemTitle.classList.add('features__item-title--red');
                             currentItemTitle.classList.remove('features__item-title--red');
                         }
-                    }
+
+
+                    },
                 },
             })
         })
