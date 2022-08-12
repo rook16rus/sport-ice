@@ -96,6 +96,16 @@
     }
   }
 
+  .slider-navigation {
+    position: absolute;
+    bottom: calc(100% + 4.4rem);
+    right: 0;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
   &__mobile-list {
     display: none;
     

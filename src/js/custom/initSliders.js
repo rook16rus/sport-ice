@@ -17,6 +17,7 @@ export default function initSliders() {
         const loop = !!slider.dataset.loop;
         const hashNavigation = !!slider.dataset.hash;
         const allowTouchMove = !slider.dataset.noTouch;
+        const watchOverflow = !!slider.dataset.watchOverflow;
         const slidesPerColumn = Number(slider.dataset.column);
         let freeMode = slider.dataset.freeMode;
 
@@ -107,6 +108,7 @@ export default function initSliders() {
             disableOnInteraction: true,
             ...autoplay,
             loop,
+            watchOverflow,
             ...fadeEffect,
             pagination: {
                 el: slider.querySelector('.swiper-pagination'),

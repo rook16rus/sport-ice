@@ -3,20 +3,9 @@ import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function gallerySlider() {
-    if (document.documentElement.clientWidth > 640) return;
+    const gallerySlides = document.querySelectorAll('.gallery .swiper-slide');
+    if (gallerySlides.length > 1) return;
 
-    const swiper = new Swiper('.gallery .swiper', {
-        touchRatio: 1,
-        effect: 'flip',
-        flipEffect: {
-            slideShadows: false,
-        },
-        pagination: {
-            el: document.querySelector('.gallery .swiper-pagination'),
-            clickable: true,
-            bulletElement: 'button',
-            bulletClass: 'slider-bullet',
-            bulletActiveClass: 'slider-bullet--active',
-        }
-    })
+    const navigation = document.querySelector('.gallery .slider-navigation');
+    if (navigation) navigation.remove();
 }
