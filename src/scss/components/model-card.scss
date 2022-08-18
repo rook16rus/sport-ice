@@ -11,7 +11,8 @@
 
   &__wrapper {
     max-width: 146.5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 14rem;
     margin-bottom: 6rem;
@@ -19,7 +20,7 @@
     @include breakpoint(mobile) {
       position: relative;
 
-      flex-direction: column;
+      grid-template-columns: 1fr;
       align-items: stretch;
       gap: 3rem;
       margin-bottom: 3rem;
@@ -28,7 +29,10 @@
 
   &__img {
     position: relative;
+
     min-width: 0;
+    width: 100%;
+    max-width: 77.5rem;
   }
 
   &__img-slider {
@@ -119,6 +123,12 @@
         }
       }
     }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   &__title {

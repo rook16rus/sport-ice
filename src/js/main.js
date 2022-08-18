@@ -32,6 +32,7 @@ import error from "./build-in/error"
 import inputPlaceholder from "./build-in/inputPlaceholder";
 import equipmentsList from "./build-in/equipmentsList";
 import reviewsSlider from "./build-in/reviewsSlider";
+import modelTag from "./build-in/modelTag";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     error();
     inputPlaceholder();
     equipmentsList();
+    modelTag()
 
     // custom
     initSliders();
