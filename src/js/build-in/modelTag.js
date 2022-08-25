@@ -1,6 +1,7 @@
 export default function modelTag() {
-    const tag = document.querySelector('.model-card__title-tag')
-    if (!tag) return;
+    const tags = document.querySelectorAll('.js-model-tag');
 
-    if (!tag.innerHTML) tag.style.display = 'none';
+    tags.forEach(tag => {
+        if (!tag.innerHTML) tag.style.display = 'none';
+    })
 }
