@@ -31,6 +31,7 @@ export default function modelsSlider() {
     });
 
     const propertySwiper = new Swiper('.models__property-slider', {
+        spaceBetween: 10,
         thumbs: {
             swiper: listSwiper
         }
