@@ -80,26 +80,12 @@
 }
 
 .fancybox__content {
-    width: 89.5rem !important;
-    height: auto !important;
-    aspect-ratio: 895 / 669;
-
     border-radius: 1rem;
     overflow: hidden;
 
-    @include breakpoint(mobile) {
-        width: 100% !important;
-        aspect-ratio: auto;
-    }
-
-    img, iframe  {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: contain;
-    }
-
     iframe {
         min-height: 30rem;
+        overflow: hidden;
     }
 }
 

@@ -413,6 +413,8 @@
   }
 
   &__map {
+    position: relative;
+
     height: 100%;
 
     background: grey;
@@ -421,7 +423,16 @@
 
     @include breakpoint(mobile) {
       width: 100%;
-      aspect-ratio: 330 / 200;
+      padding-top: 60.6%;
+    }
+
+    & > ymaps {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
     }
 
     & > ymaps, & > ymaps > ymaps {
