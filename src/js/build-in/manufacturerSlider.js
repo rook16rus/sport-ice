@@ -18,7 +18,7 @@ export default function manufacturerSlider() {
         },
         breakpoints: {
             640: {
-                slidesPerView: 1.3,
+                slidesPerView: 1,
                 initialSlide: slidesLength - 1,
                 spaceBetween: 35,
                 navigation: {

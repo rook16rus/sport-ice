@@ -310,10 +310,8 @@
     z-index: 3;
 
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
-    max-width: 82.6rem;
+    gap: 18.3rem;
 
     @include breakpoint(mobile) {
       flex-direction: column;
@@ -328,6 +326,16 @@
 
     @include breakpoint(mobile) {
       order: 1;
+    }
+  }
+
+  &__brands {
+    display: flex;
+    gap: 5rem;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 

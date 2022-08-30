@@ -42,6 +42,10 @@
     background-color: #fff;
     color: var(--text-body);
 
+    @media (min-width: 1680px) {
+      padding: 1rem 0;
+    }
+
     .header__button {
       border-color: var(--text-title);
       color: var(--text-title);

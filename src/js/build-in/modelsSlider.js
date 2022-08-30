@@ -13,16 +13,10 @@ export default function modelsSlider() {
     const listSwiper = new Swiper('.models__list-slider', {
         spaceBetween: 10,
         slidesPerView: "auto",
-        on: {
-            touchEnd: function(s,e) {
-                let range = 5;
-                let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
-                    - s.touches.startY
-                if (diff < range || diff > -range) s.allowClick = true;
-            }
-        },
         breakpoints: {
             640: {
+                slidesPerView: "auto",
+                centeredSlides: false,
                 direction: "vertical",
                 spaceBetween: 40,
                 allowTouchMove: false,
@@ -44,6 +38,7 @@ export default function modelsSlider() {
 
     propertySwiper.on('slideChangeTransitionStart', () => {
         activeThumb = models.querySelector('.swiper-slide-thumb-active');
+        listSwiper.slideTo(propertySwiper.activeIndex);
         activeThumb.style.setProperty('--machine-color', activeThumb.dataset.background)
     });
 
