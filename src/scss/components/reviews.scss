@@ -20,10 +20,6 @@
 
   &__slider {
     overflow: visible;
-
-    @include breakpoint(mobile) {
-      width: 97.8vw;
-    }
   }
 
   &__title {
@@ -51,23 +47,32 @@
     margin-right: 2.5rem;
   }
 
+  &__item-graphic-block {
+    width: 34rem;
+    margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+      width: 100%;
+      max-width: 24.4rem;
+      margin-bottom: 3rem;
+    }
+  }
+
   &__item-graphic {
     position: relative;
 
     display: block;
-    width: 34rem;
+    width: 100%;
     aspect-ratio: 340 / 175;
-    margin-bottom: 6.5rem;
+    padding-top: 51.47%;
 
     border-radius: 999px;
     overflow: hidden;
     cursor: pointer;
 
     @include breakpoint(mobile) {
-      width: 100%;
-      max-width: 24.4rem;
       aspect-ratio: 245 / 120;
-      margin-bottom: 3rem;
+      padding-top: 48.97%;
     }
 
     &--video {
@@ -78,6 +83,7 @@
         left: 4rem;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 1;
 
         @extend .video-button;
 
@@ -88,6 +94,10 @@
     }
 
     img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
       width: 100%;
       height: 100%;
       object-fit: cover;

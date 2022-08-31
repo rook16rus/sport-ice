@@ -16,7 +16,6 @@ export default function modelsSlider() {
         breakpoints: {
             640: {
                 slidesPerView: "auto",
-                centeredSlides: false,
                 direction: "vertical",
                 spaceBetween: 40,
                 allowTouchMove: false,
@@ -38,8 +37,9 @@ export default function modelsSlider() {
 
     propertySwiper.on('slideChangeTransitionStart', () => {
         activeThumb = models.querySelector('.swiper-slide-thumb-active');
-        listSwiper.slideTo(propertySwiper.activeIndex);
         activeThumb.style.setProperty('--machine-color', activeThumb.dataset.background)
+
+        if (matchMedia('(max-width: 640px)').matches) listSwiper.slideTo(propertySwiper.activeIndex);
     });
 
     /* Анимация пунктирных линий активного слайда */
