@@ -158,7 +158,14 @@
     gap: 1.4rem;
 
     @include breakpoint(mobile) {
-      display: none;
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      top: 45%;
+      z-index: 2;
+      transform: translateY(-50%);
+
+      justify-content: space-between;
     }
 
     button {
@@ -174,6 +181,11 @@
       color: #fff;
 
       transition: $base-transition-time;
+
+      @include breakpoint(mobile) {
+        width: 4.2rem;
+        height: 4.2rem;
+      }
 
       &:hover {
         background-color: #fff;

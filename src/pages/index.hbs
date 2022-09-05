@@ -32,10 +32,10 @@
                                 <div class="intro__img-slider swiper">
                                     <div class="swiper-wrapper">
                                         {{#each intro }}
-                                            <div class="swiper-slide" data-background="{{this.background}}">
+                                            <a class="swiper-slide" href="model.html" data-background="{{this.background}}">
                                                 <img class="lazyload" data-src="{{this.img}}" alt="Фото машины">
                                                 <span class="intro__img-desc">{{this.text}}</span>
-                                            </div>
+                                            </a>
                                         {{/each}}
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                                                     {{else if view3 }}
                                                         <svg width="15.4rem" height="13.2rem" viewBox="0 0 154 132" fill="none">
                                                             <symbol id="line{{id}}">
-                                                                <path fill="none"d="M1.86353 0.976096L1.00005 117.404L118.814 118.277"/>
+                                                                <path fill="none" d="M1.86353 0.976096L1.00005 117.404L118.814 118.277"/>
                                                             </symbol>
                                                             <mask id="mask{{id}}">
                                                                 <use class="mask" xlink:href="#line{{id}}" stroke="#fff"/>

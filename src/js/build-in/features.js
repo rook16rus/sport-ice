@@ -40,8 +40,8 @@ export default function features() {
                 opacity: 1,
                 scrollTrigger: {
                     trigger: elem,
-                    start: 'top 40%',
-                    end: 'top 40%',
+                    start: 'top 50%',
+                    end: 'top 50%',
                     onEnter: () => {
                         if (previousItem) {
                             const previousItemImg = previousItem.querySelector('.features__img');
