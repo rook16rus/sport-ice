@@ -159,11 +159,9 @@
 
     @include breakpoint(mobile) {
       position: absolute;
-      left: 1rem;
-      right: 1rem;
-      top: 45%;
+      right: 0;
+      top: 4rem;
       z-index: 2;
-      transform: translateY(-50%);
 
       justify-content: space-between;
     }
