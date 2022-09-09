@@ -731,7 +731,7 @@
                                 <h2 class="order__title">получите консультацию нашего эксперта</h2>
                                 <form class="order__form" action="" data-need-validation="true" novalidate>
                                     <div class="order__input-wrapper">
-                                        <input class="order__input input input--light" id="orderName" type="text" name="name" required>
+                                        <input class="order__input input input--light" id="orderName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" type="text" name="name" required>
                                         <label for="orderName">Ваше имя</label>
                                     </div>
                                     <div class="order__input-wrapper">
