@@ -1,37 +1,4 @@
 @font-face {
-	font-family: 'TT Commons';
-	font-weight: 400;
-	font-style: normal;
-	src: url('TTCommons-Regular.woff2'),
-         url('TTCommons-Regular.woff');
-}
-
-@font-face {
-	font-family: 'TT Commons';
-	font-weight: 500;
-	font-style: normal;
-	src: url('TTCommons-Medium.woff2'),
-	url('TTCommons-Medium.woff');
-}
-
-@font-face {
-	font-family: 'TT Commons';
-	font-weight: 600;
-	font-style: normal;
-	src: url('TTCommons-Demibold.woff2'),
-	url('TTCommons-Demibold.woff');
-}
-
-@font-face {
-	font-family: 'TT Commons';
-	font-weight: 700;
-	font-style: normal;
-	src: url('TTCommons-Bold.woff2'),
-	url('TTCommons-Bold.woff');
-}
-
-
-@font-face {
 	font-family: 'Bebas Neue';
 	font-weight: 700;
 	font-style: normal;
@@ -45,4 +12,28 @@
 	font-style: normal;
 	src: url('Montserrat-Semibold.woff2'),
 	url('Montserrat-Semibold.woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-style: normal;
+	src: url('Montserrat-Regular.woff2'),
+	url('Montserrat-Regular.woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 500;
+	font-style: normal;
+	src: url('Montserrat-Medium.woff2'),
+	url('Montserrat-Medium.woff');
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-style: normal;
+	src: url('Montserrat-Bold.woff2'),
+	url('Montserrat-Bold.woff');
 }
